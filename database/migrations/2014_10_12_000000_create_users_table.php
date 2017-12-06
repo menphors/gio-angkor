@@ -35,7 +35,6 @@ class CreateUsersTable extends Migration
             $table->string('tel',25)->unique();
             $table->timestamps();
             $table->rememberToken();
-
         });
     }
 
