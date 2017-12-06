@@ -16,7 +16,7 @@ class CreateProductHasGalleryTable extends Migration
         Schema::create('tbl_product_has_gallery', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->integer('gallery_id',11);
+            $table->integer('gallery_id')->unsigned();
 
         });
     }

@@ -18,7 +18,7 @@ class CreateBrandTable extends Migration
             $table->increments('id');
             $table->text('brand_name');
             $table->text('images_url');
-            $table->integer('ordering');
+            $table->integer('ordering')->unsigned();
             $table->string('official',15);
             $table->timestamps();
             $table->rememberToken();

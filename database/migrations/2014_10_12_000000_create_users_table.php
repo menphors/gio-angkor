@@ -27,8 +27,8 @@ class CreateUsersTable extends Migration
             $table->string('updated_password',150);
             $table->string('flag_sec',150);
             $table->dateTime('log_date');
-            $table->integer('role_id');
-            $table->integer('level_id');
+            $table->integer('role_id')->unsigned();
+            $table->integer('level_id')->unsigned();
             $table->text('address');
             $table->string('published');
             $table->string('created_by');

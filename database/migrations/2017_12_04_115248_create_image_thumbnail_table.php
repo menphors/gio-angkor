@@ -17,7 +17,7 @@ class CreateImageThumbnailTable extends Migration
             //
             $table->increments('id');
             $table->text('thumbnail_name');
-            $table->integer('gallery_id',11);
+            $table->integer('gallery_id')->unsigned();
             $table->timestamps();
             $table->rememberToken();
         });

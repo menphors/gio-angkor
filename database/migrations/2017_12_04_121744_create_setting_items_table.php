@@ -16,7 +16,7 @@ class CreateSettingItemsTable extends Migration
         Schema::create('tbl_setting_items', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->integer('setting_item_type_id',11);
+            $table->integer('setting_item_type_id')->unsigned();
             $table->text('setting_item_name');
             $table->text('setting_item_value');
             $table->text('setting_item_other');

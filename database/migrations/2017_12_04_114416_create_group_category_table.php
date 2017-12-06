@@ -17,8 +17,8 @@ class CreateGroupCategoryTable extends Migration
             //
             $table->increments('id');
             $table->text('group_cat_name');
-            $table->integer('category_id',11);
-            $table->integer('sub_category_id',11);
+            $table->integer('category_id')->unsigned();
+            $table->integer('sub_category_id')->unsigned();
             $table->timestamps();
             $table->rememberToken();
         });

@@ -14,13 +14,12 @@ class CreateDiscountTable extends Migration
     public function up()
     {
         Schema::create('tbl_discount', function (Blueprint $table) {
-            //
             $table->increments('id');
             $table->string('discount_percentage',50);
-            $table->integer('quantity',25);
-            $table->integer('product_id',11);
-            $table->integer('category_id',11);
-            $table->integer('store_id',11);
+            $table->integer('quantity')->unsigned();
+            $table->integer('product_id')->unsigned();
+            $table->integer('category_id')->unsigned();
+            $table->integer('store_id')->unsigned();
             $table->date('date_from');
             $table->date('date_to');
             $table->string('published',5);

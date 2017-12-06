@@ -17,9 +17,9 @@ class CreateTrackingTable extends Migration
             //
             $table->increments('id');
             $table->string('tracking_number',150);
-            $table->integer('store_id',11);
+            $table->integer('store_id')->unsigned();
             $table->text('status');
-            $table->integer('product_id',11);
+            $table->integer('product_id')->unsigned();
             $table->timestamps();
             $table->rememberToken();
         });

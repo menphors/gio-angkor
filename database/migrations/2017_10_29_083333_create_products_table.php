@@ -22,11 +22,11 @@ class CreateProductsTable extends Migration
             $table->string('made',50);
             $table->double('prices',10);
             $table->string('count_product',150);
-            $table->integer('quantity',25);
-            $table->integer('brand_id',11);
-            $table->integer('category_id',11);
-            $table->integer('promotion_id',11);
-            $table->integer('setting_id',11);
+            $table->integer('quantity')->unsigned();
+            $table->integer('brand_id')->unsigned();
+            $table->integer('category_id')->unsigned();
+            $table->integer('promotion_id')->unsigned();
+            $table->integer('setting_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->string('product_has_gallery_id',11);
             $table->string('published',20);

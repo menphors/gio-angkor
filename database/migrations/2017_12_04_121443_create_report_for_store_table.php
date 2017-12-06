@@ -17,10 +17,10 @@ class CreateReportForStoreTable extends Migration
             //
             $table->increments('id');
             $table->string('price',10);
-            $table->integer('product_id',11);
-            $table->integer('user_id',11);
-            $table->integer('category_id',11);
-            $table->integer('order_id',11);
+            $table->integer('product_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->integer('category_id')->unsigned();
+            $table->integer('order_id')->unsigned();
         });
     }
 

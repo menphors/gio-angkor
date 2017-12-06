@@ -17,9 +17,9 @@ class CreateCategoryTable extends Migration
             //
             $table->increments('id');
             $table->text('category_name');
-            $table->integer('ordering',11);
-            $table->integer('pro_id',11);
-            $table->varchar('published',5);
+            $table->integer('ordering')->unsigned();
+            $table->integer('pro_id')->unsigned();
+            $table->string('published',5);
             $table->timestamps();
             $table->rememberToken();
         });

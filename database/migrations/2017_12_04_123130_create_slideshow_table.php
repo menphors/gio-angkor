@@ -17,8 +17,8 @@ class CreateSlideshowTable extends Migration
             //
             $table->increments('id');
             $table->text('slide_name');
-            $table->integer('slide_image_id',11);
-            $table->integer('thumbnail_id',11);
+            $table->integer('slide_image_id')->unsigned();
+            $table->integer('thumbnail_id')->unsigned();
             $table->timestamps();
             $table->rememberToken();
         });

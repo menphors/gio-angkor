@@ -17,7 +17,7 @@ class CreateBlockTable extends Migration
             //
             $table->increments('id');
             $table->text('block_remark');
-            $table->integer('store_id',11);
+            $table->integer('store_id')->unsigned();
             $table->string('published',5);
             $table->text('reason');
             $table->timestamps();

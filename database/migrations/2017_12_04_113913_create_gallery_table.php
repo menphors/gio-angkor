@@ -19,8 +19,8 @@ class CreateGalleryTable extends Migration
             $table->text('gellery_name');
             $table->text('gallery_images');
             $table->dateTime('gallery_added_date');
-            $table->integer('ordering',11);
-            $table->integer('thumbnail_id',11);
+            $table->integer('ordering')->unsigned();
+            $table->integer('thumbnail_id')->unsigned();
             $table->string('published',5);
             $table->dateTime('upd_date');
             $table->timestamps();

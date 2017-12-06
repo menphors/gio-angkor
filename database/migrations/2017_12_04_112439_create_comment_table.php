@@ -18,8 +18,8 @@ class CreateCommentTable extends Migration
             $table->increments('id');
             $table->text('comment_name');
             $table->text('comment_description');
-            $table->integer('user_id',11);
-            $table->integer('product_id',11);
+            $table->integer('user_id')->unsigned();
+            $table->integer('product_id')->unsigned();
             $table->string('flag_active',2);
             $table->dateTime('comment_date');
             $table->dateTime('comment_update_date');

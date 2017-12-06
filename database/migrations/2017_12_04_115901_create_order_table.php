@@ -17,13 +17,13 @@ class CreateOrderTable extends Migration
             //
             $table->increments('id');
             $table->double('order_unit_price',10);
-            $table->integer('quantity',25);
+            $table->integer('quantity')->unsigned();
             $table->string('discount',255);
             $table->dateTime('order_date');
             $table->text('status_product');
             $table->string('published',5);
-            $table->integer('user_id',11);
-            $table->integer('product_id',11);
+            $table->integer('user_id')->unsigned();
+            $table->integer('product_id')->unsigned();
             $table->timestamps();
             $table->rememberToken();
         });
