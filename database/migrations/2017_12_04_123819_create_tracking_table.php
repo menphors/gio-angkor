@@ -33,7 +33,7 @@ class CreateTrackingTable extends Migration
     public function down()
     {
 
-            Schema::dropIfExists('tbl_sub_category');
+            Schema::dropIfExists('tbl_tracking');
 
     }
 }
