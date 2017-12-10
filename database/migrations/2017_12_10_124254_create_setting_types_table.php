@@ -13,17 +13,16 @@ class CreateSettingTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_setting_types', function (Blueprint $table) {
-            //
+        Schema::create('setting_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('setting_name',150);
-            $table->text('other');
-            $table->string('published',5);
+            $table->string('code');
+            $table->string('name_en');
+            $table->string('name_kh');
+            $table->text('note')->nullable();
             $table->timestamps();
-            $table->rememberToken();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *
@@ -31,8 +30,6 @@ class CreateSettingTypesTable extends Migration
      */
     public function down()
     {
-
-            Schema::dropIfExists('tbl_setting_types');
-
+        Schema::dropIfExists('setting_types');
     }
 }

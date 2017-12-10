@@ -13,16 +13,15 @@ class CreateSettingItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_setting_items', function (Blueprint $table) {
-            //
+        Schema::create('setting_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('setting_item_type_id')->unsigned();
-            $table->text('setting_item_name');
-            $table->text('setting_item_value');
-            $table->text('setting_item_other');
-            $table->string('published',5);
+            $table->integer('type_id')->unsigned();
+            $table->string('name_en');
+            $table->string('name_kh');
+            $table->string('code');
+            $table->text('value')->nullable();
+            $table->text('note')->nullable();
             $table->timestamps();
-            $table->rememberToken();
         });
     }
 
@@ -33,8 +32,6 @@ class CreateSettingItemsTable extends Migration
      */
     public function down()
     {
-
-            Schema::dropIfExists('tbl_setting_items');
-
+        Schema::dropIfExists('setting_items');
     }
 }
