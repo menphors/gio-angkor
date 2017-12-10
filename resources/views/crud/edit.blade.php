@@ -14,7 +14,7 @@
     @endif
     <div class="panel panel-default">
         <div class="panel-body">
-            {!! BootForm::open(['model' => $crud_item, 'store' => $route_prefix . '.store', 'update' => $route_prefix . '.update']); !!}
+            {!! BootForm::open(['model' => $crud_item, 'store' => $route_prefix . '.store', 'update' => $route_prefix . '.update']) !!}
                 @if (view()->exists($view_prefix . '.form'))
                     @include($view_prefix . '.form')
                 @else
