@@ -24,3 +24,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/welcome', 'HomeController@index')->name('welcome');
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
+    Route::resource('setting-types', 'SettingTypesController');
+    Route::resource('setting-items', 'SettingItemsController');
+});
