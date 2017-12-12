@@ -18,9 +18,7 @@ abstract class CrudController extends Controller
     
     protected $crudItem = 'crud_item';
     protected $crudList = 'crud_list';
-    
-    protected $itemName = '';
-    protected $listName = '';
+
     protected $modelPath = '';
     protected $viewPrefix = '';
     protected $routePrefix = '';
@@ -31,8 +29,8 @@ abstract class CrudController extends Controller
         $this->renderData();
     }
     
-    public function validateAllFields() {
-        $fields = ['itemName', 'listName', 'modelPath', 'viewPrefix', 'routePrefix'];
+    private function validateAllFields() {
+        $fields = ['modelPath', 'viewPrefix', 'routePrefix'];
         foreach($fields as $field) {
             if (empty($this->{$field})) {
                 throw new Exception("The field $" . $field . " is required in " . __CLASS__);
@@ -40,9 +38,7 @@ abstract class CrudController extends Controller
         }
     }
     
-    public function renderData() {
-        $this->data['item_name'] = $this->itemName;
-        $this->data['list_name'] = $this->listName;
+    private function renderData() {
         $this->data['model_path'] = $this->modelPath;
         $this->data['view_prefix'] = $this->viewPrefix;
         $this->data['route_prefix'] = $this->routePrefix;
