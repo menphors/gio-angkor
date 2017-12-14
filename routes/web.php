@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('pd',"ProductController");
+Route::resource('/pd',"ProductController");
+Route::post('/insert',"ProductController@insert");
+Auth::routes();
+
+Route::get('/show',"ProductController@show");
+// Route::get('delete{id}',"ProductController@destroy");
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -24,3 +29,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/welcome', 'HomeController@index')->name('welcome');
+Route::get('/delete/{id}', 'ProductController@destroy');
+Route::get('/edit/{id}', 'ProductController@edit');
+Route::get('/update', 'ProductController@update');
