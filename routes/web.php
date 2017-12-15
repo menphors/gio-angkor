@@ -12,9 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepages.homepage');
 });
-
+Route::get('/homepage', function () {
+    return view('homepages.homepage');
+});
+Route::get('/testing', function () {
+    return view('testing.index');
+});
 Route::resource('pd',"ProductController");
 Auth::routes();
 
