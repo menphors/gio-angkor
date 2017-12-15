@@ -15,8 +15,7 @@ class SettingTypesTableSeeder extends Seeder
     {
         SettingType::create([
             'code' => 'size',
-            'name_en' => 'Size',
-            'name_kh' => 'Size KH',
+            'name' => 'Size KH',
             'note' => 'Create size setting type by seeder'
         ]);
         
@@ -29,8 +28,7 @@ class SettingTypesTableSeeder extends Seeder
         
         SettingType::create([
             'code' => 'weight',
-            'name_en' => 'Weight',
-            'name_kh' => 'Weight KH',
+            'name' => 'Weight KH',
             'note' => 'Create weight setting type by seeder'
         ]);
     }

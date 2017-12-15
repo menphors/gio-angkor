@@ -35,8 +35,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 'xs',
-            'name_en' => 'XS',
-            'name_kh' => 'XS kh',
+            'name' => 'XS kh',
             'value' => 'XS (Xtra Small Size)',
             'note' => 'SettingItem Seeder',
             'type_id' => $size->id

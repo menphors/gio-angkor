@@ -16,8 +16,7 @@ class CreateSettingItemsTable extends Migration
         Schema::create('setting_items', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('type_id')->unsigned();
-            $table->string('name_en');
-            $table->string('name_kh');
+            $table->string('name');
             $table->string('code');
             $table->text('value')->nullable();
             $table->text('note')->nullable();

@@ -108,57 +108,102 @@ return [
     */
 
     'menu' => [
+//        [
+//            'text'        => 'Pages',
+//            'url'         => 'welcome',
+//            'icon'        => 'file',
+//            'label'       => 4,
+//            'label_color' => 'success',
+//        ],
         [
-            'text'        => 'Pages',
-            'url'         => 'welcome',
-            'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'home',
-            'icon' => 'lock',
-        ],
-        [
-            'text'    => 'Menu',
+            'text'    => 'Category',
             'icon'        => 'table',
             'submenu' => [
                 [
-                    'text' => 'Sub Menu One',
+                    'text' => 'Group Category',
                     'url'   => '#',
                 ],
                 [
-                    'text' => 'Sub Menu Two',
+                    'text' => 'Sub Category',
                     'url'  => '#',
                 ],
             ],
         ],
         [
-            'text'    => 'Categories',
-            'icon'        => 'list',
+            'text'    => 'Disput',
+            'icon'        => 'lock',
+            'url' => '#',
+        ],
+        [
+            'text'   => 'Gallery Main',
+            'icon'        => 'file-image-o',
+            'url' => '#',
+        ],
+        [
+            'text'   => 'Log Activity',
+            'icon'        => 'eye-slash',
+            'url' => '#',
+        ],
+        [
+            'text'    => 'Order',
+            'icon'        => 'shopping-cart',
             'submenu' => [
                 [
-                    'text' => 'Sub Menu One',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Sub Menu Two',
+                    'text' => 'Tracking',
                     'url'  => '#',
                 ],
             ],
         ],
         [
             'text'    => 'Product',
-            'icon'        => 'edit',
+            'icon'        => 'product-hunt',
             'submenu' => [
                 [
-                    'text' => 'Product Detail',
+                    'text' => 'Brand',
+                    'url'  => 'show',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Promotion',
+            'icon'        => 'gift',
+            'url' => '#'
+        ],
+        [
+            'text'    => 'Report',
+            'icon'        => 'line-chart',
+            'submenu' => [
+                [
+                    'text' => 'Store',
                     'url'  => '#',
                 ],
                 [
-                    'text' => 'Sub Menu Two',
+                    'text' => 'User',
                     'url'  => '#',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Store',
+            'icon'        => 'building-o',
+            'submenu' => [
+                [
+                    'text' => 'Discount',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Setting Type',
+            'icon'        => 'lock',
+            'submenu' => [
+                [
+                    'text' => 'Type',
+                    'url'  => 'adminz/setting-types',
+                ],
+                [
+                    'text' => 'Item',
+                    'url'  => 'adminz/setting-items',
                 ],
             ],
         ],
@@ -167,25 +212,7 @@ return [
             'icon'        => 'users',
             'submenu' => [
                 [
-                    'text' => 'User Level',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Sub Menu Two',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'Permission',
-            'icon'        => 'lock',
-            'submenu' => [
-                [
-                    'text' => 'Sub Menu One',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Sub Menu Two',
+                    'text' => 'Level User',
                     'url'  => '#',
                 ],
             ],

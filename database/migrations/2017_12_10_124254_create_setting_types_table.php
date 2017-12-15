@@ -16,8 +16,7 @@ class CreateSettingTypesTable extends Migration
         Schema::create('setting_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code');
-            $table->string('name_en');
-            $table->string('name_kh');
+            $table->string('name');
             $table->text('note')->nullable();
             $table->timestamps();
         });
