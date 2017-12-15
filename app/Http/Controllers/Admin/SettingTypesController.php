@@ -7,8 +7,6 @@ use App\Http\Controllers\CrudController;
 
 class SettingTypesController extends CrudController
 {
-    protected $itemName = 'setting_type';
-    protected $listName = 'setting_types';
     protected $modelPath = 'App\SettingType';
     protected $viewPrefix = 'settings.types';
     protected $routePrefix = 'setting-types';
