@@ -16,10 +16,10 @@ class CreateLevelTable extends Migration
         Schema::create('tbl_level', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->string('level_name',50);
-            $table->string('level_slog',50);
-            $table->text('remark');
-            $table->string('published',5);
+            $table->string('level_name',50)->nullable();
+            $table->string('level_slog',50)->nullable();
+            $table->text('remark')->nullable();
+            $table->string('published',5)->nullable();
             $table->timestamps();
             $table->rememberToken();
         });
