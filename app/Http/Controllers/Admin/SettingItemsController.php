@@ -9,6 +9,7 @@ use App\Http\Controllers\CrudController;
 
 class SettingItemsController extends CrudController
 {
+    protected $itemName = 'Setting item';
     protected $modelPath = 'App\SettingItem';//model list data table paramete model
     protected $viewPrefix = 'settings.items';//view find view
     protected $routePrefix = 'setting-items';//url route link

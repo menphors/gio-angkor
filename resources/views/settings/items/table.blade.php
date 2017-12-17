@@ -3,8 +3,7 @@
         <tr>
             <th>Type</th>
             <th>Code</th>
-            <th>Name in Khmer</th>
-            <th>Name in English</th>
+            <th>Name</th>
             <th class="text-center">Actions</th>
         </tr>
     </thead>
