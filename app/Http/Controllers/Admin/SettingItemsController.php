@@ -9,18 +9,18 @@ use App\Http\Controllers\CrudController;
 
 class SettingItemsController extends CrudController
 {
-    protected $modelPath = 'App\SettingItem';
-    protected $viewPrefix = 'settings.items';
-    protected $routePrefix = 'setting-items';
+    protected $modelPath = 'App\SettingItem';//model list data table paramete model
+    protected $viewPrefix = 'settings.items';//view find view
+    protected $routePrefix = 'setting-items';//url route link
     
-    protected $itemPerPage = 5;
-    protected $siteTitle = 'Admin - Setting Item';
-    protected $pageTitle = 'Setting Item';
+    protected $itemPerPage = 5;//pagination
+    protected $siteTitle = 'Admin - Setting Item'; //tittle
+    protected $pageTitle = 'Setting Item';//
     
     public function __construct() {
         parent::__construct();
         view()->share([
-            'type_list' => SettingType::pluck('name_en', 'id')
+            'type_list' => SettingType::pluck('name', 'id')//array obj for action controller
         ]);
     }
     

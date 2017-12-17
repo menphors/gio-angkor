@@ -15,23 +15,19 @@ class SettingTypesTableSeeder extends Seeder
     {
         SettingType::create([
             'code' => 'size',
-            'name_en' => 'Size KH',
-            'name_kh' => 'Size KH',
+            'name' => 'Size KH',
             'note' => 'Create size setting type by seeder'
         ]);
         
         SettingType::create([
             'code' => 'color',
-            'name_en' => 'Color',
-            'name_kh' => 'Color KH',
+            'name' => 'Color',
             'note' => 'Create color setting type by seeder'
         ]);
         
         SettingType::create([
             'code' => 'weight',
-            'name_en' => 'Color',
-            'name_kh' => 'Color',
-            'name' => 'Weight KH',
+            'name' => 'Color',
             'note' => 'Create weight setting type by seeder'
         ]);
     }

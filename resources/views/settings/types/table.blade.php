@@ -11,8 +11,7 @@
         @foreach($crud_list as $item)
             <tr>
                 <td>{{ $item->code }}</td>
-                <td>{{ $item->name_en }}</td>
-                <td>{{ $item->name_kh }}</td>
+                <td>{{ $item->name }}</td>
                 <td class="text-center">
                     <a href="{{ route($route_prefix . '.edit', $item) }}" class="btn btn-sm btn-success btn-edit-row">
                         <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify

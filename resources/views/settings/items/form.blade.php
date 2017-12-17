@@ -3,21 +3,19 @@
         {!! BootForm::select('type_id', 'Type', $type_list) !!}
     </div>
     <div class="col-md-6">
-        {!! BootForm::text('code'); !!}
+        {!! BootForm::text('code') !!}
     </div>
 </div>
 <div class="row">
+
     <div class="col-md-6">
-        {!! BootForm::text('name_en'); !!}
-    </div>
-    <div class="col-md-6">
-        {!! BootForm::text('name_kh'); !!}
+        {!! BootForm::text('name') !!}
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        {!! BootForm::textarea('note'); !!}
+        {!! BootForm::textarea('note')!!}
     </div>
 </div>
 

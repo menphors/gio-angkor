@@ -1,18 +1,18 @@
 <div class="row">
     <div class="col-md-4">
-        {!! BootForm::text('code'); !!}
+        {!! BootForm::text('code') !!}
     </div>
     <div class="col-md-4">
-        {!! BootForm::text('name_en'); !!}
+        {!! BootForm::text('name') !!}
     </div>
-    <div class="col-md-4">
-        {!! BootForm::text('name_kh'); !!}
-    </div>
+    {{--<div class="col-md-4">--}}
+        {{--{!! BootForm::text('name_kh') !!}--}}
+    {{--</div>--}}
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        {!! BootForm::textarea('note'); !!}
+        {!! BootForm::textarea('note') !!}
     </div>
 </div>
 

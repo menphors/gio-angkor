@@ -3,7 +3,7 @@
         {!! BootForm::select('type_id', 'Type', $type_list) !!}
     </div>
     <div class="col-md-6">
-        {!! BootForm::text('code'); !!}
+        {!! BootForm::text('code') !!}
     </div>
 </div>
 

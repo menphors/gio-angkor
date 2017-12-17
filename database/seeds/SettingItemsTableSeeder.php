@@ -43,8 +43,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 's',
-            'name_en' => 'S',
-            'name_kh' => 'S kh',
+            'name' => 'S kh',
             'value' => 'S (Small Size)',
             'note' => 'SettingItem Seeder',
             'type_id' => $size->id
@@ -52,8 +51,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 'm',
-            'name_en' => 'M',
-            'name_kh' => 'M kh',
+            'name' => 'M kh',
             'value' => 'M (Meduim Size)',
             'note' => 'SettingItem Seeder',
             'type_id' => $size->id
@@ -61,8 +59,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 'l',
-            'name_en' => 'L',
-            'name_kh' => 'L kh',
+            'name' => 'L',
             'value' => 'L (Large Size)',
             'note' => 'SettingItem Seeder',
             'type_id' => $size->id
@@ -70,8 +67,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 'xl',
-            'name_en' => 'XL',
-            'name_kh' => 'XL kh',
+            'name' => 'XL',
             'value' => 'XL (Xtra Large Size)',
             'note' => 'SettingItem Seeder',
             'type_id' => $size->id
@@ -82,8 +78,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 'white',
-            'name_en' => 'White',
-            'name_kh' => 'White kh',
+            'name' => 'White',
             'value' => 'White Color',
             'note' => 'SettingItem Seeder',
             'type_id' => $color->id
@@ -91,8 +86,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 'black',
-            'name_en' => 'Black',
-            'name_kh' => 'Black kh',
+            'name' => 'Black',
             'value' => 'Black Color',
             'note' => 'SettingItem Seeder',
             'type_id' => $color->id
@@ -104,8 +98,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => '100g',
-            'name_en' => '100 G',
-            'name_kh' => '100 G kh',
+            'name' => '100 G',
             'value' => '100g (Gram)',
             'note' => 'SettingItem Seeder',
             'type_id' => $weight->id
@@ -113,8 +106,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => '1kg',
-            'name_en' => '10 Kg',
-            'name_kh' => '10 Kg kh',
+            'name' => '10 Kg',
             'value' => '10kg (Kilogram)',
             'note' => 'SettingItem Seeder',
             'type_id' => $weight->id
@@ -122,8 +114,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => '10kg',
-            'name_en' => '10 Kg',
-            'name_kh' => '10 Kg kh',
+            'name' => '10 Kg',
             'value' => '10 Kg (Kilogram)',
             'note' => 'SettingItem Seeder',
             'type_id' => $weight->id

@@ -11,10 +11,9 @@
     <tbody>
         @foreach($crud_list as $item)
             <tr>
-                <th>{{ $item->type->name_en }}</th>
+                <th>{{ $item->type->name }}</th>
                 <th>{{ $item->code }}</th>
-                <th>{{ $item->name_en }}</th>
-                <th>{{ $item->name_kh }}</td>
+                <th>{{ $item->name }}</th>
                 <td class="text-center">
                     <a href="{{ route($route_prefix . '.edit', $item) }}" class="btn btn-sm btn-success btn-edit-row">
                         <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify
