@@ -160,7 +160,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Brand',
-                    'url'  => 'show',
+                    'url'  => 'adminz/brand-lists',
                 ],
             ],
         ],
@@ -213,7 +213,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Level User',
-                    'url'  => '#',
+                    'url'  => 'adminz/level-lists',
                 ],
             ],
         ],

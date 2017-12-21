@@ -77,18 +77,18 @@ abstract class CrudController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
+     * get
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        $this->data[$this->crudItem] = $this->getSingleData(null);
+        $this->data[$this->crudItem] = $this->getSingleData(null);// beside index  param null to view
         return $this->renderView('create');
     }
 
     /**
      * Display the specified resource.
-     *
+     * get
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -100,19 +100,22 @@ abstract class CrudController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
+     * post
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         $this->data[$this->crudItem] = $this->getSingleData($id);
-        return $this->renderView('edit');
+        return $this->renderView('edit');//view edit
     }
     
     /**
      * Store a newly created resource in storage.
-     *
+     *validation: have @param
+     * file : route index
+     * post
+     * update:get
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */

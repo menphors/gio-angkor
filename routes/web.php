@@ -24,9 +24,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/welcome', 'HomeController@index')->name('welcome');
-
+// resource put delete update get show data post request
 Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::resource('setting-types', 'SettingTypesController');
     Route::resource('setting-items', 'SettingItemsController');
     Route::resource('level-lists','LevelsController');
+    Route::resource('brand-lists','BrandsController');
 });

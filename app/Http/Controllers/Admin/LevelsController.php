@@ -8,6 +8,7 @@ use App\Http\Controllers\CrudController;
 
 class LevelsController extends CrudController
 {
+    protected $itemName = 'Level';
     protected $modelPath = 'App\Level';//model list data table paramete model
     protected $viewPrefix = 'admin.levels';//view find view
     protected $routePrefix = 'level-lists';//url route link

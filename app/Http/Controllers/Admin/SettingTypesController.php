@@ -12,7 +12,7 @@ class SettingTypesController extends CrudController
     protected $viewPrefix = 'settings.types';
     protected $routePrefix = 'setting-types';
     
-    protected $itemPerPage = 1;
+    protected $itemPerPage = 4;
     protected $siteTitle = 'Admin - Setting Type';
     protected $pageTitle = 'Setting Type';
     

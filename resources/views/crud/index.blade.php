@@ -3,12 +3,15 @@
 @section('title', str_plural($site_title) . ' - listing')
 
 @section('content_header')
-    <h1>
-        {{ str_plural($page_title) . ' - listing' }}
-        <a href="{{ route($route_prefix . '.create') }}" class="btn btn-sm btn-primary pull-right">
-            <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Create New
-        </a>
-    </h1>
+    <div class="col-xs-12">
+        <h3>
+            {{--title plural person--}}
+            {{ str_plural($page_title) . ' - listing' }}
+            <a href="{{ route($route_prefix . '.create') }}" class="btn btn-sm btn-primary pull-right">
+                <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Create New
+            </a>
+        </h3>
+    </div>
 @stop
 
 @section('content')
@@ -18,16 +21,19 @@
         </div>
     @endif
     @if(view()->exists($view_include_search))
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
                 {!! BootForm::open(['route' => $route_prefix . '.index', 'method' => 'get']) !!}
                     @include($view_include_search)
                 {!! BootForm::close() !!}
+                </div>
             </div>
         </div>
     @endif
-    <div class="panel panel-default">
-        <div class="panel-body">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
             @if(view()->exists($view_include_table))
                 @include($view_include_table)
             @else
@@ -35,8 +41,9 @@
                     <p>No views <strong>table.blade.php</strong> found in <strong>views.{{ $view_prefix }}</strong></p>
                 </div>
             @endif
+                </div>
+            </div>
         </div>
-    </div>
 @stop
 
 @section('js')

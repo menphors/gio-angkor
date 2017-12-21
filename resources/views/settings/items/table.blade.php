@@ -32,7 +32,7 @@
     </tbody>
 </table>
 
-<div class="row">
+<div class="row pull-right">
     <div class="col-md-12">
         {!! $crud_list->links() !!}
     </div>

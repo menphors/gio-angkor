@@ -15,7 +15,7 @@
                     <a href="{{ route($route_prefix . '.edit', $item) }}" class="btn btn-sm btn-success btn-edit-row">
                         <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify
                     </a>
-                    
+
                     <a href="javascript:void(0);" class="btn btn-sm btn-danger btn-delete-row">
                         <i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Delete
                     </a>
@@ -30,7 +30,7 @@
     </tbody>
 </table>
 
-<div class="row">
+<div class="row pull-right">
     <div class="col-md-12">
         {!! $crud_list->links() !!}
     </div>

@@ -1,9 +1,9 @@
 <table class="table table-bordered crud-table">
     <thead>
         <tr>
-            <th>LevelID</th>
-            <th>Level Name</th>
-            <th>Slug</th>
+            <th>BrandID</th>
+            <th>Brand Name</th>
+            <th>Brand Image</th>
             <th>Remark</th>
             <th>Action</th>
         </tr>
@@ -33,7 +33,7 @@
     @endforeach
     </tbody>
 </table>
-<div class="row">
+<div class="row pull-right">
     <div class="col-md-12">
         {!! $crud_list->links() !!}
     </div>
