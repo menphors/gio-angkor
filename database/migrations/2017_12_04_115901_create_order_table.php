@@ -16,14 +16,14 @@ class CreateOrderTable extends Migration
         Schema::create('tbl_order', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->double('order_unit_price',10);
+            $table->double('order_unit_price',10)->nullable();
             $table->integer('quantity')->unsigned();
-            $table->string('discount',255);
-            $table->dateTime('order_date');
-            $table->text('status_product');
-            $table->string('published',5);
-            $table->integer('user_id')->unsigned();
-            $table->integer('product_id')->unsigned();
+            $table->string('discount',255)->nullable();
+            $table->dateTime('order_date')->nullable();
+            $table->text('status_product')->nullable();
+            $table->string('published',5)->nullable();
+            $table->integer('user_id')->nullable();
+            $table->integer('product_id')->nullable();
             $table->timestamps();
             $table->rememberToken();
         });
