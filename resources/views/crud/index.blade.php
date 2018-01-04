@@ -16,12 +16,12 @@
 
 @section('content')
     @if(Session::has('success'))
+        <div class="col-xs-12">
         <div class="alert alert-success">
             <p>{{ session('success') }}</p>
         </div>
     @endif
     @if(view()->exists($view_include_search))
-        <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
                 {!! BootForm::open(['route' => $route_prefix . '.index', 'method' => 'get']) !!}

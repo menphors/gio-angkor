@@ -189,7 +189,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Discount',
-                    'url'  => '#',
+                    'url'  => 'adminz/discount',
                 ],
             ],
         ],

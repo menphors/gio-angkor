@@ -36,4 +36,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::resource('level-lists','LevelsController');
     Route::resource('brand-lists','BrandsController');
     Route::resource('order-lists','OrdersController');
+    Route::resource('discount','DiscountsController');
 });
