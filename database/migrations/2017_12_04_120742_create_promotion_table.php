@@ -16,19 +16,19 @@ class CreatePromotionTable extends Migration
         Schema::create('tbl_promotion', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->text('promotion_name');
-            $table->string('promotion_prices',50);
-            $table->text('promotion_image');
-            $table->string('discount_percentage',10);
-            $table->integer('product_id')->unsigned();
-            $table->integer('brand_id')->unsigned();
-            $table->integer('ordering')->unsigned();
-            $table->integer('category_id')->unsigned();
-            $table->date('promotion_expire_date');
-            $table->date('date_from');
+            $table->text('promotion_name')->nullable();
+            $table->string('promotion_prices',50)->nullable();
+            $table->text('promotion_image')->nullable();
+            $table->string('discount_percentage',10)->nullable();
+            $table->integer('product_id')->nullable();
+            $table->integer('brand_id')->nullable();
+            $table->integer('ordering')->nullable();
+            $table->integer('category_id')->nullable();
+            $table->date('promotion_expire_date')->nullable();
+            $table->date('date_from')->nullable();
             $table->date('date_to');
-            $table->string('published',5);
-            $table->string('active',5);
+            $table->string('published',5)->nullable();
+            $table->string('active',5)->nullable();
             $table->timestamps();
             $table->rememberToken();
         });

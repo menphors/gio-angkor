@@ -167,7 +167,7 @@ return [
         [
             'text'    => 'Promotion',
             'icon'        => 'gift',
-            'url' => '#'
+            'url' => 'adminz/promotions'
         ],
         [
             'text'    => 'Report',
