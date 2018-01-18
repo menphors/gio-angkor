@@ -16,9 +16,9 @@ class CreateGroupCategoryTable extends Migration
         Schema::create('tbl_group_category', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->text('group_cat_name');
-            $table->integer('category_id')->unsigned();
-            $table->integer('sub_category_id')->unsigned();
+            $table->text('group_cat_name')->nulllable();
+            $table->integer('category_id')->nulllable();
+            $table->integer('sub_category_id')->nulllable();
             $table->timestamps();
             $table->rememberToken();
         });

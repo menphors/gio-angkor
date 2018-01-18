@@ -121,11 +121,11 @@ return [
             'submenu' => [
                 [
                     'text' => 'Group Category',
-                    'url'   => '#',
+                    'url'   => 'adminz/group-category',
                 ],
                 [
                     'text' => 'Sub Category',
-                    'url'  => '#',
+                    'url'  => 'adminz/subcategory',
                 ],
             ],
         ],
@@ -142,7 +142,7 @@ return [
         [
             'text'   => 'Log Activity',
             'icon'        => 'eye-slash',
-            'url' => '#',
+            'url' => 'adminz/log-activity',
         ],
         [
             'text'    => 'Order',
