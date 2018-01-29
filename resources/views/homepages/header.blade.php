@@ -4,7 +4,7 @@
 
   <title></title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=no">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
