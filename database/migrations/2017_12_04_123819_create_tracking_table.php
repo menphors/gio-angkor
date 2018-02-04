@@ -16,10 +16,10 @@ class CreateTrackingTable extends Migration
         Schema::create('tbl_tracking', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->string('tracking_number',150);
-            $table->integer('store_id')->unsigned();
-            $table->text('status');
-            $table->integer('product_id')->unsigned();
+            $table->string('tracking_number',150)->nullable();
+            $table->integer('store_id')->nullable();
+            $table->text('status')->nullable();
+            $table->integer('product_id')->nullable();
             $table->timestamps();
             $table->rememberToken();
         });

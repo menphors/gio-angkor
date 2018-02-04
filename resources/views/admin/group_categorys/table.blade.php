@@ -2,6 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Men phors
+ * Date: 12/29/2017
+ * Time: 2:12 PM
+ */?>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Men phors
  * Date: 12/21/2017
  * Time: 9:34 PM
  */
@@ -9,22 +16,18 @@
 <table class="table table-bordered crud-table">
     <thead>
     <tr>
-        <th>Brand#</th>
-        <th>Brand Name</th>
-        <th>Brand Image</th>
-        <th>Ordering</th>
+        <th>Group CategoryID</th>
+        <th>Group Category Name</th>
         <th>Action</th>
     </tr>
     <thead>
     <tbody>
-    @foreach($crud_list as $brands)
+    @foreach($crud_list as $group_category)
         <tr>
-            <td>{{$brands->id}}</td>
-            <td>{{$brands->brand_name}}</td>
-            <td>{{$brands->images_url}}</td>
-            <td>{{$brands->ordering}}</td>
+            <td>{{$group_category->id}}</td>
+            <td>{{$group_category->group_cat_name}}</td>
             <td>
-                <a href="{{ route($route_prefix . '.edit', $brands) }}" class="btn btn-sm btn-success btn-edit-row">
+                <a href="{{ route($route_prefix . '.edit', $group_category) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify
                 </a>
 
@@ -32,7 +35,7 @@
                     <i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Delete
                 </a>
 
-                <form method="POST" class="form-delete-row" action="{!! route($route_prefix . '.destroy', $brands) !!}" accept-charset="UTF-8">
+                <form method="POST" class="form-delete-row" action="{!! route($route_prefix . '.destroy', $group_category) !!}" accept-charset="UTF-8">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
                 </form>
@@ -46,3 +49,4 @@
         {!! $crud_list->links() !!}
     </div>
 </div>
+
