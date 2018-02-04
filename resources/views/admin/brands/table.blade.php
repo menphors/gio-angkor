@@ -9,7 +9,7 @@
 <table class="table table-bordered crud-table">
     <thead>
     <tr>
-        <th>Brand ID</th>
+        <th>Brand#</th>
         <th>Brand Name</th>
         <th>Brand Image</th>
         <th>Ordering</th>
