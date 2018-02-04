@@ -15,7 +15,7 @@
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-            {!! BootForm::open(['model' => $crud_item, 'store' => $route_prefix . '.store', 'update' => $route_prefix . '.update']) !!}
+            {!! BootForm::open(['model' => $crud_item, 'store' => $route_prefix . '.store', 'update' => $route_prefix . '.update', 'files'=>true]) !!}
                 @if (view()->exists($view_prefix . '.form'))
                     @include($view_prefix . '.form')
                 @else

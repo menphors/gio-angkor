@@ -18,7 +18,7 @@ class CreatePromotionTable extends Migration
             $table->increments('id');
             $table->text('promotion_name')->nullable();
             $table->string('promotion_prices',50)->nullable();
-            $table->text('promotion_image')->nullable();
+            $table->text('promotion_image')->nullable()->default(null);
             $table->string('discount_percentage',10)->nullable();
             $table->integer('product_id')->nullable();
             $table->integer('brand_id')->nullable();

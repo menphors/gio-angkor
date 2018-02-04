@@ -17,4 +17,5 @@ class PromotionsController extends CrudController
     protected $itemPerPage = 4;
     protected $siteTitle = 'Promotion';
     protected $pageTitle = 'Store Promotion';
+
 }
