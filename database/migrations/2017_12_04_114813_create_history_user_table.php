@@ -16,10 +16,10 @@ class CreateHistoryUserTable extends Migration
         Schema::create('tbl_history_user', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->string('quantity',25);
-            $table->double('price',25);
-            $table->date('date');
-            $table->string('status',255);
+            $table->string('quantity',25)->nullable();
+            $table->double('price',25)->nullable();
+            $table->date('date')->nullable();
+            $table->string('status',255)->nullable();
             $table->timestamps();
             $table->rememberToken();
         });
