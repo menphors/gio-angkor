@@ -121,7 +121,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Group Category',
-                    'url'   => '#',
+                    'url'   => 'adminz/group-category',
                 ],
                 [
                     'text' => 'Sub Category',
@@ -150,7 +150,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Tracking',
-                    'url'  => '#',
+                    'url'  => 'adminz/tracking',
                 ],
             ],
         ],

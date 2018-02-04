@@ -14,6 +14,8 @@
         <th>Discount</th>
         <th>Order Date</th>
         <th>Status Product</th>
+        <th>Official</th>
+        <th>Action</th>
     </tr>
     <thead>
     <tbody>

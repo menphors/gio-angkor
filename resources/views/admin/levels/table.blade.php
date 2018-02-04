@@ -1,20 +1,24 @@
 <table class="table table-bordered crud-table">
     <thead>
         <tr>
-            <th>BrandID</th>
-            <th>Brand Name</th>
-            <th>Brand Image</th>
+            <th>Level#</th>
+            <th>Login/Email</th>
+            <th>Level Name</th>
+            <th>Level slog</th>
             <th>Remark</th>
+            <th>Last Login</th>
             <th>Action</th>
         </tr>
     <thead>
     <tbody>
     @foreach($crud_list as $levels)
         <tr>
-            <td>{{$levels->id}}</td>
+            <td><input type="checkbox" name="chk[{{$levels->id}}]"> </td>
+            <td></td>
             <td>{{$levels->level_name}}</td>
             <td>{{$levels->level_slog}}</td>
             <td>{{$levels->remark}}</td>
+            <td></td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $levels) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify
