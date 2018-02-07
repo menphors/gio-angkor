@@ -16,4 +16,22 @@ class CategoryController extends CrudController
     protected $itemPerPage = 5;//pagination
     protected $siteTitle = 'Admin - Category'; //tittle
     protected $pageTitle = 'Category';//
+
+
+    public function testCat() {
+        return [
+            'AllCategoryWithParent' => Category::with('parent')->get(),
+            'AllCategoryWithChildren' => Category::with('children')->get(),
+            'ParentsWithChildren' => Category::with('children')->where('parent_id','<=',0)->get(),
+            'ParentsWithChildren::allParents' => Category::with('children')->allParents()->get(),
+            'ChildrenWithParent' => Category::with('parent')->where('parent_id','>',0)->get(),
+            'ChildrenWithParent::allChildren' => Category::with('parent')->allChildren()->get(),
+            'Count::allParents' => Category::allParents()->count(),
+            'Count::allChildren' => Category::allChildren()->count(),
+            'CountAllCategories' => Category::count(),
+            'ListAllCategories' => Category::pluck('name', 'id'),
+            'ListAllParents' => Category::allParents()->pluck('name', 'id'),
+            'ListAllChildren' => Category::allChildren()->pluck('name', 'id'),
+        ];
+    }
 }
