@@ -16,10 +16,10 @@ class CreateCategoryTable extends Migration
         Schema::create('tbl_category', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->text('category_name')->nulllable();
+            $table->text('name')->nulllable();
+            $table->integer('parent_id')->nulllable()->default(0);
             $table->integer('ordering')->nulllable();
-            $table->integer('pro_id')->nulllable();
-            $table->string('published',5)->nulllable();
+            $table->tinyInteger('published')->nulllable();
             $table->timestamps();
             $table->rememberToken();
         });
