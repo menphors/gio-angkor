@@ -38,6 +38,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::resource('log-activity','LogActivitysController');
     Route::resource('group-category','GroupCategoryController');
     Route::resource('category','CategoryController');
+    Route::get('category-test','CategoryController@testCat');
     Route::resource('subcategory','SubCategoryController');
     Route::resource('tracking','TrackingsController');
     Route::resource('promotions','PromotionsController');
