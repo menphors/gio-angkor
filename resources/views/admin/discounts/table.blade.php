@@ -8,12 +8,12 @@
 <table class="table table-bordered crud-table">
     <thead>
     <tr>
-        <th>DiscountID</th>
-        <th>Discount Percentage</th>
+        <th>Discount#</th>
+        <th>Discount Per(%)</th>
         <th>Quantity</th>
-        <th>ProductID</th>
-        <th>CategoryID</th>
-        <th>StoreID</th>
+        <th>Product#</th>
+        <th>Category#</th>
+        <th>Store#</th>
         <th>From</th>
         <th>To</th>
         <th>Official</th>

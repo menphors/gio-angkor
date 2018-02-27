@@ -8,15 +8,15 @@
 <table class="table table-bordered crud-table">
     <thead>
     <tr>
-        <th>ProID</th>
+        <th>Pro#</th>
         <th>Name</th>
         <th>Price</th>
         <th>Image</th>
-        <th>Dis Per%</th>
-        <th>ProductID</th>
-        <th>BrandID</th>
-        <th>Ordering</th>
-        <th>CatID</th>
+        <th>Disc Per(%)</th>
+        <th>Product#</th>
+        <th>Brand#</th>
+        <th>Ordered</th>
+        <th>Cat#</th>
         <th>Exp Date</th>
         <th>From</th>
         <th>To</th>

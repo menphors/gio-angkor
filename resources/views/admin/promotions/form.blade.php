@@ -71,11 +71,11 @@
     </div>
 </div>
 
-<div class="row" style="height: 30px !important;">
-    <div class="col-md-6">
-        {!! BootForm::date('date_to')!!}
-    </div>
-</div>
+{{--<div class="row" style="height: 30px !important;">--}}
+    {{--<div class="col-md-6">--}}
+        {{--{!! BootForm::date('date_to')!!}--}}
+    {{--</div>--}}
+{{--</div>--}}
 
 <div class="row">
     <div class="col-md-12">
