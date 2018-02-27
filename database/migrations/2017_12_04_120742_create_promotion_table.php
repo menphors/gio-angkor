@@ -26,7 +26,7 @@ class CreatePromotionTable extends Migration
             $table->integer('category_id')->nullable();
             $table->date('promotion_expire_date')->nullable();
             $table->date('date_from')->nullable();
-            $table->date('date_to')->nullable();
+            $table->date('date_to')->nullable()->default(null);
             $table->string('published',5)->nullable();
             $table->string('active',5)->nullable();
             $table->timestamps();
