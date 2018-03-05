@@ -132,7 +132,7 @@ return [
         [
             'text'    => 'Disput',
             'icon'        => 'lock',
-            'url' => '#',
+            'url' => 'adminz/disput',
         ],
         [
             'text'   => 'Gallery Main',

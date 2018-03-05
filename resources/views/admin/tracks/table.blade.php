@@ -15,12 +15,12 @@
 <table class="table table-bordered crud-table">
     <thead>
     <tr>
-        <th>OrderID</th>
-        <th>Tracking Number</th>
-        <th>StoreID</th>
-        <th>Status Tracking</th>
-        <th>ProductID</th>
-        <th>Create Date</th>
+        <th>Order#</th>
+        <th>Tracking No</th>
+        <th>Store#</th>
+        <th>Status</th>
+        <th>Product#</th>
+        <th>Created Date</th>
         <th>Updated Date</th>
         <th>Action</th>
     </tr>

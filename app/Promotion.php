@@ -17,7 +17,6 @@ class Promotion extends CrudModel
         'published' => 'required',
         'promotion_expire_date' => 'nullable|date',
         'date_from' => 'nullable|date',
-        'date_to' => 'nullable|date',
     ];
     protected $table = 'tbl_promotion';//table name
     protected $fillable = [
@@ -31,7 +30,6 @@ class Promotion extends CrudModel
         'category_id',
         'promotion_expire_date',
         'date_from',
-        'date_to',
         'published',
         'active'
     ];
