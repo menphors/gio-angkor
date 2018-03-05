@@ -5,7 +5,9 @@ namespace App;
 
 class Gallery extends CrudModel
 {
-
+    public static $validationRules = [
+        'gallery_images' => 'mimes:jpeg,bmp,png||max:5000',
+    ];
     protected $table = 'tbl_gallery';//table name
     protected $fillable = [
         'promotion_name',
