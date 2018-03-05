@@ -12,7 +12,12 @@ class LogActivity extends CrudModel
         'quantity',
         'price',
         'date',
-        'status'
+        'status',
+        'created_at',
+        'updated_at',
+        'flg_login',
+        'flg_logout',
+        'session',
     ];
 
 

@@ -43,6 +43,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::resource('tracking','TrackingsController');
     Route::resource('promotions','PromotionsController');
     Route::resource('discount','DiscountsController');
+    Route::resource('gallery','GalleriesController');
 
 });
 Route::get('upload','UploadController@showUpload');

@@ -20,6 +20,9 @@ class CreateHistoryUserTable extends Migration
             $table->double('price',25)->nullable();
             $table->date('date')->nullable();
             $table->string('status',255)->nullable();
+            $table->string('flg_login',255)->nullable();
+            $table->string('flg_logout',255)->nullable();
+            $table->string('session',255)->nullable();
             $table->timestamps();
             $table->rememberToken();
         });
