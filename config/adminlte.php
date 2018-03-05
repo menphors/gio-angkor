@@ -137,7 +137,7 @@ return [
         [
             'text'   => 'Gallery Main',
             'icon'        => 'file-image-o',
-            'url' => '#',
+            'url' => 'adminz/gallery',
         ],
         [
             'text'   => 'Log Activity',
