@@ -16,10 +16,10 @@ class CreateBrandTable extends Migration
         Schema::create('tbl_brand', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->text('brand_name');
-            $table->text('images_url');
-            $table->integer('ordering')->unsigned();
-            $table->string('official',15);
+            $table->text('brand_name')->nullable();
+            $table->text('images_url')->nullable();
+            $table->integer('ordering')->nullable();
+            $table->string('official',15)->nullable();
             $table->timestamps();
             $table->rememberToken();
         });

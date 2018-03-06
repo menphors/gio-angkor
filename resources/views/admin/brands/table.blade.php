@@ -21,15 +21,15 @@
         <tr>
             <td>{{$brands->id}}</td>
             <td>{{$brands->brand_name}}</td>
-            <td>{{$brands->images_url}}</td>
+            <td><img src="{{URL::asset('/uploads/'.$brands->images_url)}}" style="width:50px;height:50px;"></td>
             <td>{{$brands->ordering}}</td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $brands) }}" class="btn btn-sm btn-success btn-edit-row">
-                    <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify
+                    <i class="fa fa-pencil" aria-hidden="true"></i>Edit
                 </a>
 
                 <a href="javascript:void(0);" class="btn btn-sm btn-danger btn-delete-row">
-                    <i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Delete
+                    <i class="fa fa-times" aria-hidden="true"></i>Delete
                 </a>
 
                 <form method="POST" class="form-delete-row" action="{!! route($route_prefix . '.destroy', $brands) !!}" accept-charset="UTF-8">
