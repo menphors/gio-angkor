@@ -18,7 +18,7 @@ class CreateSubCategoryTable extends Migration
             $table->increments('id');
             $table->integer('cat_group_id')->nulllable();
             $table->text('sub_category_name')->nulllable();
-            $table->string('published',5);
+            $table->string('published',15)->nulllable();
             $table->timestamps();
             $table->rememberToken();
 

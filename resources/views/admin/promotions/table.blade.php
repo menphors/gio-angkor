@@ -30,9 +30,9 @@
         <tr>
             <td>{{$promotions->id}}</td>
             <td>{{$promotions->promotion_name}}</td>
-            <td>{{$promotions->promotion_prices}}</td>
+            <td>{{$promotions->promotion_prices}}$</td>
             <td><img src="{{URL::asset('/uploads/'.$promotions->promotion_image)}}" style="width:50px;height:50px;"></td>
-            <td>{{$promotions->discount_percentage}}</td>
+            <td>{{$promotions->discount_percentage}}%</td>
             <td>{{$promotions->product_id}}</td>
             <td>{{$promotions->brand_id}}</td>
             <td>{{$promotions->ordering}}</td>

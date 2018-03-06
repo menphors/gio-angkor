@@ -7,7 +7,7 @@
  */?>
 <div class="row">
     <div class="col-md-6">
-        {!! BootForm::text('discount_percentage') !!}
+        {!! BootForm::number('discount_percentage') !!}
     </div>
 </div>
 <div class="row">
