@@ -38,7 +38,8 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container">
-    <h1>Store Reports <small>(<i class="fa-line-chart"></i>)</small></h1>
+    <h2>Store Reports</h2>
+    <hr style="border-color: #001a35;">
     <div class="row">
         <div class="col-md-10"><button type="button" class="btn btn-success pull-right "><b><i>+</i>&nbsp;&nbsp;Extract</b></button></div>
         <br><br>

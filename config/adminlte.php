@@ -179,7 +179,7 @@ return [
                 ],
                 [
                     'text' => 'User',
-                    'url'  => '#',
+                    'url'  => 'adminz/users-report',
                 ],
             ],
         ],
