@@ -175,7 +175,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Store',
-                    'url'  => '#',
+                    'url'  => 'adminz/store-report',
                 ],
                 [
                     'text' => 'User',
