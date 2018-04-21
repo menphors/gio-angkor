@@ -41,7 +41,9 @@
     <h2>Store Reports</h2>
     <hr style="border-color: #001a35;">
     <div class="row">
-        <div class="col-md-10"><button type="button" class="btn btn-success pull-right "><b><i>+</i>&nbsp;&nbsp;Extract</b></button></div>
+        <div class="col-md-10"><button type="button" class="btn btn-success pull-right "><b><i>+</i>&nbsp;&nbsp;<a href="{{ url('/adminz/export')}}">Extract</a></b></button></div>
+        {{ csrf_field() }}
+        <br/>
         <br><br>
         <div class="col-md-4">
             <div class="panel panel-primary">

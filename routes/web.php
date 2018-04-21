@@ -47,6 +47,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::resource('disput','DisputController');
     Route::get('store-report','StoreReportsController@index');
     Route::get('users-report','UsersReportsController@index');
+    Route::get('export','UsersReportsController@export_excel');
 
 });
 Route::get('upload','UploadController@showUpload');
