@@ -37,17 +37,15 @@ body{
 .menu ul li{
 	padding-left: 10px;
 	height: 30px;
-	background-color: #FFE4C4;
+	background-color: #d1d2d4;
 	
 }
 .title_box{
-	
-height:40px;
-background:url(images/menu_title_bg.gif) no-repeat center;
+border-radius: 8px 0px 0px 0px;
+height:35px;
+padding-top: 4px;
 background-color: #B71C1C;
-text-align:center;
-font-size:20px;
-font-weight:bold;
+font-size:18px;
 color:#fff;
 line-height:30px;
 
@@ -64,9 +62,8 @@ line-height:30px;
 	margin-top: -40px;
 }
 #fonts{
-	font-size:12px;
-	
-	background-color: #E0E0E0;
+	font-size:13px;
+	background-color: #d1d2d4;
 }
 #fontss{
 	font-size:15px;
