@@ -49,7 +49,12 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::get('users-report','UsersReportsController@index');
     Route::get('export','UsersReportsController@export_excel');
     Route::get('export-user','UsersReportsController@user_export');
+});
 
+
+Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
+
+    Route::get('order','OrderController@index');
 });
 Route::get('upload','UploadController@showUpload');
 Route::post('upload','UploadController@saveUpload');
