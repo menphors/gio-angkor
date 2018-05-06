@@ -1,79 +1,13 @@
+
+@extends('homepages.footer')
+@section('footer')
+@stop
+@section('contents')
+
 @extends('homepages.header')
-<!-- Nav header -->
-<div class="container-fluid " >
-    <div class="container">
-        <div class="row justify-content-between ">
-            <nav class="nav col colorback no-gutters">
-                       
-                <a class="navbar-brand" href="#">
-                    <img src="images/cambodia.png" width="30px" height="20px"  >
-                </a>
-                <a class="navbar-brand" href="#">
-                    <img src="images/uk.png" width="30px" height="20px" >
-                </a>
-                <a class="navbar-brand mr-auto" style=" font-size:12px;color: black;" href="#">Tel: 023 222 555</a>
-
-                <a class="nav-link fa fa-shopping-cart text-dark Active " href="#"><i class=" fa-lg" aria-hidden="true"></i> Card <span class="badge badge-pill badge-danger" style="border: 2px solid #">10</span></a>
-
-                <a class="nav-link fa fa-heartbeat  text-dark" aria-hidden="true" href="#"><i class=" fa-lg" aria-hidden="true"></i> Wish List</a>
-
-                <a class="nav-link fa fa-lock text-dark" aria-hidden="true" href="#"><i class=" fa-lg" aria-hidden="true"></i> Sign In</a>
-
-                <a class="nav-link fa fa-users text-dark" aria-hidden="true" href="#"><i class="" aria-hidden="true"></i> Free Join</a>
-            </nav>
-        </div>                      
-    </div> 
-</div>
-<!-- Nav header end -->
-
-<div class="container-fluid  " style="background-color: #e7e7e8;">
-  <div class="container ">
-    <div class="row ">
-      <div class="col-3  my-5 mx-auto"><img src="images/logogio.png" alt="logo" class="img-thumbnail" style=" height: 50px"></div>
-      <div class="col-9 my-5 mx-auto" style="margin-top: -50px;">
-        <div class="input-group " style="    margin-left: -13px;    width: 852px;">                              
-                <input type="text" class="form-control" placeholder="Seach...">
-                <span class="input-group-btn  mr-3"> 
-                  <button class="btn btn btn-secondary dropdown" data-toggle="dropdown" type="submit">All Categries</button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>  
-                  <button class="btn btn-danger" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </span>
-                <ul class="nav float-right" style="margin-right:;">
-                  <li class="nav-item border border-dark border-right-0">
-                    <a class="nav-link">800 million</a>
-                  </li>
-                  <li class="nav-item border border-dark">
-                    <a class="nav-link">200.000 successful</a>
-                  </li>
-                </ul>                
-              </div>
-      </div>      
-    </div>
-  </div>
-</div>
-
-<div class="container">
-        <div class="row help ">
-            <div class=" title_box col-lg-3 " >Categories</div>
-                <nav class="nav col-lg-9 " id="fonts">
-                    <a class="nav-link " id="grey" href="#">Export US</a>
-                    <a class="nav-link" id="grey" href="#">Customer consultant</a>
-                    <a class="nav-link" id="grey" href="#">Shoping guide</a>
-                    <a class="nav-link" id="grey" href="#">Customer protection</a>
-                    <a class="nav-link" id="grey" href="#">International transportation</a>
-                    <a class="nav-link" id="grey" href="#">Pricing & Checking size</a>
-                    <div class="linewidth"></div>                        
-                </nav>
-        </div>
-                    
-
-                    
-    </div>
-  </div>
+@section('navigation-bar')
+@stop
+@section('content')
 
   <div class="container">
         <div class="row ">
@@ -326,55 +260,8 @@
     </div>
 </div>
 
-<div class="container-fluid" style="padding-top: 20px;">
-            <div class="row" style=" background-color: #e7e7e8;height: 180px; text-align: center;">
-              <div class="col-lg-3">
-                <h5>How to Buy</h5>
-                  <ul class="list-unstyled">
-                    <li>Making Payments</li>
-                    <li>Delivery Options</li>
-                    <li>Buyer Protection</li>
-                    <li>New User Guide</li>
-                   </ul>
-              </div>
-
-              <div class="col-lg-3">
-                <h5>Customer Service</h5>
-                  <ul class="list-unstyled">
-                    <li>Customer Service</li>
-                    <li>Transaction Service Agreement</li>
-                    <li>Take Our Survey</li>
-                    <li>Organization & Technical Support</li>
-                   </ul>
-              </div>
-
-              <div class="col-lg-3">
-                <h5>Partner Promotion</h5>
-                <ul class="list-unstyled">
-                  <li>Partnerships</li>
-                  <li>Affiliate Program</li>
-                 </ul>        
-              </div>
-
-              <div class="col-lg-3">
-                <h5>CONTACT</h5>
-                <ul class="list-unstyled">
-                  <li>support@gioangkor.com</li>
-                  <li>(+855) 23 999 888</li>
-                  <li>The headquarter in US:</li>
-                  <li>8522, Oasis Ave Westminster,</li>
-                  <li>CA 92683-4629</li>
-                 </ul> 
-              </div>
-              
-            </div>
-          </div>
-        
-
-          <div class="container-fluid">
-            <div class="row " style=" background-color: #d1d2d4; height: 30px;padding-left: 100px;">
-              Copyright © 1995-2016 eBay Inc. All Rights Reserved.
-            </div>
-          </div>
 
 
+
+@stop
+@stop
