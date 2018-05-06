@@ -56,8 +56,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
 
 
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
-
     Route::get('order','OrderController@index');
+    Route::get('detail','StorepageController@index');
 });
 Route::get('upload','UploadController@showUpload');
 Route::post('upload','UploadController@saveUpload');
