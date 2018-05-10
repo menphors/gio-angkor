@@ -1,3 +1,7 @@
+@extends('homepages.header')
+@section('navigation-bar')
+@stop
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -306,3 +310,4 @@
 <!-- Bootstrap core JavaScript -->
 </body>
 </html>
+@stop
