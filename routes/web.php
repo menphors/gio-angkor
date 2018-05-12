@@ -17,9 +17,6 @@ Route::get('/', function () {
 Route::get('/homepage', function () {
     return view('homepages.homepage');
 });
-Route::get('/store', function () {
-    return view('StorePage.store');
-});
 Route::get('/testing', function () {
     return view('testing.index');
 });
@@ -58,6 +55,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('order','OrderController@index');
     Route::get('detail','StorepageController@index');
+    Route::get('store', function () {
+        return view('front.StorePage.store');
+    });
 });
 Route::get('upload','UploadController@showUpload');
 Route::post('upload','UploadController@saveUpload');
