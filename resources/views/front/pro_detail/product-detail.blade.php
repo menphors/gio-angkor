@@ -4,16 +4,13 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>4 Col Portfolio - Start Bootstrap Template</title>
-
     <!-- Bootstrap core CSS -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/bootstrap-combined.min.css')}}" rel="stylesheet" id="bootstrap-css">
@@ -239,7 +236,6 @@
                             <li data-target="#myCarousel" data-slide-to="1"></li>
                             <li data-target="#myCarousel" data-slide-to="2"></li>
                         </ol>
-
                         <!-- Carousel items -->
                         <div class="carousel-inner">
 
@@ -269,13 +265,10 @@
                                     <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
                                 </div><!--/row-fluid-->
                             </div><!--/item-->
-
                         </div><!--/carousel-inner-->
-
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lt;</a>
                         <a class="right carousel-control" href="#myCarousel" data-slide="next">&gt;</a>
                     </div><!--/myCarousel-->
-
                 </div><!--/well-->
             </div>
         </div>
@@ -301,13 +294,8 @@
 <!-- /.container -->
 <div style="height: 20px;"></div>
 <!-- Footer -->
-<footer class="py-5 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-    </div>
-    <!-- /.container -->
-</footer>
 <!-- Bootstrap core JavaScript -->
 </body>
 </html>
+@include('homepages.footer')
 @stop

@@ -5,10 +5,38 @@
  * Time: 9:56 PM
  */?>
 @extends('homepages.header')
-@include('homepages.head')
 @section('content')
-    <div style="height:40px"></div>
-<div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/order.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/order.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bootstrap.js') }}"></script>
+    <style type="text/css">
+        #search{
+            width: 600px;
+
+        }
+        #research{
+            width: 300px;
+        }
+        .width-space{
+            width: 24%;
+        }
+        .space-right{
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 20px;"></div>
+<div class="container">
     <div class="stepwizard col-md-offset-3">
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step">
@@ -98,7 +126,12 @@
         </div>
     </div>
 </div>
-@extends('homepages.footer')
+</body>
+</html>
+@include('homepages.footer')
+@stop
+
+
 
 
 
