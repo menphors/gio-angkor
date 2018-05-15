@@ -36,3 +36,19 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::resource('level-lists','LevelsController');
     Route::resource('brand-lists','BrandsController');
 });
+
+Route::get('/product-list', function () {
+    return view('login_form.login');
+});
+//Route::get('/login', function () {
+//    return view('login_form.login');
+//});
+Route::get('/Login', function (){
+    return view('form_login.Login');
+});
+Route::get('/sign_in', function (){
+    return view('form_login.sign_in');
+});
+Route::get('/categories_collapse', function (){
+    return view('categories.categories_collapse');
+});
