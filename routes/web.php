@@ -61,3 +61,19 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
 });
 Route::get('upload','UploadController@showUpload');
 Route::post('upload','UploadController@saveUpload');
+
+Route::get('/product-list', function () {
+    return view('login_form.login');
+});
+//Route::get('/login', function () {
+//    return view('login_form.login');
+//});
+Route::get('/login', function (){
+    return view('form_login.Login');
+});
+Route::get('/sign_in', function (){
+    return view('form_login.sign_in');
+});
+Route::get('/categories_collapse', function (){
+    return view('categories.categories_collapse');
+});

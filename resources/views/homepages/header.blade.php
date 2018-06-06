@@ -54,9 +54,9 @@
 
                     <a class="nav-link fa fa-heartbeat  text-dark" aria-hidden="true" href="#"><i class=" fa-lg" aria-hidden="true"></i> Wish List</a>
 
-                    <a class="nav-link fa fa-lock text-dark" aria-hidden="true" href="#"><i class=" fa-lg" aria-hidden="true"></i> Sign In</a>
+                    <a class="nav-link fa fa-lock text-dark" aria-hidden="true" href="{{url('login')}}"><i class=" fa-lg" aria-hidden="true"></i> Sign In</a>
 
-                    <a class="nav-link fa fa-users text-dark" aria-hidden="true" href="#"><i class="" aria-hidden="true"></i> Free Join</a>
+                    <a class="nav-link fa fa-users text-dark" aria-hidden="true" href="{{url('sign_in')}}"><i class="" aria-hidden="true"></i> Free Join</a>
                 </nav>
             </div>
         </div>

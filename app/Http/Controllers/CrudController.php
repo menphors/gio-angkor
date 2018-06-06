@@ -82,7 +82,7 @@ abstract class CrudController extends Controller
      */
     public function create()
     {
-        $this->data[$this->crudItem] = $this->getSingleData(null);// beside index  param null to view
+        $this->data[$this->crudItem] = $this->getSingleData(null);// beside index  param null to views
         return $this->renderView('create');
     }
 
@@ -107,7 +107,7 @@ abstract class CrudController extends Controller
     public function edit($id)
     {
         $this->data[$this->crudItem] = $this->getSingleData($id);
-        return $this->renderView('edit');//view edit
+        return $this->renderView('edit');//views edit
     }
     
     /**
