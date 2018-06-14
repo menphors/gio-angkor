@@ -47,6 +47,12 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
 Route::get('upload','UploadController@showUpload');
 Route::post('upload','UploadController@saveUpload');
 
+Route::get('/product-list', function () {
+    return view('login_form.login');
+});
+Route::get('/login', function () {
+   return view('login_form.login');
+});
 Route::get('/login', function (){
     return view('form_login.Login');
 });
