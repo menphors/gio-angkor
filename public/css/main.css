@@ -1,0 +1,106 @@
+body{
+	background-color: #f3f3f4;
+	font-family: "Myriad Pro";
+}
+.colorback{
+	
+	height: 30px;
+	
+}
+
+.recolors{
+	background-color: #e4e4e4;
+}
+.recolor{
+	height: 150px;
+	background-color: #EEEEEE;
+}
+.recolorss{
+	height: 30px;
+	
+	background-color: #ABB7B7;
+}
+.recolorss li a{
+	color: black;
+	margin-top: -5px;
+}
+.recolornav{
+	height: 120px;
+
+}
+.imagesize img{
+	height: 410px;
+}
+.menu ul{
+	margin-top: 2px;
+}
+.menu ul li{
+	padding-left: 10px;
+	height: 30px;
+	background-color: #d1d2d4;
+	
+}
+.title_box{
+border-radius: 8px 0px 0px 0px;
+height:35px;
+padding-top: 4px;
+background-color: #B71C1C;
+font-size:18px;
+color:#fff;
+line-height:30px;
+
+}
+.linewidth{
+	width: 1475px;
+	margin-left:-450px;
+	margin-right:-155px;
+	height: 2px;
+	background-color: #c0392b;
+	margin-top: 4px;
+}
+.help{
+	margin-top: -40px;
+}
+#fonts{
+	font-size:13px;
+	background-color: #d1d2d4;
+}
+#fontss{
+	font-size:15px;
+	color: black;
+	background-color: #d1d2d4;
+}
+#fontssa{
+	font-size:25px;
+	color: white;
+	text-align: center;
+	background-color: #ed1b4a;
+}
+#fontsss{
+	font-size:12px;
+	height: 80px;
+	color: black;
+	background-color: #e7e7e8;
+}
+.fa-credit-card-alt{
+	font-size: 20px;
+	color: #B71C1C;
+}
+.fa-usd{
+	font-size: 20px;
+	color: #B71C1C;
+}
+.fa-shield{
+	font-size: 20px;
+	color: #B71C1C;
+}
+.fa-truck{
+	font-size: 20px;
+	color: #B71C1C;
+}
+.fa-search{
+
+}
+#grey{
+	color: #414141;
+}
