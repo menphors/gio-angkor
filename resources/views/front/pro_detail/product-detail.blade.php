@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('front.homepages.header')
+=======
+@extends('homepages.header')
+>>>>>>> origin/master
 @section('navigation-bar')
 @stop
 @section('content')
@@ -297,5 +301,9 @@
 <!-- Bootstrap core JavaScript -->
 </body>
 </html>
+<<<<<<< HEAD
 @include('front.homepages.footer')
+=======
+@include('homepages.footer')
+>>>>>>> origin/master
 @stop

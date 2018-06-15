@@ -53,6 +53,7 @@ Route::get('/product-list', function () {
 Route::get('/login', function () {
    return view('login_form.login');
 });
+master
 Route::get('/login', function (){
     return view('form_login.Login');
 });

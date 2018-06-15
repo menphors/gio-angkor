@@ -11,7 +11,11 @@ class SettingItemsController extends CrudController
 {
     protected $itemName = 'Setting item';
     protected $modelPath = 'App\SettingItem';//model list data table paramete model
+<<<<<<< HEAD
     protected $viewPrefix = 'admin.settings.items';//view find view
+=======
+    protected $viewPrefix = 'settings.items';//view find view
+>>>>>>> origin/master
     protected $routePrefix = 'setting-items';//url route link
     
     protected $itemPerPage = 5;//pagination
