@@ -9,11 +9,7 @@ class SettingTypesController extends CrudController
 {
     protected $itemName = 'Setting type';
     protected $modelPath = 'App\SettingType';
-<<<<<<< HEAD
     protected $viewPrefix = 'admin.settings.types';
-=======
-    protected $viewPrefix = 'settings.types';
->>>>>>> origin/master
     protected $routePrefix = 'setting-types';
     
     protected $itemPerPage = 4;

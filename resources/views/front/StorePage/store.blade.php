@@ -1,9 +1,5 @@
 @section('contents')
-<<<<<<< HEAD
 @extends('front.homepages.header')
-=======
-@extends('homepages.header')
->>>>>>> origin/master
 @section('navigation-bar')
 @stop
 @section('content')
@@ -319,10 +315,6 @@
             <h4 class="text-body">US $2.89</h4>
         </div>
     </div>
-</div>
-<<<<<<< HEAD
+</div>s
 @include('front.homepages.footer')
-=======
-@include('homepages.footer')
->>>>>>> origin/master
 @stop

@@ -4,11 +4,7 @@
  * Date: 4/26/2018
  * Time: 9:56 PM
  */?>
-<<<<<<< HEAD
 @extends('front.homepages.header')
-=======
-@extends('homepages.header')
->>>>>>> origin/master
 @section('content')
 <!DOCTYPE html>
 <html>
@@ -132,11 +128,7 @@
 </div>
 </body>
 </html>
-<<<<<<< HEAD
 @include('front.homepages.footer')
-=======
-@include('homepages.footer')
->>>>>>> origin/master
 @stop
 
 
