@@ -22,7 +22,7 @@
             <td>{{$SubCategory->id}}</td>
             <td>{{$SubCategory->cat_group_id}}</td>
             <td>{{$SubCategory->sub_category_name}}</td>
-            <td>{{$SubCategory->published}}</td>
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $SubCategory) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify

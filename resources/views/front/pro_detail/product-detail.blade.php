@@ -62,29 +62,26 @@
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
                                 <a href="#">
-                                    Start Bootstrap
+                                     Women’s Clothing
                                 </a>
                             </li>
                             <li>
-                                <a href="#">Dashboard</a>
+                                <a href="#">Men’s Clothing</a>
                             </li>
                             <li>
-                                <a href="#">Shortcuts</a>
+                                <a href="#">Cellphones & Accessories</a>
                             </li>
                             <li>
-                                <a href="#">Overview</a>
+                                <a href="#">Computer</a>
                             </li>
                             <li>
-                                <a href="#">Events</a>
+                                <a href="#">Consumer Electronics</a>
                             </li>
                             <li>
-                                <a href="#">About</a>
+                                <a href="#">Jewelry & Watches</a>
                             </li>
                             <li>
-                                <a href="#">Services</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
+                                <a href="#">Home & Garden & Funiture</a>
                             </li>
                         </ul>
                     </div>
@@ -93,34 +90,34 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/galaxy-s9.jpg')}}" alt="" width="400" height="700"></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">Project One</a>
+                        <a href="#">Galaxy S9</a>
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                    <p class="card-text">Samsung Galaxy S9 Plus (256GB)</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/i-phone-8-plus.jpg')}}" alt=""></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">Project Two</a>
+                        <a href="#">Iphone 8 plus</a>
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                    <p class="card-text">iPhone 8 Plus</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/iphone-x.jpg')}}" alt=""></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">Project Three</a>
+                        <a href="#">Iphone X</a>
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+                    <p class="card-text">Iphone X</p>
                 </div>
             </div>
         </div>
@@ -131,29 +128,23 @@
                     <ul class="sidebar-nav">
                         <li class="sidebar-brand">
                             <a href="#">
-                                Start Bootstrap
+                                Toys Kids & Baby
                             </a>
                         </li>
                         <li>
-                            <a href="#">Dashboard</a>
+                            <a href="#">Sports & Outdoors</a>
                         </li>
                         <li>
-                            <a href="#">Shortcuts</a>
+                            <a href="#">Health & Beauty Hairs</a>
                         </li>
                         <li>
-                            <a href="#">Overview</a>
+                            <a href="#">Automobiles & Motorcycles</a>
                         </li>
                         <li>
-                            <a href="#">Events</a>
+                            <a href="#">Home Improvement Tools</a>
                         </li>
                         <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Services</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
+                            <a href="#">Bags & shoes</a>
                         </li>
                     </ul>
                 </div>
@@ -163,36 +154,36 @@
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
             <div style="height: 20px;"></div>
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/ipad-apple.jpg')}}" alt=""></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">Project Four</a>
+                        <a href="#">Ipad Apple</a>
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                    <p class="card-text">iPad Mini 4 (Cellular)</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
             <div style="height: 20px;"></div>
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/ipad-apple1.jpg')}}" alt=""></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">Project Five</a>
+                        <a href="#">Ipad Apple</a>
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                    <p class="card-text">iPad Pro 12.9 Cellular 2017</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
             <div style="height: 20px;"></div>
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/ipad-apple2.jpg')}}" alt=""></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">Project Six</a>
+                        <a href="#">Ipad Apple</a>
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+                    <p class="card-text">iPad 9.7" 2018 (Cellular)</p>
                 </div>
             </div>
         </div>
@@ -241,10 +232,10 @@
 
                             <div class="item active">
                                 <div class="row-fluid">
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-black.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-white.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-blue.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-gray.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
                                 </div><!--/row-fluid-->
                             </div><!--/item-->
 

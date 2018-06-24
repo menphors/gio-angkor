@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 // resource put delete update get show data post request
 Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
+    Route::resource('user-account','AccountController');
     Route::resource('setting-types', 'SettingTypesController');
     Route::resource('setting-items', 'SettingItemsController');
     Route::resource('level-lists','LevelsController');
@@ -42,6 +43,9 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('detail','StorepageController@index');
     Route::get('store', function () {
         return view('front.StorePage.store');
+    });
+    Route::get('product-add-to-card', function () {
+        return view('front.pro_detail.product-order');
     });
 });
 Route::get('upload','UploadController@showUpload');

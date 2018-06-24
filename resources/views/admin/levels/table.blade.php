@@ -7,6 +7,7 @@
             <th>Level slog</th>
             <th>Remark</th>
             <th>Last Login</th>
+            <th>Published</th>
             <th>Action</th>
         </tr>
     <thead>
@@ -19,6 +20,7 @@
             <td>{{$levels->level_slog}}</td>
             <td>{{$levels->remark}}</td>
             <td></td>
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $levels) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify

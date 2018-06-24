@@ -9,9 +9,14 @@
         {!! BootForm::text('level_slog') !!}
     </div>
 </div>
+<div class="row">
+    <div class="col-md-6">
+        {!! BootForm::select('published','publish',array('pub'=>'Publish','unpub'=> 'Un-publish'))!!}
+    </div>
+</div>
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
         {!! BootForm::textarea('remark')!!}
     </div>
 </div>

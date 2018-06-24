@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->date('dob')->nullable();
             $table->string('username')->nullable();
             $table->string('email')->unique();
-            $table->string('password',150);
+            $table->string('password',150)->nullable();
             $table->string('forgot_password',150)->nullable();
             $table->string('updated_password',150)->nullable();
             $table->string('flag_sec',150)->nullable();

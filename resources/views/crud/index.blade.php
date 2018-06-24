@@ -1,12 +1,12 @@
 @extends('adminlte::page')
 
-@section('title', str_plural($site_title) . ' - listing')
+@section('title', str_plural($site_title) . 'Page')
 
 @section('content_header')
     <div class="col-xs-12">
         <h3>
             {{--title plural person--}}
-            {{ str_plural($page_title) . ' - listing' }}
+            {{ str_plural($page_title) . ' Page' }}
             <a href="{{ route($route_prefix . '.create') }}" class="btn btn-sm btn-primary pull-right">
                 <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Create New
             </a>

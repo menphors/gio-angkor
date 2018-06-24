@@ -27,7 +27,7 @@
             <td>{{$orders->discount}}</td>
             <td>{{$orders->order_date}}</td>
             <td>{{$orders->status_product}}</td>
-            <td>{{$orders->published}}</td>
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $orders) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify

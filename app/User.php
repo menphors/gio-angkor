@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+//extend Authenticatable
 
-class User extends Authenticatable
+class User extends CrudModel
 {
     use Notifiable;
 

@@ -40,7 +40,7 @@
             <td>{{$promotions->promotion_expire_date}}</td>
             <td>{{$promotions->date_from}}</td>
             <td>{{$promotions->date_to}}</td>
-            <td>{{$promotions->published}}</td>
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $promotions) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-pencil" aria-hidden="true"></i>
