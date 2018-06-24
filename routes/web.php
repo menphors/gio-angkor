@@ -28,6 +28,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::resource('subcategory','SubCategoryController');
     Route::resource('tracking','TrackingsController');
     Route::resource('promotions','PromotionsController');
+    Route::resource('products','ProductController');
     Route::resource('discount','DiscountsController');
     Route::resource('gallery','GalleriesController');
     Route::resource('disput','DisputController');

@@ -159,6 +159,10 @@ return [
             'icon'        => 'product-hunt',
             'submenu' => [
                 [
+                    'text' => 'Add new product',
+                    'url'  => 'adminz/products',
+                ],
+                [
                     'text' => 'Brand',
                     'url'  => 'adminz/brand-lists',
                 ],
@@ -212,11 +216,17 @@ return [
             'icon'        => 'users',
             'submenu' => [
                 [
+                    'text' => 'Add new user',
+                    'url'  => 'adminz/user-account',
+                ],
+                [
                     'text' => 'Level User',
                     'url'  => 'adminz/level-lists',
                 ],
+                
             ],
         ],
+
     ],
 
     /*

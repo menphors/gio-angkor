@@ -25,7 +25,7 @@
             <td>{{$GroupCategory->sub_category_id}}</td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $GroupCategory) }}" class="btn btn-sm btn-success btn-edit-row">
-                    <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify
+                    <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Edit
                 </a>
 
                 <a href="javascript:void(0);" class="btn btn-sm btn-danger btn-delete-row">

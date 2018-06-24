@@ -13,7 +13,7 @@
                 <td>{{ $item->name }}</td>
                 <td class="text-center">
                     <a href="{{ route($route_prefix . '.edit', $item) }}" class="btn btn-sm btn-success btn-edit-row">
-                        <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Modify
+                        <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Edit
                     </a>
 
                     <a href="javascript:void(0);" class="btn btn-sm btn-danger btn-delete-row">

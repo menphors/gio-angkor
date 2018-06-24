@@ -43,11 +43,11 @@
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $promotions) }}" class="btn btn-sm btn-success btn-edit-row">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <i class="fa fa-pencil" aria-hidden="true">Edit</i>
                 </a>
 
                 <a href="javascript:void(0);" class="btn btn-sm btn-danger btn-delete-row">
-                    <i class="fa fa-times" aria-hidden="true"></i>
+                    <i class="fa fa-times" aria-hidden="true">Delete</i>
                 </a>
 
                 <form method="POST" class="form-delete-row" action="{!! route($route_prefix . '.destroy', $promotions) !!}" accept-charset="UTF-8">
