@@ -48,6 +48,9 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('product-add-to-card', function () {
         return view('front.pro_detail.product-order');
     });
+    Route::get('dashboard-user', function () {
+        return view('front.user_dashboard.dashboard');
+    });
 });
 Route::get('upload','UploadController@showUpload');
 Route::post('upload','UploadController@saveUpload');
