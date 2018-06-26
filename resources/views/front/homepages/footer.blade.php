@@ -35,20 +35,19 @@
         <div class="col-lg-3">
             <h5>CONTACT</h5>
             <ul class="list-unstyled">
-                <li>support@gioangkor.com</li>
+                <li>#134, at.118, Phsar Chas Commue, Doun Penh District, Phnom Penh</li>
                 <li>(+855) 23 999 888</li>
-                <li>The headquarter in US:</li>
-                <li>8522, Oasis Ave Westminster,</li>
-                <li>CA 92683-4629</li>
             </ul>
         </div>
     </div>
 </div>
 
 
-<div class="container-fluid">
-    <div class="row " style=" background-color: #d1d2d4; height: 30px;padding-left: 100px;">
-        Copyright © 1995-2016 eBay Inc. All Rights Reserved.
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">Copyright © 2018 Gio-Angkor. All Rights Reserved.</div>
+        </div>
     </div>
 </div>
 <section>

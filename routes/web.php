@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/* Default Page and Authentication*/
 Auth::routes();
 Route::get('/', function () {
     return view('front.homepages.homepage');
 });
+/*Route Admin page*/
 // resource put delete update get show data post request
 Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::resource('user-account','AccountController');
@@ -38,7 +40,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::get('export-user','UsersReportsController@user_export');
 });
 
-
+/*Route Frontend*/
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('order','OrderController@index');
     Route::get('detail','StorepageController@index');
@@ -51,22 +53,14 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('dashboard-user', function () {
         return view('front.user_dashboard.dashboard');
     });
+    Route::get('view-card', function () {
+        return view('front.order.view-card');
+    });
 });
-Route::get('upload','UploadController@showUpload');
-Route::post('upload','UploadController@saveUpload');
-
-Route::get('/product-list', function () {
-    return view('login_form.login');
-});
-Route::get('/login', function () {
-   return view('login_form.login');
-});
+/*Login and Register*/
 Route::get('/login', function (){
     return view('form_login.Login');
 });
 Route::get('/sign_in', function (){
     return view('form_login.sign_in');
-});
-Route::get('/categories_collapse', function (){
-    return view('categories.categories_collapse');
 });

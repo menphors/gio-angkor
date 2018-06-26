@@ -28,7 +28,7 @@
             <td>{{$products->pro_name}}</td>
             <td>{{$products->pro_code}}</td>
             <td>{{$products->model}}</td>
-            <td>{{$products->product_desc}}%</td>
+            <td>{{$products->product_desc}}</td>
             <td>{{$products->made}}</td>
             <td>{{$products->prices}}</td>
             <td>{{$products->count_product}}</td>

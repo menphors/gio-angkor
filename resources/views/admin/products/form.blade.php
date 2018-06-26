@@ -50,22 +50,56 @@
 </div>
 <div class="row">
     <div class="col-md-6">
-        {!! BootForm::text('brand')!!}
+        <!-- {!! BootForm::text('brand')!!} -->
+         {!! BootForm::select('id','brand',array(
+        'addidas'=>"Addidas",
+        'nike'=>"Nike",
+        'apple'=>"Apple",
+        'samsung'=>"Samsung",
+        'zendo'=>"Zendo",
+        'pedro'=>"Pedro",
+        'romanson'=>"Romanson",
+        'gucci'=>"Gucci",
+        'channel'=>"Channel",
+        'dior'=>'Dior',
+        'baby_dry'=>"Baby Dry",
+        'levi'=>"Levi's")
+        )!!}
     </div>
 </div>
 <div class="row">
     <div class="col-md-6">
-        {!! BootForm::text('category')!!}
+        <!-- {!! BootForm::text('category')!!} -->
+        {!! BootForm::select('category','category',array(
+        'women_cloth'=>"Women's Clothing",
+        'man_cloth'=>"Man's Clothing",
+        'phone'=>"Phone & Accessories",
+        'computer'=>"Computer & Office",
+        'consumer'=>"Consumer Electronics",
+        'jewelry'=>"Jewelry & Watches",
+        'home'=>"Home & Garden, Funiture",
+        'bag_shoes'=>"Bags & Shoes",
+        'toy'=>"Toy, Kids & Baby",
+        'sport'=>'Sport & Outdoor',
+        'health'=>"Health & Beauty, Hair",
+        'automobile'=>"Automobiles & Motorcycles",
+        'home_impro'=>"Home Improvement")
+        )!!}
     </div>
 </div>
 <div class="row">
     <div class="col-md-6">
-        {!! BootForm::text('setting')!!}
+        <!-- {!! BootForm::text('setting')!!} -->
+         {!! BootForm::select('id','setting',array(
+        'size'=>"Size",
+        'color'=>"Color",
+        'weight'=>"Weight")
+        )!!}
     </div>
 </div>
 <div class="row">
     <div class="col-md-6">
-        {!! BootForm::text('user')!!}
+        {!! BootForm::hidden('user')!!}
     </div>
 </div>
 <div class="row">

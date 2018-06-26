@@ -12,9 +12,38 @@
   <link href="{{asset('css/bootstrap-theme.min.css')}}" rel="stylesheet">
 
   <script src="{{asset('js/jquery.min.js')}}" ></script>
-    <script src="{{asset('js/popper.min.js')}}" ></script>
-    <script src="{{asset('js/bootstrap.min.js')}}" ></script>
-    
+  <script src="{{asset('js/popper.min.js')}}" ></script>
+  <script src="{{asset('js/bootstrap.min.js')}}" ></script>
+  <!-- Header style -->
+  <!-- order style -->
+  <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ URL::asset('css/order.css') }}" rel="stylesheet">
+  <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+  <script type="text/javascript" src="{{ URL::asset('js/order.js') }}"></script>
+  <script type="text/javascript" src="{{ URL::asset('js/bootstrap.js') }}"></script>
+    <!-- end order style -->
+    <!-- product-detail header -->
+  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('css/product-detail-css.css')}}" rel="stylesheet">
+  <link href="{{asset('css/bootstrap-combined.min.css')}}" rel="stylesheet" id="bootstrap-css">
+    <!-- Custom styles for this template -->
+  <link href="{{asset('css/4-col-portfolio.css')}}'" rel="stylesheet">
+  <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
+  <script src="{{asset('js/jquery.min.js')}}"></script>
+  <script src="{{asset('js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('vendor/bootstrap/dist/js/bootstrap.js')}}"></script>
+  <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
+    <!-- end product detail header -->
+    <!-- user dashboard-->
+  <link type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{asset('bootstrap/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{asset('css/theme.css')}}" rel="stylesheet">
+  <link type="text/css" href="{{asset('images_icon/icons/css/font-awesome.css')}}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- end user dashboar --> 
+    <!-- apply hold font to all page -->
+  <link type="text/css" href="{{asset('css/style.css')}}" rel="stylesheet">
  <style type="text/css">
      #search{
          width: 200px;

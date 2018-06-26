@@ -1,0 +1,13 @@
+      .carousel-indicators {
+            right: 50%;
+            top: auto;
+            bottom: 0px;
+            margin-right: -19px;
+        }
+        /* Changes the colour of the indicators */
+        .carousel-indicators li {
+            background: #c0c0c0;
+        }
+        .carousel-indicators .active {
+            background: #333333;
+        }

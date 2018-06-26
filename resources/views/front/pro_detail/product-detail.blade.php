@@ -2,27 +2,7 @@
 @section('navigation-bar')
 @stop
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>4 Col Portfolio - Start Bootstrap Template</title>
-    <!-- Bootstrap core CSS -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/bootstrap-combined.min.css')}}" rel="stylesheet" id="bootstrap-css">
-    <!-- Custom styles for this template -->
-    <link href="{{asset('css/4-col-portfolio.css')}}'" rel="stylesheet">
-    <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('vendor/bootstrap/dist/js/bootstrap.js')}}"></script>
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
-    <script>
+<script>
         $(document).ready(function() {
 //        $('#myCarousel').carousel({
 //            interval: 10000
@@ -32,24 +12,7 @@
                 interval: false,
             });
         });
-    </script>
-    <style>
-        .carousel-indicators {
-            right: 50%;
-            top: auto;
-            bottom: 0px;
-            margin-right: -19px;
-        }
-        /* Changes the colour of the indicators */
-        .carousel-indicators li {
-            background: #c0c0c0;
-        }
-        .carousel-indicators .active {
-            background: #333333;
-        }
-    </style>
-</head>
-<body>
+</script>
 <!-- Page Content -->
 <div class="container">
     <!-- Page Heading -->
@@ -286,7 +249,5 @@
 <div style="height: 20px;"></div>
 <!-- Footer -->
 <!-- Bootstrap core JavaScript -->
-</body>
-</html>
 @include('front.homepages.footer')
 @stop

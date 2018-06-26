@@ -15,11 +15,11 @@
         <th>Disc Per(%)</th>
         <th>Product#</th>
         <th>Brand#</th>
-        <th>Ordered</th>
+       <!--  <th>Ordered</th> -->
         <th>Cat#</th>
         <th>Exp Date</th>
         <th>From</th>
-        <th>To</th>
+       <!--  <th>To</th> -->
         <th>Official</th>
         <th>Action</th>
 
@@ -35,11 +35,11 @@
             <td>{{$promotions->discount_percentage}}%</td>
             <td>{{$promotions->product_id}}</td>
             <td>{{$promotions->brand_id}}</td>
-            <td>{{$promotions->ordering}}</td>
+            <!-- <td>{{$promotions->ordering}}</td> -->
             <td>{{$promotions->category_id}}</td>
             <td>{{$promotions->promotion_expire_date}}</td>
             <td>{{$promotions->date_from}}</td>
-            <td>{{$promotions->date_to}}</td>
+            <!-- <td>{{$promotions->date_to}}</td> -->
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $promotions) }}" class="btn btn-sm btn-success btn-edit-row">
