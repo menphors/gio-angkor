@@ -95,10 +95,10 @@
     <div class="container-fluid  " style="background-color: #e7e7e8;">
         <div class="container ">
             <div class="row ">
-                <div class="col-3  my-5 mx-auto"><img src="{{asset('images/logogio.png')}}" alt="logo" class="img-thumbnail" style=" height: 50px"></div>
+                <div class="col-3  my-5 mx-auto"><img src="{{asset('images/logo/circle-logo.png')}}" alt="logo" id="logo"></div>
                 <div class="col-9 my-5 mx-auto" style="margin-top: -50px;">
                     <div class="input-group " style="    margin-left: -13px;    width: 852px;">
-                        <input type="text" class="form-control" placeholder="Seach..." style="height: 40px;">
+                        <input type="text" class="col-md-6 col-sm-6 col-lg-6" placeholder="Seach..." style="height: 40px;width: 50%;">
                 <span class="input-group-btn  mr-3">
                   <button class="btn btn btn-secondary dropdown" data-toggle="dropdown" type="submit" style="height: 40px;">All Categries</button>
                     <div class="dropdown-menu">
@@ -108,7 +108,8 @@
                     </div>
                   <button class="btn btn-danger" type="submit" style="height: 40px;"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </span>
-                        <ul class="nav float-right">
+                        <ul class="nav float-right" style="margin-left: 551px;
+    position: absolute;height: 40px;">
                             <li class="nav-item border border-dark border-right-0">
                                 <a class="nav-link">800 million</a>
                             </li>

@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\Product;
 
 class Promotion extends CrudModel
 {
@@ -50,6 +50,11 @@ class Promotion extends CrudModel
         //dd($inputData);
 
         return $this->fill($inputData)->save();
+    }
+
+    public function product() {
+        return $this->hasManyThrough('App\Product','App\Brand','App\Category', 'id','brand_id','category_id');
+
     }
 
 }

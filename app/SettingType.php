@@ -13,4 +13,7 @@ class SettingType extends CrudModel
     public function items() {
         return $this->hasMany('App\SettingItem');
     }
+    public function products() {
+        return $this->hasMany('App\Product');
+    }
 }

@@ -15,6 +15,6 @@ class OrdersController extends CrudController
 
     protected $itemPerPage = 4;
     protected $siteTitle = 'order';
-    protected $pageTitle = 'Order listing';
+    protected $pageTitle = 'Order';
 }
 

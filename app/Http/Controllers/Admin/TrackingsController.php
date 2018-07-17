@@ -15,5 +15,5 @@ class TrackingsController extends CrudController
 
     protected $itemPerPage = 4;
     protected $siteTitle = 'Tracking Gio';
-    protected $pageTitle = 'Tracking listing';
+    protected $pageTitle = 'Tracking';
 }

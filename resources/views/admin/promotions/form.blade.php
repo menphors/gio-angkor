@@ -5,45 +5,47 @@
  * Date: 12/31/2017
  * Time: 11:30 PM
  */?>
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
         {!! BootForm::text('promotion_name') !!}
     </div>
 </div>
-<div class="row">
+<div class="row" style="height: 30px !important;">
 
     <div class="col-md-6">
         {!! BootForm::text('promotion_prices') !!}
     </div>
 </div>
 
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
         {!! BootForm::file('promotion_image')!!}
     </div>
 </div>
 
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
         {!! BootForm::text('discount_percentage')!!}
     </div>
 </div>
 
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::select('published','publish',array('pub'=>'Publish','unpub'=> 'Un-publish'))!!}
+        {!! BootForm::select('published','publish',array('1'=>'Publish','0'=> 'Un-publish'))!!}
     </div>
 </div>
 
 <div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::text('product_id')!!}
+        {!! BootForm::select('product_id', 'Product', $product_list) !!}
     </div>
 </div>
 
 <div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::text('brand_id')!!}
+        <!-- {!! BootForm::text('brand_id')!!} -->
+        {!! BootForm::select('brand_id', 'Brand', $brand_list) !!}
+
     </div>
 </div>
 
@@ -55,7 +57,9 @@
 
 <div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::text('category_id')!!}
+        <!-- {!! BootForm::text('category_id')!!} -->
+        {!! BootForm::select('category_id', 'Category', $category_list) !!}
+
     </div>
 </div>
 
@@ -83,5 +87,13 @@
         {!! Form::submit('Submit', ['class' => 'btn btn-primary pull-right']) !!}
     </div>
 </div>
-
-
+<!-- <script src="{{asset('js/jquery.min.js')}}" ></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#product_id').on('change', function(){
+            var id = $(this).val();
+            alert(id);
+        });
+    });
+   
+</script> -->

@@ -116,7 +116,7 @@ return [
 //            'label_color' => 'success',
 //        ],
         [
-            'text'    => 'Category',
+            'text'    => 'Categories',
             'icon'        => 'table',
             'submenu' => [
                 [
@@ -129,76 +129,84 @@ return [
                 ],
             ],
         ],
-        [
-            'text'    => 'Disput',
-            'icon'        => 'lock',
-            'url' => 'adminz/disput',
-        ],
+        // [
+        //     'text'    => 'Disput',
+        //     'icon'        => 'lock',
+        //     'url' => 'adminz/disput',
+        // ],
         [
             'text'   => 'Gallery Main',
             'icon'        => 'file-image-o',
-            'url' => 'adminz/gallery',
+            'url' => 'adminz/gallery/create',
         ],
         [
             'text'   => 'Log Activity',
             'icon'        => 'eye-slash',
             'url' => 'adminz/log-activity',
         ],
+        // [
+        //     'text'    => 'Orders',
+        //     'icon'        => 'shopping-cart',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Tracking',
+        //             'url'  => 'adminz/tracking',
+        //         ],
+        //     ],
+        // ],
         [
-            'text'    => 'Order',
-            'icon'        => 'shopping-cart',
-            'submenu' => [
-                [
-                    'text' => 'Tracking',
-                    'url'  => 'adminz/tracking',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'Product',
+            'text'    => 'Products',
             'icon'        => 'product-hunt',
             'submenu' => [
                 [
-                    'text' => 'Add new product',
+                    'text' => 'Order Status',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'All products',
                     'url'  => 'adminz/products',
+                ],
+                [
+                    'text' => 'Add new product',
+                    'url'  => 'adminz/products/create',
                 ],
                 [
                     'text' => 'Brand',
                     'url'  => 'adminz/brand-lists',
                 ],
+                [
+                    'text' => 'Product Categories',
+                    'url'  => 'adminz/category',
+                ],
             ],
         ],
         [
-            'text'    => 'Promotion',
+            'text'    => 'Promotions',
             'icon'        => 'gift',
             'url' => 'adminz/promotions'
         ],
         [
-            'text'    => 'Report',
+            'text'    => 'Reports',
             'icon'        => 'line-chart',
             'submenu' => [
                 [
                     'text' => 'Store',
                     'url'  => 'adminz/store-report',
                 ],
-                [
-                    'text' => 'User',
-                    'url'  => 'adminz/users-report',
-                ],
             ],
         ],
+        // [
+        //     'text'    => 'Store',
+        //     'icon'        => 'building-o',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Discount',
+        //             'url'  => 'adminz/discount',
+        //         ],
+        //     ],
+        // ],
         [
-            'text'    => 'Store',
-            'icon'        => 'building-o',
-            'submenu' => [
-                [
-                    'text' => 'Discount',
-                    'url'  => 'adminz/discount',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'Setting Type',
+            'text'    => 'Settings',
             'icon'        => 'lock',
             'submenu' => [
                 [
@@ -212,12 +220,16 @@ return [
             ],
         ],
         [
-            'text'    => 'User',
+            'text'    => 'Users',
             'icon'        => 'users',
             'submenu' => [
                 [
+                    'text' => 'All Users',
+                    'url'  => 'adminz/user-account'
+                ],
+                [
                     'text' => 'Add new user',
-                    'url'  => 'adminz/user-account',
+                    'url'  => 'adminz/user-account/create',
                 ],
                 [
                     'text' => 'Level User',

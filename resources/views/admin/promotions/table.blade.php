@@ -13,7 +13,7 @@
         <th>Price</th>
         <th>Image</th>
         <th>Disc Per(%)</th>
-        <th>Product#</th>
+        <!-- <th>Product#</th> -->
         <th>Brand#</th>
        <!--  <th>Ordered</th> -->
         <th>Cat#</th>
@@ -26,23 +26,25 @@
     </tr>
     <thead>
     <tbody>
-    @foreach($crud_list as $promotions)
+    @foreach($crud_list as $product)
         <tr>
-            <td>{{$promotions->id}}</td>
-            <td>{{$promotions->promotion_name}}</td>
-            <td>{{$promotions->promotion_prices}}$</td>
-            <td><img src="{{URL::asset('/uploads/'.$promotions->promotion_image)}}" style="width:50px;height:50px;"></td>
-            <td>{{$promotions->discount_percentage}}%</td>
-            <td>{{$promotions->product_id}}</td>
-            <td>{{$promotions->brand_id}}</td>
-            <!-- <td>{{$promotions->ordering}}</td> -->
-            <td>{{$promotions->category_id}}</td>
-            <td>{{$promotions->promotion_expire_date}}</td>
-            <td>{{$promotions->date_from}}</td>
-            <!-- <td>{{$promotions->date_to}}</td> -->
+            <td>{{$product->id}}</td>
+            <td>{{$product->promotion_name}}</td>
+            <td>{{$product->promotion_prices}}$</td>
+            <td><img src="{{URL::asset('/uploads/'.$product->promotion_image)}}" style="width:50px;height:50px;"></td>
+            <td>{{$product->discount_percentage}}%</td>
+            <!-- <td>{{ $product->product_id }}</td> -->
+            <td>{{$product->brand_id}}</td>
+            <td>{{$product->category_id}}</td>
+            <td>{{$product->promotion_expire_date}}</td>
+            <td>{{$product->date_from}}</td>
+            @if($product->published ==1) 
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+            @else
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye-slash" aria-hidden="true"></i></a></td> 
+            @endif
             <td>
-                <a href="{{ route($route_prefix . '.edit', $promotions) }}" class="btn btn-sm btn-success btn-edit-row">
+                <a href="{{ route($route_prefix . '.edit', $product) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-pencil" aria-hidden="true">Edit</i>
                 </a>
 
@@ -50,7 +52,7 @@
                     <i class="fa fa-times" aria-hidden="true">Delete</i>
                 </a>
 
-                <form method="POST" class="form-delete-row" action="{!! route($route_prefix . '.destroy', $promotions) !!}" accept-charset="UTF-8">
+                <form method="POST" class="form-delete-row" action="{!! route($route_prefix . '.destroy', $product) !!}" accept-charset="UTF-8">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
                 </form>

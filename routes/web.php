@@ -12,12 +12,14 @@
 */
 /* Default Page and Authentication*/
 Auth::routes();
+
 Route::get('/', function () {
     return view('front.homepages.homepage');
 });
 /*Route Admin page*/
 // resource put delete update get show data post request
 Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
+    Route::get('/','StoreReportsController@index');
     Route::resource('user-account','AccountController');
     Route::resource('setting-types', 'SettingTypesController');
     Route::resource('setting-items', 'SettingItemsController');

@@ -29,4 +29,11 @@ class Brand extends CrudModel
 
         return $this->fill($inputData)->save();
     }
+    public function promotions() {
+        return $this->hasMany('App\Promotion');
+    }
+
+    public function products() {
+        return $this->hasMany('App\Product');
+    }
 }

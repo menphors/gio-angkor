@@ -15,5 +15,5 @@ class BrandsController extends CrudController
 
     protected $itemPerPage = 4;//pagination
     protected $siteTitle = 'Brand'; //tittle
-    protected $pageTitle = 'Brand Listing';//
+    protected $pageTitle = 'Brand';//
 }

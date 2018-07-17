@@ -15,5 +15,5 @@ class LevelsController extends CrudController
 
     protected $itemPerPage = 4;//pagination
     protected $siteTitle = 'Level'; //tittle
-    protected $pageTitle = ' Level listing';//
+    protected $pageTitle = ' Level';//
 }

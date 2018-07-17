@@ -22,7 +22,7 @@
                 <div id="wrapper">
                     <!-- Sidebar -->
                     <div id="sidebar-wrapper">
-                        <ul class="sidebar-nav">
+                        <ul class="sidebar-nav" style="list-style: none;">
                             <li class="sidebar-brand">
                                 <a href="#">
                                      Women’s Clothing
@@ -88,7 +88,7 @@
             <div id="wrapper">
                 <!-- Sidebar -->
                 <div id="sidebar-wrapper">
-                    <ul class="sidebar-nav">
+                    <ul class="sidebar-nav" style="list-style: none;">
                         <li class="sidebar-brand">
                             <a href="#">
                                 Toys Kids & Baby

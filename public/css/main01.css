@@ -9,12 +9,11 @@ body{
 	margin-left: -15px;
 }
 #menu ul li{
-	padding: 4px;
-	margin-left: -40px;
-	position: relative;
-	width: 285px;
-	padding-left: 20px;
-	
+	padding: 5.8px;
+    margin-left: 0px;
+    position: relative;
+    width: 285px;
+    padding-left: 20px;
 }
 #menu ul li:hover{
 
@@ -28,4 +27,11 @@ body{
 #color-main01{
 	background-color: #e7e8e9;
 	
+}
+#logo{
+	height: 140px;
+    width: 140px;
+    margin-left: 45px;
+    position: relative;
+    margin-top: -44px !important;
 }

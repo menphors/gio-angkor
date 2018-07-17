@@ -62,13 +62,14 @@
       </div>
       <div class="col-md-7 " >
           <div id="carouselExampleIndicators"   class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+                <ol class="carousel-indicators" >
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 </ol>
+          </div>
           <div class="carousel-inner imagesize">
               <div class="carousel-item active">
                   <img class="d-block w-100" src="images/12.jpg" alt="First slide">
@@ -94,7 +95,6 @@
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                           <span class="sr-only">Next</span>
                         </a>
-          </div>
       </div>
 
       <div class="col-md-2" style="margin-left: -30px;">

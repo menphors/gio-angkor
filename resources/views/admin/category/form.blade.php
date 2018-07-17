@@ -6,27 +6,21 @@
  * Time: 8:19 PM
  */
 ?>
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::text('category_name') !!}
+        {!! BootForm::text('name') !!}
     </div>
 </div>
-<div class="row">
-
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::number('ordering') !!}
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6">
-        {!! BootForm::number('pro_id')!!}
+       <!--  {!! BootForm::number('parent_id')!!} -->
+        {!! BootForm::select('parent_id','Main Category',array('1' => 'Main Category','0'=> 'Child Category'))!!}
     </div>
 </div>
 
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::select('published','Published',array('publish' => 'Publish','unpublish'=> 'Unpublish'))!!}
+        {!! BootForm::select('published','Published',array('1' => 'Publish','0'=> 'Unpublish'))!!}
     </div>
 </div>
 

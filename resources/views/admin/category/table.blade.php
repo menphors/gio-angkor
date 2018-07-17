@@ -10,7 +10,6 @@
     <tr>
         <th>ID</th>
         <th>Category</th>
-        <th>Ordering</th>
         <th>ProductID</th>
         <th>Published</th>
     </tr>
@@ -19,10 +18,13 @@
     @foreach($crud_list as $Category)
         <tr>
             <td>{{$Category->id}}</td>
-            <td>{{$Category->category_name}}</td>
-            <td>{{$Category->ordering}}</td>
-            <td>{{$Category->pro_id}}</td>
+            <td>{{$Category->name}}</td>
+            @if($Category->parent_id ==1) <td>Main Category</td> @else  <td>Sub Category</td>  @endif</td>
+            @if($Category->published ==1) 
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+            @else
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye-slash" aria-hidden="true"></i></a></td> 
+            @endif
             <td>
                 <a href="{{ route($route_prefix . '.edit', $Category) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Edit

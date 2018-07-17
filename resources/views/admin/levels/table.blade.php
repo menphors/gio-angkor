@@ -20,7 +20,11 @@
             <td>{{$levels->level_slog}}</td>
             <td>{{$levels->remark}}</td>
             <td></td>
+            @if($levels->published ==1) 
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+            @else
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye-slash" aria-hidden="true"></i></a></td> 
+            @endif
             <td>
                 <a href="{{ route($route_prefix . '.edit', $levels) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Edit

@@ -33,7 +33,11 @@
             <td>{{$products->prices}}</td>
             <td>{{$products->count_product}}</td>
             <td>{{$products->quantity}}</td>
+           @if($products->published ==1) 
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+            @else
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye-slash" aria-hidden="true"></i></a></td> 
+            @endif
             <td>
                 <a href="{{ route($route_prefix . '.edit', $products) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-pencil" aria-hidden="true">Edit</i>

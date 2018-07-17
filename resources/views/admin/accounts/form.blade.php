@@ -6,18 +6,18 @@
  * Time: 9:44 PM
  */
 ?>
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
         {!! BootForm::text('username') !!}
     </div>
 </div>
-<div class="row">
+<div class="row" style="height: 30px !important;">
 
     <div class="col-md-6">
         {!! BootForm::tel('tel') !!}
     </div>
 </div>
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
         <label>Gender</label>
         {!! BootForm::radio('gender', 'F') !!}
@@ -25,24 +25,29 @@
 
     </div>
 </div>
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
         {!! BootForm::date('dob')!!}
     </div>
 </div>
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
         {!! BootForm::email('email')!!}
     </div>
 </div>
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
         {!! BootForm::password('password')!!}
     </div>
 </div>
-<div class="row">
+<div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::select('official','official',array('official' => 'official','unofficial'=> 'unofficial'))!!}
+        {!! BootForm::select('level_id', 'Level', $level_list) !!}
+    </div>
+</div>
+<div class="row" style="height: 30px !important;">
+    <div class="col-md-6">
+        {!! BootForm::select('published','Official',array('1' => 'official','0'=> 'unofficial'))!!}
     </div>
 </div>
 

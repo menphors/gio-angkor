@@ -11,7 +11,7 @@
 </div>
 <div class="row">
     <div class="col-md-6">
-        {!! BootForm::select('published','publish',array('pub'=>'Publish','unpub'=> 'Un-publish'))!!}
+        {!! BootForm::select('published','Publish',array('1'=>'Publish','0'=> 'Un-publish'))!!}
     </div>
 </div>
 

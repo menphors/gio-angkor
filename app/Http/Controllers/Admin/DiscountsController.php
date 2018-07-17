@@ -15,5 +15,5 @@ class DiscountsController extends CrudController
 
     protected $itemPerPage = 4;//pagination
     protected $siteTitle = 'Discount'; //tittle
-    protected $pageTitle = 'Discount Lists';//
+    protected $pageTitle = 'Discount';//
 }
