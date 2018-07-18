@@ -7,7 +7,6 @@ class Brand extends CrudModel
 {
     public static $validationRules = [
         'brand_name' => 'required||max:25',
-        'ordering' => 'required||numeric',
         'images_url' => 'required||mimes:jpeg,bmp,png||max:5000',
         'official' => 'required'
     ];

@@ -5,79 +5,47 @@
  * Date: 3/6/2018
  * Time: 12:08 AM
  */?>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-<html lang="en">
-<head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>eCommerce Product Detail</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-</head>
-<style>
-    body {
-        background: #F2F2F2;
-    }
-</style>
-<body>
-
-<div class="container">
-    <div class="card">
-        <div class="container-fliud">
-            <div class="wrapper row">
-                <div class="preview col-md-6">
-                    @foreach($crud_list as $galleries)
-                    <div class="preview-pic tab-content">
-                        <div class="tab-pane active" id="pic-1"><img src="{{URL::asset('/uploads/'.$galleries->gallery_images)}}" width="550" height="400"/></div>
-                        <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/200/252" /></div>
-                        <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/200/252" /></div>
-                    </div>
-                    @endforeach
-                    <ul class="preview-thumbnail nav nav-tabs">
-                        <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                        <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                    </ul>
-
-                </div>
-                <div class="details col-md-6">
-                    <h3 class="product-title">men's shoes fashion</h3>
-                    <div class="rating">
-                        <div class="stars">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <span class="review-no">41 reviews</span>
-                    </div>
-                    <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
-                    <h4 class="price">current price: <span>$180</span></h4>
-                    <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-                    <h5 class="sizes">sizes:
-                        <span class="size" data-toggle="tooltip" title="small">s</span>
-                        <span class="size" data-toggle="tooltip" title="medium">m</span>
-                        <span class="size" data-toggle="tooltip" title="large">l</span>
-                        <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
-                    </h5>
-                    <h5 class="colors">colors:
-                        <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
-                        <span class="color green"></span>
-                        <span class="color blue"></span>
-                    </h5>
-                    <div class="action">
-                        <button class="add-to-cart btn btn-default" type="button">add to cart</button>
-                        <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <table class="table table-bordered crud-table">
+    <thead>
+    <tr>
+        <th>Media Image</th>
+        <th>Image Type</th>
+        <th>Action</th>
+    </tr>
+    <thead>
+    <tbody>
+    @foreach($crud_list as $galleries)
+    <tr>
+    @if($galleries->published ==1) 
+        <td>
+            <img src="{{URL::asset('/uploads/'.$galleries->gallery_images)}}" width="100" height="100"/>
+        </td>
+        <td align="center"><a href="#" class="btn btn-sm btn-warning"><i class="fa fa-file-image-o" aria-hidden="true"></i> Main Gallery</a></td>
+        @else
+        <td>
+            <img src="{{URL::asset('/uploads/'.$galleries->gallery_images)}}" width="100" height="100" style="border: 1px solid #000;padding: 4px;" />
+        </td>
+        <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-file-image-o" aria-hidden="true"></i> Image Thumbsnail</a></td> 
+        @endif
+    <td>
+    <a href="{{ route($route_prefix . '.edit', $galleries) }}" class="btn btn-sm btn-success btn-edit-row">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+    </a>
+    <a href="javascript:void(0);" class="btn btn-sm btn-danger btn-delete-row">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+    <form method="POST" class="form-delete-row" action="{!! route($route_prefix . '.destroy', $galleries) !!}" accept-charset="UTF-8">
+        {{ csrf_field() }}
+        {{ method_field('DELETE') }}
+    </form>
+    </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+<div class="row pull-right">
+    <div class="col-md-12">
+        {!! $crud_list->links() !!}
     </div>
 </div>
-</body>
-</html>
-
+                   

@@ -22,7 +22,11 @@
             <td>{{$brands->id}}</td>
             <td>{{$brands->brand_name}}</td>
             <td><img src="{{URL::asset('/uploads/'.$brands->images_url)}}" style="width:50px;height:50px;"></td>
+            @if($brands->official ==1) 
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+            @else
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye-slash" aria-hidden="true"></i></a></td> 
+            @endif
             <td>
                 <a href="{{ route($route_prefix . '.edit', $brands) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-pencil" aria-hidden="true"></i>Edit

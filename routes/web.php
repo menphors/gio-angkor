@@ -40,6 +40,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::get('users-report','UsersReportsController@index');
     Route::get('export','UsersReportsController@export_excel');
     Route::get('export-user','UsersReportsController@user_export');
+    Route::resource('order','OrdersController');
 });
 
 /*Route Frontend*/

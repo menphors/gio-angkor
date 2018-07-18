@@ -5,7 +5,7 @@
 @section('content_header')
     <h1>
         {{ str_plural($page_title) . ' - listing' }}
-        <a href="{{ route($route_prefix . '.create') }}" class="btn btn-sm btn-primary pull-right log-activity">
+        <a href="{{ route($route_prefix . '.create') }}" class="btn btn-sm btn-primary pull-right log-activity order">
             <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Create New
         </a>
     </h1>

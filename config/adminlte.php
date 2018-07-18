@@ -159,8 +159,9 @@ return [
             'icon'        => 'product-hunt',
             'submenu' => [
                 [
-                    'text' => 'Order Status',
-                    'url'  => '#',
+                    'text' => 'Orders',
+                    'url'  => 'adminz/order',
+                    'icon' => 'shopping-cart'
                 ],
                 [
                     'text' => 'All products',

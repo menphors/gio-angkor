@@ -20,17 +20,17 @@
 
 <div class="row">
     <div class="col-md-12">
-        {!! BootForm::select('official','official',array('official' => 'official','unofficial'=> 'unofficial'))!!}
+        {!! BootForm::select('official','Official',array('1' => 'official','0'=> 'unofficial'))!!}
     </div>
 </div>
-
+<!-- 
 <div class="row">
     <div class="col-md-12">
         {!! BootForm::number('ordering')!!}
     </div>
 </div>
 
-
+ -->
 
 <div class="row">
     <div class="col-md-12">

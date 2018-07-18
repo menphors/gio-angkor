@@ -9,6 +9,7 @@ class Category extends CrudModel
     //validation
     public static $validationRules = [
         'name' => 'required',
+        'parent_id' => 'required'
     ];
     protected $table = 'tbl_category';
     protected $fillable = [
