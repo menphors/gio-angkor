@@ -6,14 +6,7 @@
  * Time: 9:52 PM
  */
 ?>
-
 <div class="row">
-    <div class="col-md-6">
-        {!! BootForm::number('cat_group_id') !!}
-    </div>
-</div>
-<div class="row">
-
     <div class="col-md-6">
         {!! BootForm::text('sub_category_name') !!}
     </div>
@@ -21,7 +14,22 @@
 
 <div class="row">
     <div class="col-md-6">
-        {!! BootForm::select('published','Published',array('publish' => 'Publish','unpublish'=> 'Unpublish'))!!}
+        <!-- {!! BootForm::text('category_id')!!} -->
+        {!! BootForm::select('category_id', 'Category', $category_list) !!}
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <!-- {!! BootForm::text('category_id')!!} -->
+        {!! BootForm::select('cat_group_id', 'Group Category', $group_list) !!}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        {!! BootForm::select('published','Published',array('1' => 'Publish','0'=> 'Unpublish'))!!}
     </div>
 </div>
 

@@ -13,7 +13,7 @@ use App\SettingItem;
 
 class ProductController extends CrudController
 {
-    protected $itemName = 'View Product';
+    protected $itemName = 'Product';
     protected $modelPath = 'App\Product';
     protected $viewPrefix = 'admin.products';
     protected $routePrefix = 'products';

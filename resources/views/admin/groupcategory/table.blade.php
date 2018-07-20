@@ -11,8 +11,8 @@
     <tr>
         <th>ID</th>
         <th>Group Category</th>
-        <th>Category ID</th>
-        <th>Sub-Category ID</th>
+        <th>CategoryID</th>
+        <th>SubCategoryID</th>
         <th>Action</th>
     </tr>
     <thead>

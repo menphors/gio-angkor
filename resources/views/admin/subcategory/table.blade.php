@@ -11,9 +11,10 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Category ID</th>
-        <th>Sub-Category Name</th>
+        <th>CategoryID</th>
+        <th>Sub Category Name</th>
         <th>Published</th>
+        <th>Action</th>
     </tr>
     <thead>
     <tbody>
@@ -22,7 +23,11 @@
             <td>{{$SubCategory->id}}</td>
             <td>{{$SubCategory->cat_group_id}}</td>
             <td>{{$SubCategory->sub_category_name}}</td>
+               @if($SubCategory->published ==1) 
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+            @else
+            <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye-slash" aria-hidden="true"></i></a></td> 
+            @endif
             <td>
                 <a href="{{ route($route_prefix . '.edit', $SubCategory) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Edit

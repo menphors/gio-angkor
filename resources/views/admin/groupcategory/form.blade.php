@@ -12,15 +12,17 @@
     </div>
 </div>
 <div class="row">
-
     <div class="col-md-6">
-        {!! BootForm::number('category_id') !!}
+        <!-- {!! BootForm::text('category_id')!!} -->
+        {!! BootForm::select('category_id', 'Category', $category_list) !!}
+
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-6">
-        {!! BootForm::number('sub_category_id')!!}
+        <!-- {!! BootForm::text('category_id')!!} -->
+        {!! BootForm::select('sub_category_id', 'Group Category', $sub_list) !!}
     </div>
 </div>
 

@@ -8,7 +8,7 @@ use App\Http\Controllers\CrudController;
 
 class AccountController extends CrudController
 {
-    protected $itemName = 'Brand';
+    protected $itemName = 'User';
     protected $modelPath = 'App\User';//model list data Brand
     protected $viewPrefix = 'admin.accounts';//view find view
     protected $routePrefix = 'user-account';//url route link
