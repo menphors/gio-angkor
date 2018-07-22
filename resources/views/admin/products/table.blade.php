@@ -17,6 +17,8 @@
         <th>Prices</th>
         <th>Count</th>
         <th>quantity</th>
+        <th>Category</th>
+        <th>ProImage</th>
         <th>Published</th>
         <th>Action</th>
     </tr>
@@ -33,6 +35,8 @@
             <td>{{$products->prices}}</td>
             <td>{{$products->count_product}}</td>
             <td>{{$products->quantity}}</td>
+            <td>{{$products->category_id}}</td>
+            <td><a href="#"><img src="{{URL::asset('/uploads/'.$products->gallery)}}" style="width:50px;height:50px;"></a></td>
            @if($products->published ==1) 
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             @else

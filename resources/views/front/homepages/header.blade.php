@@ -5,6 +5,7 @@
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=no">
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
   <link href="{{asset('css/main.css')}}" rel="stylesheet">
@@ -41,6 +42,7 @@
   <link type="text/css" href="{{asset('css/theme.css')}}" rel="stylesheet">
   <link type="text/css" href="{{asset('images_icon/icons/css/font-awesome.css')}}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
     <!-- end user dashboar --> 
     <!-- apply hold font to all page -->
   <link type="text/css" href="{{asset('css/style.css')}}" rel="stylesheet">
@@ -95,7 +97,7 @@
     <div class="container-fluid  " style="background-color: #e7e7e8;">
         <div class="container ">
             <div class="row ">
-                <div class="col-3  my-5 mx-auto"><img src="{{asset('images/logo/circle-logo.png')}}" alt="logo" id="logo"></div>
+                <div class="col-3  my-5 mx-auto"><a href="{!! url('/') !!}"><img src="{{asset('images/logo/circle-logo.png')}}" alt="logo" id="logo"></a></div>
                 <div class="col-9 my-5 mx-auto" style="margin-top: -50px;">
                     <div class="input-group " style="    margin-left: -13px;    width: 852px;">
                         <input type="text" class="col-md-6 col-sm-6 col-lg-6" placeholder="Seach..." style="height: 40px;width: 50%;">

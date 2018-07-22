@@ -52,9 +52,6 @@
         {!! $crud_list->links() !!}
     </div>
 </div>
-<script type="text/javascript">
-    
-</script>
 <script src="{{asset('js/jquery.min.js')}}" ></script>
 <script type="text/javascript">
     $(document).ready(function(){

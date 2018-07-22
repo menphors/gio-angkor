@@ -46,7 +46,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
 /*Route Frontend*/
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('order','OrderController@index');
-    Route::get('detail','StorepageController@index');
+    Route::get('detail','ProductController@index');
+    Route::get('show-product-grid','ProductController@show');
     Route::get('store', function () {
         return view('front.StorePage.store');
     });
@@ -59,6 +60,8 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('view-card', function () {
         return view('front.order.view-card');
     });
+    Route::get('product-lists','ProductGridController@show');
+    Route::post('productimg','ProductController@getProduct');
 });
 /*Login and Register*/
 Route::get('/login', function (){

@@ -20,7 +20,7 @@
         {!! BootForm::textarea('remark')!!}
     </div>
 </div>
-
+    {{ csrf_field() }}
 <div class="row">
     <div class="col-md-12">
         {!! link_to_route($route_prefix . '.index', 'Back to list', [], ['class' => 'btn btn-default']) !!}

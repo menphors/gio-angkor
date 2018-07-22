@@ -29,6 +29,7 @@ class CreateProductsTable extends Migration
             $table->integer('setting_id')->nullable();
             $table->integer('type_id')->nullable();
             $table->integer('user_id')->nullable();
+            $table->text('gallery')->nullable();
             $table->string('product_has_gallery_id',11)->nullable();
             $table->string('published',20)->nullable();
             $table->timestamps();

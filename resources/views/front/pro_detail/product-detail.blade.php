@@ -1,180 +1,55 @@
 @extends('front.homepages.header')
-@section('navigation-bar')
-@stop
 @section('content')
-<script>
-        $(document).ready(function() {
-//        $('#myCarousel').carousel({
-//            interval: 10000
-//        });
-            $('#myCarousel').carousel({
-                pause: true,
-                interval: false,
-            });
-        });
-</script>
 <!-- Page Content -->
+<h1 class="my-4"></h1>
 <div class="container">
     <!-- Page Heading -->
+    <div class="row" width="100%">
+        <div class="col-md-9 col-sm-9 col-lg-9"></div>
+        <div class="col-md-1 col-sm-1 col-lg-1" >
+            View:<a href="{!! url('frontend/show-product-grid') !!}"><i class="fa fa fa-table fa-fw"></i></a><a href="{!! url('frontend/product-lists') !!}"><i class="fa fa fa-list-ul"></i></a>
+        </div>
+        <div class="col-md-2 col-sm-2 col-lg-2" >
+            <div class="dropdown" style="float:right;position: relative;">
+                <div class="col col-lg-2 col-sm-2 col-md-2 portfolio-item">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Sort By:
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Low to High Price</a></li>
+                    <li><a href="#">High to Low Price</a></li>
+                    <li><a href="#">Latest Product</a></li>
+                  </ul>
+                </div>
+            </div><!--dropdown-->
+        </div>
+    </div>
+    <hr>
     <h1 class="my-4"></h1>
     <div class="row">
-            <div class="col-lg-2 col-md-3 col-sm-3">
-                <div id="wrapper">
-                    <!-- Sidebar -->
-                    <div id="sidebar-wrapper">
-                        <ul class="sidebar-nav" style="list-style: none;">
-                            <li class="sidebar-brand">
-                                <a href="#">
-                                     Women’s Clothing
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Men’s Clothing</a>
-                            </li>
-                            <li>
-                                <a href="#">Cellphones & Accessories</a>
-                            </li>
-                            <li>
-                                <a href="#">Computer</a>
-                            </li>
-                            <li>
-                                <a href="#">Consumer Electronics</a>
-                            </li>
-                            <li>
-                                <a href="#">Jewelry & Watches</a>
-                            </li>
-                            <li>
-                                <a href="#">Home & Garden & Funiture</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /#sidebar-wrapper -->
-                </div><!-- wrap-->
-        </div>
+        @foreach ($users as $value)
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/galaxy-s9.jpg')}}" alt="" width="400" height="700"></a>
+                <a href="#"><img src="{{URL::asset('/uploads/'.$value->gallery)}}"></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">Galaxy S9</a>
+                        <a href="#">{{ $value->pro_name }}</a>
                     </h4>
-                    <p class="card-text">Samsung Galaxy S9 Plus (256GB)</p>
+                    <!--get pagination-->
+                    <p class="card-text">{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}</p>
+                    <p><a href="#" style="color: red !important;font-weight: bold;">{{ $value->prices }}$</a></p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/i-phone-8-plus.jpg')}}" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Iphone 8 plus</a>
-                    </h4>
-                    <p class="card-text">iPhone 8 Plus</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/iphone-x.jpg')}}" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Iphone X</a>
-                    </h4>
-                    <p class="card-text">Iphone X</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-sm-3">
-            <div id="wrapper">
-                <!-- Sidebar -->
-                <div id="sidebar-wrapper">
-                    <ul class="sidebar-nav" style="list-style: none;">
-                        <li class="sidebar-brand">
-                            <a href="#">
-                                Toys Kids & Baby
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Sports & Outdoors</a>
-                        </li>
-                        <li>
-                            <a href="#">Health & Beauty Hairs</a>
-                        </li>
-                        <li>
-                            <a href="#">Automobiles & Motorcycles</a>
-                        </li>
-                        <li>
-                            <a href="#">Home Improvement Tools</a>
-                        </li>
-                        <li>
-                            <a href="#">Bags & shoes</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /#sidebar-wrapper -->
-            </div><!-- wrap-->
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div style="height: 20px;"></div>
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/ipad-apple.jpg')}}" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Ipad Apple</a>
-                    </h4>
-                    <p class="card-text">iPad Mini 4 (Cellular)</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div style="height: 20px;"></div>
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/ipad-apple1.jpg')}}" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Ipad Apple</a>
-                    </h4>
-                    <p class="card-text">iPad Pro 12.9 Cellular 2017</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-            <div style="height: 20px;"></div>
-            <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{asset('images/phone_image/ipad-apple2.jpg')}}" alt=""></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Ipad Apple</a>
-                    </h4>
-                    <p class="card-text">iPad 9.7" 2018 (Cellular)</p>
-                </div>
-            </div>
-        </div>
+        <br><br><br><br>
+        @endforeach
     </div>
     <!-- /.row -->
     <div class="before-pagin" style="height: 40px !important;"></div>
     <!-- Pagination -->
     <ul class="pagination justify-content-center">
         <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
-            </a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
-            </a>
+          {{ $users->links() }}
         </li>
     </ul>
     <!--related product-->
@@ -195,7 +70,7 @@
 
                             <div class="item active">
                                 <div class="row-fluid">
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-black.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
+                                    <div class="span3" ><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-blue.jpg')}}" alt="Image" style="max-width:100%;"/></a></div>
                                     <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-white.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
                                     <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-blue.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
                                     <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-gray.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
@@ -204,27 +79,19 @@
 
                             <div class="item">
                                 <div class="row-fluid">
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                </div><!--/row-fluid-->
-                            </div><!--/item-->
-
-                            <div class="item">
-                                <div class="row-fluid">
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
+                                   <div class="span3" ><a href="#x" class="thumbnail"><img id= "writeinfo" src="uploads" alt="Image" style="max-width:100%;"/></a></div>
                                 </div><!--/row-fluid-->
                             </div><!--/item-->
                         </div><!--/carousel-inner-->
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lt;</a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">&gt;</a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next" id="right">&gt;</a>
                     </div><!--/myCarousel-->
                 </div><!--/well-->
             </div>
+        </div>
+        <div id="pro">
+        <input type="hidden" class="getinfo">
+       <!--  <img id= "writeinfo" src="uploads" alt=""></img> -->
         </div>
     </div>
     <!--buyer protection-->
@@ -247,6 +114,29 @@
 </div>
 <!-- /.container -->
 <div style="height: 20px;"></div>
+<script src="{{asset('js/jquery.min.js')}}" ></script>
+    <script>
+        $(document).ready(function(){
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            var pic = "http://localhost:8000/uploads";
+
+            $("#right").click(function(){
+                $.ajax({
+                    /* the route pointing to the post function */
+                    url: 'productimg',
+                    type: 'POST',
+                    /* send the csrf-token and the input to the controller */
+                    data: {_token: CSRF_TOKEN, gallery:$(".getinfo").val()},
+                    dataType: 'JSON',
+                    /* remind that 'data' is the response of the AjaxController */
+                    success: function (data) { 
+                        //var res = $(".writeinfo").append('<img src="uploads/" + data + ">');
+                       var res = $('#writeinfo').attr("src","http://localhost:8000/uploads/"+data);
+                    }
+                }); 
+            });
+       });    
+    </script>
 <!-- Footer -->
 <!-- Bootstrap core JavaScript -->
 @include('front.homepages.footer')
