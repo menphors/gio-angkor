@@ -35,7 +35,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 'xs',
-            'name' => 'XS kh',
+            'name' => 'XS',
             'value' => 'XS (Xtra Small Size)',
             'note' => 'SettingItem Seeder',
             'type_id' => $size->id
@@ -43,7 +43,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 's',
-            'name' => 'S kh',
+            'name' => 'S',
             'value' => 'S (Small Size)',
             'note' => 'SettingItem Seeder',
             'type_id' => $size->id
@@ -51,7 +51,7 @@ class SettingItemsTableSeeder extends Seeder
         
         SettingItem::create([
             'code' => 'm',
-            'name' => 'M kh',
+            'name' => 'M',
             'value' => 'M (Meduim Size)',
             'note' => 'SettingItem Seeder',
             'type_id' => $size->id

@@ -43,9 +43,9 @@
           <a class="btn btn-primary" href="{!! url('frontend/product-add-to-card') !!}">View Detail</a>
         </div>
       </div>
+      <hr>
       @endforeach
       <!-- /.row -->
-      <hr>
       <!-- Pagination -->
       <ul class="pagination justify-content-center">
         <li class="page-item">

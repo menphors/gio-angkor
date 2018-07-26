@@ -11,7 +11,7 @@
         <th>Pro#</th>
         <th>Name</th>
         <th>Price</th>
-        <th>Image</th>
+        <!-- <th>Image</th> -->
         <th>Disc Per(%)</th>
         <!-- <th>Product#</th> -->
         <th>Brand#</th>
@@ -31,7 +31,7 @@
             <td>{{$product->id}}</td>
             <td>{{$product->promotion_name}}</td>
             <td>{{$product->promotion_prices}}$</td>
-            <td><img src="{{URL::asset('/uploads/'.$product->promotion_image)}}" style="width:50px;height:50px;"></td>
+           <!--  <td><img src="{{URL::asset('/uploads/'.$product->promotion_image)}}" style="width:50px;height:50px;"></td> -->
             <td>{{$product->discount_percentage}}%</td>
             <!-- <td>{{ $product->product_id }}</td> -->
             <td>{{$product->brand_id}}</td>

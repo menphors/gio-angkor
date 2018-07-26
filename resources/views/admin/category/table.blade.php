@@ -10,7 +10,7 @@
     <tr>
         <th>ID</th>
         <th>Category</th>
-        <th>ProductID</th>
+        <th>Category Main</th>
         <th>Published</th>
     </tr>
     <thead>

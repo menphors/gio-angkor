@@ -133,7 +133,7 @@
 </div>
 <div class="row" style="height: 30px !important;">
     <div class="col-md-6">
-        {!! BootForm::select('published','publish',array('pub'=>'Publish','unpub'=> 'Un-publish'))!!}
+        {!! BootForm::select('published','publish',array('1'=>'Publish','0'=> 'Un-publish'))!!}
     </div>
 </div>
 <div class="row" style="height: 30px !important;">

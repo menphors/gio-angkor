@@ -38,6 +38,7 @@
                     <!--get pagination-->
                     <p class="card-text">{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}</p>
                     <p><a href="#" style="color: red !important;font-weight: bold;">{{ $value->prices }}$</a></p>
+                    <button class="btn btn-success"><a href="#" style="color: #FFF;">Add to cart</a></button>
                 </div>
             </div>
         </div>

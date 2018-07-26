@@ -15,7 +15,7 @@ class SettingTypesTableSeeder extends Seeder
     {
         SettingType::create([
             'code' => 'size',
-            'name' => 'Size KH',
+            'name' => 'Size',
             'note' => 'Create size setting type by seeder'
         ]);
         
