@@ -17,8 +17,8 @@
         <th>Brand#</th>
        <!--  <th>Ordered</th> -->
         <th>Cat#</th>
-        <th>Exp Date</th>
         <th>From</th>
+        <th>Exp Date</th>
        <!--  <th>To</th> -->
         <th>Official</th>
         <th>Action</th>
@@ -36,8 +36,8 @@
             <!-- <td>{{ $product->product_id }}</td> -->
             <td>{{$product->brand_id}}</td>
             <td>{{$product->category_id}}</td>
-            <td>{{$product->promotion_expire_date}}</td>
             <td>{{$product->date_from}}</td>
+            <td>{{$product->promotion_expire_date}}</td>
             @if($product->published ==1) 
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             @else
