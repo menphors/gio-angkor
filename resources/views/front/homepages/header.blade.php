@@ -87,7 +87,7 @@
 
                     <a class="nav-link fa fa-lock text-dark" aria-hidden="true" href="{{url('login')}}"><i class=" fa-lg" aria-hidden="true"></i> Sign In</a>
 
-                    <a class="nav-link fa fa-users text-dark" aria-hidden="true" href="{{url('sign_in')}}"><i class="" aria-hidden="true"></i> Free Join</a>
+                    <a class="nav-link fa fa-users text-dark" aria-hidden="true" href="{{url('register')}}"><i class="" aria-hidden="true"></i> Free Join</a>
                 </nav>
             </div>
         </div>
