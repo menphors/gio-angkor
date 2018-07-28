@@ -2,20 +2,13 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\Users as Authenticatable;
 //extend Authenticatable
 
-class User extends Authenticatable
+class Users extends CrudModel
 {
-    use Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-      //validation fields
     public static $validationRules = [
         'username' => 'required||max:255',
         'tel' => 'required||numeric',
@@ -54,8 +47,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function level() {
-        return $this->hasManyThrough('App\Level','id');
-    }
 }

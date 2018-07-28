@@ -41,7 +41,7 @@
                 <form action="">
                     <p>Register a new membership</p>
                     <div class="form-group">
-                        <p>FULL NAME<br>
+                        <p>Username<br>
                             <input type="email" name="" class="col-md-8 form-control" ></p>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>

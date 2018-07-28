@@ -64,9 +64,16 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::post('productimg','ProductController@getProduct');
 });
 /*Login and Register*/
-Route::get('/login', function (){
-    return view('form_login.Login');
-});
+// Route::get('/login', function (){
+//     return view('form_login.Login');
+// });
 Route::get('/sign_in', function (){
     return view('form_login.sign_in');
+});
+
+Route::get('/welcome', function (){
+    return view('welcome');
+});
+Route::get('/home', function (){
+    return view('home');
 });

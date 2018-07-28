@@ -38,7 +38,7 @@
         <div class="col" style="border-bottom: 1px solid rgb(133, 133, 133); padding-left: 5%;">
             <h4>CREATE ACCOUNT</h4><p style="border: 1px  solid #EEEEEE; width: 82%;"></p>
             <div class="panel panel-default">
-                <form action="">
+                <form action="{{route('sign_in')}}">
                     <p>Register a new membership</p>
                     <div class="form-group">
                         <p>FULL NAME<br>
