@@ -77,3 +77,9 @@ Route::get('/welcome', function (){
 Route::get('/home', function (){
     return view('home');
 });
+//Cart controller
+Route::resource('/cart','CartController');
+Route::delete('delete','CartController@delete');
+
+
+

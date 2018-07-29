@@ -179,6 +179,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         JeroenNoten\LaravelAdminLte\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
 
         
         Collective\Html\HtmlServiceProvider::class,
@@ -238,6 +239,8 @@ return [
         'BootForm' => Watson\BootstrapForm\Facades\BootstrapForm::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+
 
 
     ],

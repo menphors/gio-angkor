@@ -81,7 +81,7 @@
                     </a>
                     <a class="navbar-brand mr-auto" style=" font-size:12px;color: black;" href="#">Tel: 023 222 555</a>
 
-                    <a class="nav-link fa fa-shopping-cart text-dark Active " href="#"><i class=" fa-lg" aria-hidden="true"></i> Card <span class="badge badge-pill badge-danger" style="border: 2px solid #">10</span></a>
+                    <a class="nav-link fa fa-shopping-cart text-dark Active " href="{{ route('cart.index')}}"><i class=" fa-lg" aria-hidden="true"></i> Card <span class="badge badge-pill badge-danger" style="border: 2px solid #">{{ Cart::count() }}</span></a>
 
                     <a class="nav-link fa fa-heartbeat  text-dark" aria-hidden="true" href="#"><i class=" fa-lg" aria-hidden="true"></i> Wish List</a>
 
