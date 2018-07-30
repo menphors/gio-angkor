@@ -32,7 +32,7 @@
                       <td><input type="number" name="" value="{{$cartItem->qty}}"></td>
                       <td>{{ $cartItem->price}}</td>
                       <td>{{ Cart::total() }} $</td>
-                      <td><a href="{{url('delete',$cartItem->id)}}"><i class="fa fa-trash btn btn-danger"></i></td>
+                      <td><a href="{{url('remove-cart/'.$cartItem->rowId)}}"><i class="fa fa-trash btn btn-danger"></i></td>
                     </tr>
                     @endforeach
                   </tbody>
@@ -45,7 +45,7 @@
                 </a>
                 <a href="#" class="list-group-item"><span><b>Shipping:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free shipping</span></a>
                 <a href="#" class="list-group-item"><span><b>Total:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Cart::total() }} $</span></a>
-                <a href="#" class="list-group-item">
+                <a href="{{ url('checkout') }}" class="list-group-item">
                     <button class="btn btn-danger btn-product btn-block"><span class=""></span>Checkout</button>
                 </a>
             </div>

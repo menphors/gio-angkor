@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 use Illuminate\Http\Request;
-use App\Product;
 
-class CartController extends Controller
+class CheckoutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        $cartItems = Cart::content();
-        return \View::make('front/order/view-card', compact('cartItems'));
+        //
     }
 
     /**
@@ -26,6 +24,7 @@ class CartController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
@@ -56,14 +55,9 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request,$id)
+    public function edit($id)
     {
-        $product = Product::find($id);
-        $name = $product->pro_name;
-        $price = $product->prices;
-        // $cart = Cart::add($id,$name,$price);
-        Cart::add(['id'=> $id,'name'=>$name,'price'=>$price,'qty'=>1]); 
-        return redirect('cart');
+        //
     }
 
     /**
@@ -87,5 +81,16 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function checkout()
+    {       
+        return view('front.checkout.checkout');
+    }
+    //remove cart
+    public function RemoveCart($rowid)
+    {
+        Cart::remove($rowid);
+        return redirect()->back();
     }
 }
