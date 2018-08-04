@@ -33,14 +33,14 @@
                     Proceed Order
                 </a>
                 <a href="#" class="list-group-item">
-                    <form role="form" action="" method="post">
+                    <form role="form" action="{{url('billing-address')}}" method="post">
                         <div class="row setup-content" id="step-1">
                             <div class="col-xs-6 col-md-offset-3">
                                 <div class="col-md-12">
                                     <h3>Billing Detail</h3>
                                     <div class="form-group">
                                         <label class="control-label">First Name</label>
-                                        <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
+                                        <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" name="first_name" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Last Name</label>

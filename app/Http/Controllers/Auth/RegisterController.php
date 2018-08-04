@@ -6,6 +6,8 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Gloudemans\Shoppingcart\Facades\Cart;
+
 
 class RegisterController extends Controller
 {
@@ -73,5 +75,15 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function doLogout()
+    {
+        session(['user' => null]);
+        foreach (Cart::content() as $row) {
+            session([$row->id => null]);
+        }
+        Cart::destroy();
+        return redirect('/');
     }
 }

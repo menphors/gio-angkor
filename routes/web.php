@@ -82,6 +82,8 @@ Route::resource('/cart','CartController');
 Route::delete('delete','CartController@delete');
 Route::get('checkout','CheckoutController@checkout');
 Route::get('remove-cart/{rowid}','CheckoutController@RemoveCart');
+//Checkout or billing address
+Route::resource('billing-address','CheckoutController@store');
 
 
 

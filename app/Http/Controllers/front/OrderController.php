@@ -9,6 +9,6 @@ class OrderController extends Controller
 {
     //
     public function index(){
-        return view('front.order.order');
+        return view('front.order.view-cart');
     }
 }

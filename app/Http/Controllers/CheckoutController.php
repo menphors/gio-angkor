@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use Gloudemans\Shoppingcart\Facades\Cart;
-
+use App\User;
+use App\Product;
+use App\Order;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -35,8 +37,17 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+          $products = Cart::content();
+     
+     // iterate through the products and store them into the database
+     foreach($products as $product){
+         Order::create([
+             'product_id' => $product->id,
+             'user_id' => auth()->id(),
+         ]);
+     }
+     
+     return back();    }
 
     /**
      * Display the specified resource.
