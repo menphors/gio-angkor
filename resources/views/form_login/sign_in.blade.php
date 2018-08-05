@@ -89,7 +89,4 @@
 <button class="btn btn-primary btn-sm " style="background: #00c0ef;border: 1px solid #00c0ef;"><i class="fa fa-twitter"> | &nbsp;</i>Sign in with Twitter </button>
 
 </body>
-<script>
-
-</script>
 </html>
