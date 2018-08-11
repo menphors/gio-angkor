@@ -1,11 +1,9 @@
 @extends('front.homepages.header')
-@section('navigation-bar')
-@stop
 @section('content')
         <br>
          <div class="container" align="center">
                 <div class="col-md-6">
-                    <p>This is your account <a href="#">Phors MEN</a>. Do you want to <a href="{{url('/')}}">Logout?</a></p>
+                    <p>This is your account <a href="#">Phors MEN</a>. Do you want to <a href="{{url('auth/logout') }}">Logout?</a></p>
                 </div>
             </div>
         </div>
@@ -19,7 +17,7 @@
                             </li>
                             <li><a href="#"><i class="menu-icon icon-inbox"></i>Wishlist</b> </a></li>
                             <li><a href="#"><i class="menu-icon icon-tasks"></i>Profile</a></li>
-                            <li><a href="{{url('/')}}"><i class="menu-icon icon-signout"></i>Logout </a></li>
+                            <li><a href="{{ url('auth/logout') }}"><i class="menu-icon icon-signout"></i>Logout </a></li>
                         </ul>
                         <!--/.widget-nav-->
                     </div>

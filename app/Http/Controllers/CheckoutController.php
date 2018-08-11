@@ -5,6 +5,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use App\User;
 use App\Product;
 use App\Order;
+use Auth;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -16,7 +17,6 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -103,5 +103,17 @@ class CheckoutController extends Controller
     {
         Cart::remove($rowid);
         return redirect()->back();
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        session(['guest' => null]);
+        foreach (Cart::content() as $row) {
+            session([$row->id => null]);
+        }
+        Cart::destroy();
+        return redirect('/');
     }
 }

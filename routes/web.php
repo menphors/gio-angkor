@@ -75,7 +75,7 @@ Route::get('/welcome', function (){
     return view('welcome');
 });
 Route::get('/home', function (){
-    return view('home');
+    return view('front.user_dashboard.dashboard');
 });
 //Cart controller
 Route::resource('/cart','CartController');
@@ -84,6 +84,7 @@ Route::get('checkout','CheckoutController@checkout');
 Route::get('remove-cart/{rowid}','CheckoutController@RemoveCart');
 //Checkout or billing address
 Route::resource('billing-address','CheckoutController@store');
+Route::get('/auth/logout','CheckoutController@logout');
 
 
 
