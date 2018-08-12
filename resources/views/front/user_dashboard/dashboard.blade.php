@@ -2,8 +2,20 @@
 @section('content')
         <br>
          <div class="container" align="center">
-                <div class="col-md-6">
-                    <p>This is your account <a href="#">Phors MEN</a>. Do you want to <a href="{{url('auth/logout') }}">Logout?</a></p>
+                <div class="col-md-12">
+                    <div class="col-md-10">
+                        <p>This is your account <a href="#">Phors MEN</a>.Do you want to <a href="{{url('auth/logout') }}">Logout?</a></p>
+                    </div>
+                    @if(Auth::user() &&  Auth::user()->admin == 1)
+                    <div class="col-md-2">
+                        <button class="btn btn-success"><a href="{{url('adminz')}}" style="color:#FFF;">Go to Admin Panel</a></button>
+                    </div>
+                    <br>
+                    <hr>
+                    @else
+                    <br>
+                    <hr>
+                    @endif
                 </div>
             </div>
         </div>

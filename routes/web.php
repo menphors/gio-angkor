@@ -19,28 +19,28 @@ Route::get('/', function () {
 /*Route Admin page*/
 // resource put delete update get show data post request
 Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
-    Route::get('/','StoreReportsController@index');
-    Route::resource('user-account','AccountController');
-    Route::resource('setting-types', 'SettingTypesController');
-    Route::resource('setting-items', 'SettingItemsController');
-    Route::resource('level-lists','LevelsController');
-    Route::resource('brand-lists','BrandsController');
-    Route::resource('log-activity','LogActivitysController');
-    Route::resource('group-category','GroupCategoryController');
-    Route::resource('category','CategoryController');
-    Route::get('category-test','CategoryController@testCat');
-    Route::resource('subcategory','SubCategoryController');
-    Route::resource('tracking','TrackingsController');
-    Route::resource('promotions','PromotionsController');
-    Route::resource('products','ProductController');
-    Route::resource('discount','DiscountsController');
-    Route::resource('gallery','GalleriesController');
-    Route::resource('disput','DisputController');
-    Route::get('store-report','StoreReportsController@index');
-    Route::get('users-report','UsersReportsController@index');
-    Route::get('export','UsersReportsController@export_excel');
-    Route::get('export-user','UsersReportsController@user_export');
-    Route::resource('order','OrdersController');
+    Route::get('/','StoreReportsController@index')->middleware('admin');
+    Route::resource('user-account','AccountController')->middleware('admin');
+    Route::resource('setting-types', 'SettingTypesController')->middleware('admin');
+    Route::resource('setting-items', 'SettingItemsController')->middleware('admin');
+    Route::resource('level-lists','LevelsController')->middleware('admin');
+    Route::resource('brand-lists','BrandsController')->middleware('admin');
+    Route::resource('log-activity','LogActivitysController')->middleware('admin');
+    Route::resource('group-category','GroupCategoryController')->middleware('admin');
+    Route::resource('category','CategoryController')->middleware('admin');
+    Route::get('category-test','CategoryController@testCat')->middleware('admin');
+    Route::resource('subcategory','SubCategoryController')->middleware('admin');
+    Route::resource('tracking','TrackingsController')->middleware('admin');
+    Route::resource('promotions','PromotionsController')->middleware('admin');
+    Route::resource('products','ProductController')->middleware('admin');
+    Route::resource('discount','DiscountsController')->middleware('admin');
+    Route::resource('gallery','GalleriesController')->middleware('admin');
+    Route::resource('disput','DisputController')->middleware('admin');
+    Route::get('store-report','StoreReportsController@index')->middleware('admin');
+    Route::get('users-report','UsersReportsController@index')->middleware('admin');
+    Route::get('export','UsersReportsController@export_excel')->middleware('admin');
+    Route::get('export-user','UsersReportsController@user_export')->middleware('admin');
+    Route::resource('order','OrdersController')->middleware('admin');
 });
 
 /*Route Frontend*/
@@ -63,19 +63,11 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('product-lists','ProductGridController@show');
     Route::post('productimg','ProductController@getProduct');
 });
-/*Login and Register*/
-// Route::get('/login', function (){
-//     return view('form_login.Login');
-// });
-Route::get('/sign_in', function (){
-    return view('form_login.sign_in');
-});
-
-Route::get('/welcome', function (){
-    return view('welcome');
-});
 Route::get('/home', function (){
     return view('front.user_dashboard.dashboard');
+})->middleware('auth');
+Route::get('/privacy', function (){
+    return view('front.abouts.policy_privacy');
 });
 //Cart controller
 Route::resource('/cart','CartController');
@@ -85,6 +77,7 @@ Route::get('remove-cart/{rowid}','CheckoutController@RemoveCart');
 //Checkout or billing address
 Route::resource('billing-address','CheckoutController@store');
 Route::get('/auth/logout','CheckoutController@logout');
+
 
 
 

@@ -44,7 +44,8 @@ class User extends Authenticatable
     'address',
     'published',
     'created_by',
-    'tel'
+    'tel',
+    'admin'
     ];
     /**
      * The attributes that should be hidden for arrays.

@@ -21,6 +21,7 @@
         <th data-filter-control="select" sortable="true" data-field="Gender">Gender</th>
         <th data-filter-control="select" sortable="true" data-field="DOB">DOB</th>
         <th data-filter-control="select" sortable="true" data-field="Email">Email</th>
+        <th data-filter-control="select" sortable="true" data-field="Email">User Role</th>
         <th data-filter-control="select" sortable="true" data-field="Published">Published</th>
         <th>Action</th>
     </tr>
@@ -35,6 +36,11 @@
             <td>{{$users->gender}}</td>
             <td>{{$users->dob}}</td>
             <td>{{$users->email}}</td>
+            @if($users->admin=='1')
+            <td>Administrator</td>
+            @else
+            <td>Customer</td>
+            @endif
             @if($users->published ==1)
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             @else
