@@ -180,7 +180,7 @@ return [
         JeroenNoten\LaravelAdminLte\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
-
+        Laravel\Socialite\SocialiteServiceProvider::class,
         
         Collective\Html\HtmlServiceProvider::class,
         Watson\BootstrapForm\BootstrapFormServiceProvider::class,
@@ -240,6 +240,7 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
 
 

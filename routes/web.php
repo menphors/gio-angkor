@@ -66,7 +66,7 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
 Route::get('/home', function (){
     return view('front.user_dashboard.dashboard');
 })->middleware('auth');
-Route::get('/privacy', function (){
+Route::get('/policy', function (){
     return view('front.abouts.policy_privacy');
 });
 //Cart controller
@@ -77,6 +77,8 @@ Route::get('remove-cart/{rowid}','CheckoutController@RemoveCart');
 //Checkout or billing address
 Route::resource('billing-address','CheckoutController@store');
 Route::get('/auth/logout','CheckoutController@logout');
+Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+Route::get('/callback', 'SocialAuthFacebookController@callback');
 
 
 

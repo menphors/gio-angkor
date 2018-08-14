@@ -72,7 +72,7 @@
     </div><!---- row ---->
     <br>
         <div class="row" style="padding-left: 1%;">
-            <button class="btn btn-primary btn-sm " style="background: #038;border: 1px solid #038;"><i class="fa fa-facebook">&nbsp;<span>|</span>&nbsp;</i>Sign in with Facebook </button>
+            <button class="btn btn-primary btn-sm " style="background: #038;border: 1px solid #038;"><i class="fa fa-facebook">&nbsp;<span>|</span>&nbsp;</i><a href="{{url('/redirect')}}">Sign in with Facebook</a></button>
             &nbsp;
             <button class="btn btn-primary btn-sm " style="background: #00c0ef;border: 1px solid #00c0ef;"><i class="fa fa-twitter"> | &nbsp;</i>Sign in with Twitter </button>
         </div><!--div button-->
