@@ -62,7 +62,9 @@
      }
    
  </style>
-  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
     <nav>
@@ -99,10 +101,10 @@
             <div class="row ">
                 <div class="col-3  my-5 mx-auto"><a href="{!! url('/') !!}"><img src="{{asset('images/logo/circle-logo.png')}}" alt="logo" id="logo"></a></div>
                 <div class="col-9 my-5 mx-auto" style="margin-top: -50px;">
-                    <div class="input-group " style="    margin-left: -13px;    width: 852px;">
-                        <input type="text" class="col-md-6 col-sm-6 col-lg-6" placeholder="Seach..." style="height: 40px;width: 50%;">
-                <span class="input-group-btn  mr-3">
-                  <button class="btn btn btn-secondary dropdown" data-toggle="dropdown" type="submit" style="height: 40px;">All Categries</button>
+                    <form class="input-group " style="    margin-left: -13px;    width: 852px;" action="{{route('searchResult')}}" >
+                        <input type="text" class="col-md-6 col-sm-6 col-lg-6" placeholder="Seach..." name="searchname" id="searchname" style="height: 40px;width: 50%;">
+                        <span class="input-group-btn  mr-3">
+                        <button class="btn btn btn-secondary dropdown" data-toggle="dropdown" type="submit" style="height: 40px;">All Categries</button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
@@ -119,7 +121,7 @@
                                 <a class="nav-link">200.000 successful</a>
                             </li>
                         </ul>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -131,3 +133,13 @@
 <!-- Nav header -->
 
 </body>
+<script type="text/javascript">
+    $('#searchname').autocomplete({
+        source : '{!! URL::route('autoComplete') !!}',
+        minlength : 1,
+        autoFocus : true,
+        select:function(e,ui){
+            alert(ui)
+        }
+    });
+</script>

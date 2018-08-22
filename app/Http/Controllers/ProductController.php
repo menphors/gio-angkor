@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\Product;
 
 class ProductController extends Controller
@@ -87,5 +88,26 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function autoComplete(Request $request)
+    {
+        $term=$request->term;
+        $data = Product::where('pro_name','LIKE','%'.$term.'%')
+            ->take(10)
+            ->get();
+        $results=array();
+        foreach($data as $key => $v){
+            $results[]=['id'=>$v->id,'value'=>$v->pro_name];
+        }
+        return response()->json($results);
+
+    }
+    public function searchResult(Request $request){
+
+        $searchname=$request->input('searchname');
+
+        $products = Product::where('pro_name','like',"%$searchname%")->get();
+
+        return view('front.products.index')->with('products',$products);
     }
 }

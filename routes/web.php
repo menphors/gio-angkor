@@ -78,6 +78,9 @@ Route::get('remove-cart/{rowid}','CheckoutController@RemoveCart');
 Route::resource('billing-address','CheckoutController@store');
 Route::get('/auth/logout','CheckoutController@logout');
 
+Route::get('/autoComplete',array('as'=>'autoComplete','uses'=>'ProductController@autoComplete'));
+Route::get('/searchResult',array('as'=>'searchResult','uses'=>'ProductController@searchResult'));
+
 
 
 
