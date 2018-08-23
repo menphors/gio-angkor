@@ -14,7 +14,8 @@
 Auth::routes();
 
 Route::get('/', function () {
-    return view('front.homepages.homepage');
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.homepages.homepage',$data1);
 });
 /*Route Admin page*/
 // resource put delete update get show data post request
@@ -45,11 +46,13 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
 
 /*Route Frontend*/
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
+
     Route::get('order','OrderController@index');
     Route::get('detail','ProductController@index');
     Route::get('show-product-grid','ProductController@show');
     Route::get('store', function () {
-        return view('front.StorePage.store');
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.StorePage.store',$data1);
     });
     Route::get('product-add-to-card', function () {
         return view('front.pro_detail.product-order');

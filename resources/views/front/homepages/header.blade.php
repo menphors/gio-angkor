@@ -104,12 +104,13 @@
                     <form class="input-group " style="    margin-left: -13px;    width: 852px;" action="{{route('searchResult')}}" >
                         <input type="text" class="col-md-6 col-sm-6 col-lg-6" placeholder="Seach..." name="searchname" id="searchname" style="height: 40px;width: 50%;">
                         <span class="input-group-btn  mr-3">
-                        <button class="btn btn btn-secondary dropdown" data-toggle="dropdown" type="submit" style="height: 40px;">All Categries</button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                        {{--<button class="btn btn btn-secondary dropdown" data-toggle="dropdown" type="submit" style="height: 40px;">All Categries</button>--}}
+                    <select name="searchByCategory" id="searchByCategory">
+                        <option value="">ALL Category</option>
+                        @foreach($data as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                    </select>
                   <button class="btn btn-danger" type="submit" style="height: 40px;"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </span>
                         <ul class="nav float-right" style="margin-left: 551px;
@@ -139,7 +140,6 @@
         minlength : 1,
         autoFocus : true,
         select:function(e,ui){
-            alert(ui)
         }
     });
 </script>

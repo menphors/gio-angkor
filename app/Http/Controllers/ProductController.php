@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Product;
+use App\Category;
+use DB;
 
 class ProductController extends Controller
 {
@@ -19,6 +21,7 @@ class ProductController extends Controller
         $data = [];
         $data["title"]="hello";
         $data["products"]=Product::paginate(2);
+
 
         return view("products.index",$data);
     }
@@ -105,9 +108,12 @@ class ProductController extends Controller
     public function searchResult(Request $request){
 
         $searchname=$request->input('searchname');
-
-        $products = Product::where('pro_name','like',"%$searchname%")->get();
-
-        return view('front.products.index')->with('products',$products);
+        $searchByCategory=$request->input('searchByCategory');
+        $products = Product::where('pro_name','like',"%$searchname%")
+            ->where('category_id','like',"%$searchByCategory%")
+            ->get();
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.products.index',$data1)->with('products',$products);
     }
+
 }
