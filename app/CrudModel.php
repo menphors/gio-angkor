@@ -14,4 +14,5 @@ abstract class CrudModel extends Model
     public function saveOrUpdate($request) {
         return $this->fill($request->all())->save();
     }
+    
 }

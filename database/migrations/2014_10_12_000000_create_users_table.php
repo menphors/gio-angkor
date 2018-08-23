@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->dateTime('log_date')->nullable();
             $table->integer('role_id')->nullable();
             $table->integer('level_id')->nullable();
+            $table->integer('google_id')->nullable();
             $table->text('address')->nullable();
             $table->string('published')->nullable();
             $table->string('created_by')->nullable();

@@ -136,7 +136,7 @@
         {!! BootForm::select('published','publish',array('1'=>'Publish','0'=> 'Un-publish'))!!}
     </div>
 </div>
-<div class="row" style="height: 30px !important;">
+<div class="row" style="height: auto !important;">
     <div class="col-md-12">
         {!! BootForm::textarea('product_desc')!!}
     </div>

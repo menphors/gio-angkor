@@ -135,3 +135,6 @@
     @stack('js')
     @yield('js')
 @stop
+
+</body>
+</html>

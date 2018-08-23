@@ -59,4 +59,10 @@ class User extends Authenticatable
     public function level() {
         return $this->hasManyThrough('App\Level','id');
     }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+        
+    }
 }

@@ -36,34 +36,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //store user billing address not yet finish
-         $this->validate($request, [
-            'guest_name' => 'required|max:255',
-            'guest_phone' => 'required',
-            'guest_email' => 'required',
-            'guest_address' => 'required',
-          ]);
-            $guest = new Guest;
-            $guest->name = $request->guest_name;
-            $guest->phone = $request->guest_phone;
-            $guest->email = $request->guest_email;
-            $guest->address = $request->guest_address;
-            $guest->payment_method = $request->payment_method;
-            $guest->save();
-
-            $cart = new Cart;
-            $cartDetails = Cart::content();
-            $subtotal = Cart::subtotal();
-            foreach($cartDetails as $c){
-              $cart->guest_id = $guest->id;
-              $cart->products = $c->name;
-              $cart->qty = $c->qty;
-              $cart->price = $c->price;
-              $cart->subtotal = $c->subtotal;
-              $cart->save();
-            }
-
-            return view('guest/track')->with('msg','Your Order has been placed! You\'ll get an email shortly!');
+        
     }
 
     /**
@@ -72,9 +45,18 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function view_cart()
     {
-        //
+        //view cart while checkout
+        // $product = Product::find($id);
+        // $name = $product->pro_name;
+        // $price = $product->prices;
+        // // $cart = Cart::add($id,$name,$price);
+        // $cart = Cart::add(['id'=> $id,'name'=>$name,'price'=>$price,'qty'=>1]); 
+        // return view('front.checkout.checkout', compact($cart));
+
+        $cartItems = Cart::content();
+        return \View::make('front.checkout.checkout', compact('cartItems'));
     }
 
     /**

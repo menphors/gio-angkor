@@ -40,7 +40,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::get('users-report','UsersReportsController@index')->middleware('admin');
     Route::get('export','UsersReportsController@export_excel')->middleware('admin');
     Route::get('export-user','UsersReportsController@user_export')->middleware('admin');
-    Route::resource('order','OrdersController')->middleware('admin');
+    Route::resource('order','OrderController')->middleware('admin');
 });
 
 /*Route Frontend*/
@@ -57,10 +57,8 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('dashboard-user', function () {
         return view('front.user_dashboard.dashboard');
     });
-    Route::get('view-card', function () {
-        return view('front.order.view-card');
-    });
     Route::get('product-lists','ProductGridController@show');
+    Route::get('products/productdetails/{$id}', 'ProductGridController@show_product');
     Route::post('productimg','ProductController@getProduct');
 });
 Route::get('/home', function (){
@@ -70,15 +68,31 @@ Route::get('/policy', function (){
     return view('front.abouts.policy_privacy');
 });
 //Cart controller
+
+Route::group(['middleware' => 'auth'], function() {
+Route::get('view-card', 'CartController@view_cart');
 Route::resource('/cart','CartController');
 Route::delete('delete','CartController@delete');
 Route::get('checkout','CheckoutController@checkout');
 Route::get('remove-cart/{rowid}','CheckoutController@RemoveCart');
+});
 //Checkout or billing address
 Route::resource('billing-address','CheckoutController@store');
 Route::get('/auth/logout','CheckoutController@logout');
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 Route::get('/callback', 'SocialAuthFacebookController@callback');
+Route::get('proDetail', function () {
+        return view('front.pro_detail.product-order');
+    });
+/*Twitter login*/
+Route::post('/google/redirect', 'SocialAuthTwitterController@redirect');
+Route::get('/google/callback', 'SocialAuthTwitterController@callback');
+/*Login with G+*/
+Route::get('/google/redirect', 'AuthController@redirectToGoogle');
+Route::get('google/callback', 'AuthController@handleGoogleCallback');
+/*Proceed Order*/
+Route::get('/billing-address', 'front\ProceedOrderController@store');
+Route::post('/billing-address', 'front\ProceedOrderController@store');
 
 
 

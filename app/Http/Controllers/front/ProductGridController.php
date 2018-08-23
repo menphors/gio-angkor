@@ -37,7 +37,7 @@ class ProductGridController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -86,4 +86,10 @@ class ProductGridController extends Controller
     {
         //
     }
+
+    public function show_product( $id ) {
+    $product = Product::find( $id );
+    dd($product);
+    //return Redirect('/proDetail',compact('products'));
+   }
 }
