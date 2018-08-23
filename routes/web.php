@@ -40,7 +40,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
     Route::get('users-report','UsersReportsController@index')->middleware('admin');
     Route::get('export','UsersReportsController@export_excel')->middleware('admin');
     Route::get('export-user','UsersReportsController@user_export')->middleware('admin');
-    Route::resource('order','OrderController')->middleware('admin');
+    Route::resource('order','OrdersController')->middleware('admin');
 });
 
 /*Route Frontend*/

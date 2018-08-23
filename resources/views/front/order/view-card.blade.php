@@ -45,7 +45,7 @@
                 </a>
                 <a href="#" class="list-group-item"><span><b>Shipping:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free shipping</span></a>
                 <a href="#" class="list-group-item"><span><b>Total:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Cart::total() }} $</span></a>
-                <a href="{{ url('checkout') }}" class="list-group-item">
+                <a href="{{ url('view-card') }}" class="list-group-item">
                     <button class="btn btn-danger btn-product btn-block"><span class=""></span>Checkout</button>
                 </a>
             </div>

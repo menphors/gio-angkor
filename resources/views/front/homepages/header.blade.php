@@ -83,7 +83,7 @@
 
                     <a class="nav-link fa fa-shopping-cart text-dark Active " href="{{ route('cart.index')}}"><i class=" fa-lg" aria-hidden="true"></i> Card <span class="badge badge-pill badge-danger" style="border: 2px solid #">{{ Cart::count() }}</span></a>
 
-                    <a class="nav-link fa fa-heartbeat  text-dark" aria-hidden="true" href="#"><i class=" fa-lg" aria-hidden="true"></i> Wish List {{ Cart::instance('wishlist')->content() }}</a>
+                    <a class="nav-link fa fa-heartbeat  text-dark" aria-hidden="true" href="#"><i class=" fa-lg" aria-hidden="true"></i> Wish List</a>
 
                     <a class="nav-link fa fa-lock text-dark" aria-hidden="true" href="{{url('login')}}"><i class=" fa-lg" aria-hidden="true"></i> Sign In</a>
 
