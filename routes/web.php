@@ -55,22 +55,27 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
         return view('front.StorePage.store',$data1);
     });
     Route::get('product-add-to-card', function () {
-        return view('front.pro_detail.product-order');
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.pro_detail.product-order',$data1);
     });
     Route::get('dashboard-user', function () {
-        return view('front.user_dashboard.dashboard');
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.user_dashboard.dashboard',$data1);
     });
     Route::get('view-card', function () {
-        return view('front.order.view-card');
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.order.view-card',$data1);
     });
     Route::get('product-lists','ProductGridController@show');
     Route::post('productimg','ProductController@getProduct');
 });
 Route::get('/home', function (){
-    return view('front.user_dashboard.dashboard');
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.user_dashboard.dashboard',$data1);
 })->middleware('auth');
 Route::get('/privacy', function (){
-    return view('front.abouts.policy_privacy');
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.abouts.policy_privacy',$data1);
 });
 //Cart controller
 Route::resource('/cart','CartController');
