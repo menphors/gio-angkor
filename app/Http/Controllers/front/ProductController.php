@@ -49,8 +49,8 @@ class ProductController extends Controller
     public function show()
     {
         $users = DB::table('tbl_products')->paginate(8);
-
-        return view('front.pro_detail.product-detail',compact('users'));
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.pro_detail.product-detail',$data1,compact('users'));
     }
 
     /**

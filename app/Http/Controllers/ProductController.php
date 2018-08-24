@@ -18,10 +18,11 @@ class ProductController extends Controller
     public function index()
     {
         //
+        $data1['data'] = DB::table('tbl_category')->get();
         $data = [];
         $data["title"]="hello";
         $data["products"]=Product::paginate(2);
-        return view("products.index",$data);
+        return view("products.index",$data,$data1);
     }
 
     /**
@@ -55,6 +56,7 @@ class ProductController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
