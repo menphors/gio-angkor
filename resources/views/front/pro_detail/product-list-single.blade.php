@@ -5,22 +5,8 @@
     <div class="container">
       <div class="row" width="100%">
         <div class="col-md-9 col-sm-9 col-lg-9"></div>
-        <div class="col-md-1 col-sm-1 col-lg-1" >
-            View:<a href="{!! url('frontend/show-product-grid') !!}"><i class="fa fa fa-table fa-fw"></i></a><a href="{!! url('frontend/product-lists') !!}"><i class="fa fa fa-list-ul"></i></a>
-        </div>
-        <div class="col-md-2 col-sm-2 col-lg-2" >
-            <div class="dropdown" style="float:right;position: relative;">
-                <div class="col col-lg-2 col-sm-2 col-md-2 portfolio-item">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Sort By:
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Low to High Price</a></li>
-                    <li><a href="#">High to Low Price</a></li>
-                    <li><a href="#">Latest Product</a></li>
-                  </ul>
-                </div>
-            </div><!--dropdown-->
+        <div class="col-md-3 col-sm-3 col-lg-3" >
+            View:<a href="{!! url('frontend/show-product-grid') !!}"><i class="btn fa fa-table"></i></a>&nbsp;&nbsp;<a href="{!! url('frontend/product-lists') !!}"><i class="btn fa fa-list-ul"></i></a>
         </div>
     </div>
     <hr>

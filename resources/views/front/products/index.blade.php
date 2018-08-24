@@ -5,7 +5,12 @@
 @extends('front.homepages.header')
 @section('content')
 <div class="container">
-
+    <br><br>
+    <div class="row"> 
+        <div class="col-md-5 col-sm-5 col-lg-5" >
+            View:&nbsp;<a href="{!! url('frontend/show-product-grid') !!}"><i class="btn fa fa-table"></i></a>&nbsp;&nbsp;&nbsp;<a href="{!! url('frontend/product-lists') !!}"><i class="btn fa fa-list-ul"></i></a>
+        </div>
+    </div>
     <h1>Search Results</h1>
     <p>{{$products->count()}} result(s) for '{{request()->input('searchname')}}'</p>
 
@@ -44,10 +49,10 @@
             </a>
         </div>
         <div class="col-md-7">
-            <h3><a href="{!! url('frontend/product-add-to-card') !!}">{{ $value->pro_name }}</a></h3>
+            <h3><a href="{!! url('product/'. $value->id) !!}">{{ $value->pro_name }}</a></h3>
             <p>{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}.</p>
             <h4><b><a href="#" style="color: red !important;font-weight: bold;">{{ $value->prices }}$</a></b></h4>
-            <a class="btn btn-primary" href="{!! url('frontend/product-add-to-card') !!}">View Detail</a>
+            <a class="btn btn-primary" href="{!! url('product/'. $value->id) !!}">View Detail</a>
         </div>
     </div>
     <hr>
