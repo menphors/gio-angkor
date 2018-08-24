@@ -4,14 +4,12 @@
 @section('contents')
 
 @extends('front.homepages.header')
-@section('navigation-bar')
-@stop
 @section('content')
-<div class="container-fluid" style="background-color: #f3f3f4">
-  <div class="container" style="background-color: #e7e7e8">
-        <div class="row ">
+<div class="container-fluid">
+  <div class="container">
+        <div class="row">
             <div class="col-md-3" id="menu">
-                <ul class="" id="color-main01" >
+                <ul class="" id="color-main01" style="background-color: #e7e7e8">
                   <li>
                     <a href="#"><i class="fa fa-home fa-fw"></i> Women's Clothing</a>
                   </li>
@@ -156,7 +154,7 @@
 
             </div>
     </div>
-<div class="container-fluid" style="background-color: #f3f3f4">
+<div class="container-fluid">
     <div class="container" style="padding-top: 20px;">
         <div class="row ">
                 <div class="no-gutters">
@@ -186,7 +184,7 @@
     </div>
 
 
-    <div class="container-fluid" style="background-color: #f3f3f4">
+    <div class="container-fluid">
         <div class="container" style="padding-top: 20px;">
             <div class="row ">
                 <div class="no-gutters">

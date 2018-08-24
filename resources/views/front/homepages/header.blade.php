@@ -78,10 +78,7 @@
   
 </head>
 <body>
-    <nav>
-        @yield('navigation-bar')
-    </nav>
-    <div class="container-fluid" style="background-color: #f9fafb">
+    <div class="container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-12 col-xs-12" style="margin-top: -5px">
@@ -113,57 +110,44 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="background-color: #e7e7e8">
+    <div class="container-fluid" style="background-color: #f9fafb">
         <div class="container">
             <div class="row">
-            <div class="col-md-3 col-sm-12 col-xs-12" style="margin-top: 55px;margin-bottom: 10px">
-                <a href="{{ url('/') }}"><img id="logo" src="{{asset('images/gio-angkor.png')}}" alt="logo" style="height: 80px;"></a>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12" id="search-tool">
-                        <div class="input-group" id="search_group" style="width: 530px;margin-top: 40px">
-                      <!--       <input id="txt-search" type="text" class="form-control" name="x" placeholder="Search..." style="height: 35px;">
-                            <div id="btn-all" class="input-group-btn search-panel">
-                               <span> <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                    All Category
+
+                <div class="col-md-3 col-sm-12 col-xs-12" style="margin-top: 55px;margin-bottom: 10px">
+                    <a href="{{ url('/') }}"><img id="logo" src="{{asset('images/gio-angkor.png')}}" alt="logo" style="height: 80px;"></a>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12" id="search-tool">
+                    <div class="input-group" id="search_group" style="width: 530px;margin-top: 40px">
+                           <form class="input-group" action="{{route('searchResult')}}" >
+                              <input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname" style="height: 35px;">
+                              <span class="input-group-btn  mr-3">
+                                <div id="btn-all" class="input-group-btn search-panel">
+                                      <select name="searchByCategory" id="searchByCategory" class="class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown" style="height: 35px;">
+                                        <option value="" selected="selected">ALL Category</option>
+                                        @foreach($data as $category)
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <button id="btn-search" class="btn btn-danger" type="submit" style="float: right;margin-top: -34px"><span class="glyphicon glyphicon-search" ></span>
                                 </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#contains">Contains</a></li>
-                                    <li><a href="#its_equal">It's equal</a></li>
-                                    <li><a href="#greather_than">Greather than ></a></li>
-                                    <li><a href="#less_than">Less than < </a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#all">Anything</a></li>
-                                </ul></span>
-                            </div>
-                            <span class="input-group-btn">
-                            <button id="btn-search" class="btn btn-danger" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                            </span> -->
-                               <form class="input-group" action="{{route('searchResult')}}" >
-                                  <input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname" style="height: 35px;">
-                                  <span class="input-group-btn  mr-3">
-                                  <div id="btn-all" class="input-group-btn search-panel">
-                                        <select name="searchByCategory" id="searchByCategory" class="class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown" style="height: 35px;">
-                                          <option value="" selected="selected">ALL Category</option>
-                                          @foreach($data as $category)
-                                              <option value="{{$category->id}}">{{$category->name}}</option>
-                                          @endforeach
-                                      </select>
-                                  </div>
-                            <button id="btn-search" class="btn btn-danger" type="submit" style="float: right;margin-top: -34px"><span class="glyphicon glyphicon-search" ></span></button>
-                          </div>
-            </div>
-            <div class="col-md-3">
-                        <div id="rcorners1"  style="float: right;width: 290px;margin-top: 38px" >
-                           <p style="font-size: 16px;margin-top: -15px;"> <b style="color: #bf1e2e;"> >800 million </b></p>
-                            <p style="font-size: 16px;margin-top: -32px;margin-right: 20px;float: right"> <b style="color: #bf1e2e;"> 1.0800 million </b></p>
-                            <p style="font-size: 10px;margin-top: -15px;"> <b style="color: white;"> of product on Amazon </b></p>
-                            <p style="font-size: 10px;margin-top: -24px;margin-right: 14px;float: right"> <b style="color: white;"> transaction through GIO</b></p>
-                            <p style="font-size: 35px;margin-top: -52px;margin-left: 120px; color: black">  | </p>
-                        </div>
-            </div>
+                                </span>
+                          </form>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="rcorners1"  style="float: right;width: 290px;margin-top: 38px" >
+                       <p style="font-size: 16px;margin-top: -15px;"> <b style="color: #bf1e2e;"> >800 million </b></p>
+                        <p style="font-size: 16px;margin-top: -32px;margin-right: 20px;float: right"> <b style="color: #bf1e2e;"> 1.0800 million </b></p>
+                        <p style="font-size: 10px;margin-top: -15px;"> <b style="color: white;"> of product on Amazon </b></p>
+                        <p style="font-size: 10px;margin-top: -24px;margin-right: 14px;float: right"> <b style="color: white;"> transaction through GIO</b></p>
+                        <p style="font-size: 35px;margin-top: -52px;margin-left: 120px; color: black">  | </p>
+                    </div>
+                </div>
         </div>
     </div>
-
+  </div>
     <section>
         @yield('content')
     </section>
