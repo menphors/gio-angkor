@@ -55,7 +55,7 @@
                 <h1 class="text-primary">GET IN TOUCH:</h1>
                 <i class="fa fa-address-card"></i> <label class="text-secondary">#134, at.118, Phsar Chas Commue, Doun Penh District, Phnom Penh </label></br></br>
                 <i class="fa fa-phone"></i> <label class="text-secondary">Tel: 016 841 777</label></br></br>
-                <i class="fa fa-envelope"></i> <label class="text-secondary">Email: gio.angkor@gmail.com</label>
+                <i class="fa fa-envelope"></i> <label class="text-secondary">Email: gioangkor.info@gmail.com</label>
             </div>
             <div class="col-md-6">
                 <img id="contact2" src="{{asset('images/contact2.png')}}">

@@ -89,7 +89,8 @@ Route::get('/home', function (){
 })->middleware('auth');
 
 Route::get('/policy', function (){
-    return view('front.abouts.policy_privacy');
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.abouts.policy_privacy',$data1);
 });
 Route::get('/privacy', function (){
     $data1['data'] = DB::table('tbl_category')->get();
