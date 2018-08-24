@@ -67,6 +67,9 @@ Route::get('/home', function (){
 Route::get('/policy', function (){
     return view('front.abouts.policy_privacy');
 });
+Route::get('/profile', function (){
+    return view('front.profiles.user');
+});
 //Cart controller
 
 Route::group(['middleware' => 'auth'], function() {

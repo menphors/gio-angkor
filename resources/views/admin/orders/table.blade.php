@@ -9,6 +9,7 @@
     <thead>
     <tr>
         <th>OrderID</th>
+        <th> Name </th>
         <th>Order Unit Price</th>
         <th>Quantity</th>
         <th>Discount</th>
@@ -25,12 +26,13 @@
                 <a href="{{ route($route_prefix . '.edit', $orders) }}" class="links">#000{{$orders->id}}
                 </a>
             </td>
-            <td>{{$orders->order_unit_price}}</td>
-            <td>{{$orders->quantity}}</td>
-            <td>{{$orders->discount}}</td>
-            <td>{{$orders->order_date}}</td>
-            <td>{{$orders->status_product}}</td>
-            <td align="center"> $</td>
+            <td>{{ $orders->first_name }}  {{ $orders->last_name}}</td>
+            <td align="center">$ {{$orders->order_unit_price}}</td>
+            <td align="center">{{$orders->quantity}}</td>
+            <td align="center">@if($orders->discount == '') 0 @else {{$orders->discount}} @endif</td>
+            <td align="center">{{$orders->created_at}}</td>
+            <td align="center">{{$orders->status_product}}</td>
+            <td align="center"> $ {{ $orders->order_unit_price * $orders->quantity }}</td>
             <td>
                 <a href="{{ route($route_prefix . '.edit', $orders) }}" class="btn btn-sm btn-success btn-edit-row">
                     <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;Edit
