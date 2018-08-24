@@ -14,8 +14,8 @@
 Auth::routes();
 
 Route::get('/', function () {
-    return view('front.homepages.homepage');
-
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.homepages.homepage',$data1);
 });
 /*Route Admin page*/
 // resource put delete update get show data post request
@@ -47,6 +47,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
 
 /*Route Frontend*/
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
+
     Route::get('order','OrderController@index');
 
     Route::get('detail','ProductController@index');
@@ -59,23 +60,37 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('term-condition','TermConditionController@index');
 
     Route::get('store', function () {
-        return view('front.StorePage.store');
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.StorePage.store',$data1);
     });
     Route::get('product-add-to-card', function () {
-        return view('front.pro_detail.product-order');
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.pro_detail.product-order',$data1);
     });
     Route::get('dashboard-user', function () {
-        return view('front.user_dashboard.dashboard');
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.user_dashboard.dashboard',$data1);
+    });
+
+    Route::get('view-card', function () {
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.order.view-card',$data1);
     });
     Route::get('product-lists','ProductGridController@show');
     Route::get('products/productdetails/{$id}', 'ProductGridController@show_product');
     Route::post('productimg','ProductController@getProduct');
 });
 Route::get('/home', function (){
-    return view('front.user_dashboard.dashboard');
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.user_dashboard.dashboard',$data1);
 })->middleware('auth');
+
 Route::get('/policy', function (){
     return view('front.abouts.policy_privacy');
+});
+Route::get('/privacy', function (){
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.abouts.policy_privacy',$data1);
 });
 Route::get('/profile', function (){
     return view('front.profiles.user');
@@ -106,6 +121,9 @@ Route::get('google/callback', 'AuthController@handleGoogleCallback');
 /*Proceed Order*/
 Route::get('/billing-address', 'front\ProceedOrderController@store');
 Route::post('/billing-address', 'front\ProceedOrderController@store');
+
+Route::get('/autoComplete',array('as'=>'autoComplete','uses'=>'ProductController@autoComplete'));
+Route::get('/searchResult',array('as'=>'searchResult','uses'=>'ProductController@searchResult'));
 
 
 

@@ -74,7 +74,9 @@
      }
    
  </style>
-  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
     <nav>
@@ -112,7 +114,7 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="background-color: #e7e7e8">
+<!--     <div class="container-fluid" style="background-color: #e7e7e8">
         <div class="container">
             <div class="row">
             <div class="col-md-3 col-sm-12 col-xs-12" style="margin-top: 55px;margin-bottom: 10px">
@@ -146,8 +148,37 @@
                             <p style="font-size: 10px;margin-top: -15px;"> <b style="color: white;"> of product on Amazon </b></p>
                             <p style="font-size: 10px;margin-top: -24px;margin-right: 14px;float: right"> <b style="color: white;"> transaction through GIO</b></p>
                             <p style="font-size: 35px;margin-top: -52px;margin-left: 120px; color: black">  | </p>
-                        </div>
+                        </div> -->
 
+
+    <div class="container-fluid  " style="background-color: #e7e7e8;">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-3  my-5 mx-auto"><a href="{!! url('/') !!}"><img src="{{asset('images/logo/circle-logo.png')}}" alt="logo" id="logo"></a></div>
+                <div class="col-9 my-5 mx-auto" style="margin-top: -50px;">
+                    <form class="input-group " style="    margin-left: -13px;    width: 852px;" action="{{route('searchResult')}}" >
+                        <input type="text" class="col-md-6 col-sm-6 col-lg-6" placeholder="Seach..." name="searchname" id="searchname" style="height: 40px;width: 50%;">
+                        <span class="input-group-btn  mr-3">
+                        {{--<button class="btn btn btn-secondary dropdown" data-toggle="dropdown" type="submit" style="height: 40px;">All Categries</button>--}}
+                    <select name="searchByCategory" id="searchByCategory">
+                        <option value="">ALL Category</option>
+                        @foreach($data as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                    </select>
+                  <button class="btn btn-danger" type="submit" style="height: 40px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </span>
+                        <ul class="nav float-right" style="margin-left: 551px;
+    position: absolute;height: 40px;">
+                            <li class="nav-item border border-dark border-right-0">
+                                <a class="nav-link">800 million</a>
+                            </li>
+                            <li class="nav-item border border-dark">
+                                <a class="nav-link">200.000 successful</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -158,6 +189,7 @@
 <!-- Nav header -->
 
 </body>
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -178,4 +210,13 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
+<script type="text/javascript">
+    $('#searchname').autocomplete({
+        source : '{!! URL::route('autoComplete') !!}',
+        minlength : 1,
+        autoFocus : true,
+        select:function(e,ui){
+        }
+    });
 </script>
