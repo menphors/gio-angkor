@@ -20,7 +20,9 @@
             <td>{{$Category->id}}</td>
             <td>{{$Category->name}}</td>
             @if($Category->parent_id ==1) <td>Main Category</td> @else  <td>Sub Category</td>  @endif</td>
-            @if($Category->published ==1) 
+            @if($Category->published ==1)
+            <td>{{$Category->ordering}}</td>
+            <td>{{$Category->parent_id}}</td>
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
             @else
             <td align="center"><a href="#" class="btn btn-sm btn-warning btn-edit-row"><i class="fa fa-eye-slash" aria-hidden="true"></i></a></td> 
