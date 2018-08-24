@@ -10,45 +10,27 @@
         <div class="row">
             <div class="col-md-3" id="menu">
                 <ul class="" id="color-main01" style="background-color: #e7e7e8">
-                  <li>
-                    <a href="#"><i class="fa fa-home fa-fw"></i> Women's Clothing</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-list-alt fa-fw"></i> Man's Clothing</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-file-o fa-fw"></i> Phone & Accessories</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Computer & Office</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-table fa-fw"></i> Consumer Electonics</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-tasks fa-fw"></i> Jewelry&Watches</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-calendar fa-fw"></i> Home & Garden,Furniture</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-book fa-fw"></i> Bags & Shoes</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-pencil fa-fw"></i> Toys, Kids & Baby</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-cogs fa-fw"></i> Sports & Outdoors</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-calendar fa-fw"></i> Health & Beauty, Hair</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-book fa-fw"></i> Automobiles & Motorcycles</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-pencil fa-fw"></i> Home Improvement</a>
-                  </li>
+                  @foreach($data as $category)
+                        <li>
+                            <a href="{{route('searchResult')}}?searchByCategory={{$category->id}}"  >
+                                @if($category->id==1)<i class="fa fa-home fa-fw"></i>
+                                @elseif($category->id==2)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==3)<i class="fa fa-file-o fa-fw"></i>
+                                @elseif($category->id==4)<i class="fa fa-bar-chart-o fa-fw"></i>
+                                @elseif($category->id==5)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==6)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==7)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==9)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==10)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==11)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==12)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==13)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==14)<i class="fa fa-list-alt fa-fw"></i>
+                                @else<i class="fa fa-file-o fa-fw"></i>
+                                @endif
+                                {{$category->name}}</a>
+                        </li>
+                        @endforeach
                 </ul>
             </div>
             <div class="col-md-7 col-sm-9" >
