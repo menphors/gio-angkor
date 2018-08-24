@@ -6,6 +6,7 @@ use App\User;
 use App\Product;
 use App\Order;
 use Auth;
+use DB;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -95,8 +96,9 @@ class CheckoutController extends Controller
     }
 
     public function checkout()
-    {       
-        return view('front.checkout.checkout');
+    {
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.checkout.checkout',$data1);
     }
     //remove cart
     public function RemoveCart($rowid)

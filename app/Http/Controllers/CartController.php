@@ -5,6 +5,8 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 use Illuminate\Http\Request;
 use App\Product;
+use DB;
+
 
 class CartController extends Controller
 {
@@ -16,7 +18,8 @@ class CartController extends Controller
     public function index()
     {
         $cartItems = Cart::content();
-        return \View::make('front/order/view-card', compact('cartItems'));
+        $data1['data'] = DB::table('tbl_category')->get();
+        return \View::make('front/order/view-card', compact('cartItems'),$data1);
     }
 
     /**
