@@ -1,40 +1,12 @@
 
 @extends('front.homepages.footer')
-@section('footer')
-@stop
+
 @section('contents')
 
 @extends('front.homepages.header')
 @section('navigation-bar')
 @stop
 @section('content')
-
-<div class="container-fluid" style="background-color: #e7e7e8">
-        <div class="container" style="background-color: #d1d2d4;height: 40px;border-top-right-radius: 15px;border-top-left-radius: 15px;">
-            <div class="row">
-                <div class="col-md-3 col-xs-12" id="category" style="background-color: #bf1e2e;border-top-left-radius: 15px">
-                        <!-- Categories Menu -->
-
-                       <div class="category" style="font-size: 20px;color: white">
-                           <h4><i class="fa fa-bars "></i> &nbsp Category</h4>
-
-                       </div>
-                </div>
-                <div class="col-md-9">
-                        <!-- Main Nav Menu -->
-
-                        <div class="topnav" id="myTopnav">
-                            <a class="active" href="#home">Export to US</a>
-                            <a href="#">Customer consultant</a>
-                            <a href="#">Shopping guide</a>
-                            <a href="#">Customer protection</a>
-                            <a href="#">Pricing and Checking size</a>
-                        </div>
-
-                </div>
-            </div>
-        </div>
-</div>
 <div class="container-fluid" style="background-color: #bf1e2e;height: 3px;margin-top: -1px">
 
 </div>
