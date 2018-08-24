@@ -32,15 +32,15 @@
       <!-- Project One -->
       <div class="row">
         <div class="col-md-5">
-          <a href="{!! url('frontend/product-add-to-card') !!}">
+          <a href="{!! url('product/'. $value->id) !!}"">
             <img class="img-fluid rounded mb-3 mb-md-0" src="{{URL::asset('/uploads/'.$value->gallery)}}" style="width: 400px;height: 300px;">
           </a>
         </div>
         <div class="col-md-7">
-          <h3><a href="{!! url('frontend/products/productdetails/'. $value->id) !!}">{{ $value->pro_name }}</a></h3>
+          <h3><a href="{!! url('product/'. $value->id) !!}"">{{ $value->pro_name }}</a></h3>
           <p>{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}.</p>
           <h4><b><a href="#" style="color: red !important;font-weight: bold;">{{ $value->prices }}$</a></b></h4>
-          <a class="btn btn-primary" href="{!! url('frontend/products/productdetails/'. $value->id) !!}">View Detail</a>
+          <a class="btn btn-primary" href="{!! url('product/'. $value->id) !!}">View Detail</a>
         </div>
       </div>
       <hr>

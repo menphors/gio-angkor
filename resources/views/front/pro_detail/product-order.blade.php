@@ -14,6 +14,7 @@
         </div>
 
         <div class="col-md-4">
+          {{ $data }}
           <h3 class="my-3">Product Description</h3>
           <p>Technology GSM / HSPA / LTE
 2G bands  GSM 850 / 900 / 1800 / 1900

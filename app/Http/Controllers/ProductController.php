@@ -53,9 +53,14 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showProduct($id)
     {
         //
+        $products = DB::table('tbl_products')->paginate(8);
+        $data1['data'] = DB::table('tbl_category')->get();
+        $product = Product::findOrFail($id);
+        $data['product'] = $product;
+        return view('front.pro_detail.product-order',$data,$data1);
 
     }
 

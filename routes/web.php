@@ -77,9 +77,12 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
         return view('front.order.view-card',$data1);
     });
     Route::get('product-lists','ProductGridController@show');
-    Route::get('products/productdetails/{$id}', 'ProductGridController@show_product');
+    Route::get('products/productdetails/{$id}', 'ProductController@show_product');
+
     Route::post('productimg','ProductController@getProduct');
 });
+//Route::resource('product/{$id}', 'ProductController');
+Route::get('/product/{id}', 'ProductController@showproduct');
 Route::get('/home', function (){
     $data1['data'] = DB::table('tbl_category')->get();
     return view('front.user_dashboard.dashboard',$data1);
@@ -93,7 +96,8 @@ Route::get('/privacy', function (){
     return view('front.abouts.policy_privacy',$data1);
 });
 Route::get('/profile', function (){
-    return view('front.profiles.user');
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.profiles.user',$data1);
 });
 //Cart controller
 

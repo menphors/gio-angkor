@@ -33,7 +33,7 @@
                 <a href="#"><img src="{{URL::asset('/uploads/'.$value->gallery)}}"></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">{{ $value->pro_name }}</a>
+                        <a href="{!! url('product/'. $value->id) !!}"">{{ $value->pro_name }}</a>
                     </h4>
                     <!--get pagination-->
                     <p class="card-text">{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}</p>
