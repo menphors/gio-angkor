@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class UploadController extends Controller
 {
     public function  showUpload(){
-        return view('upload.upload_form');
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('upload.upload_form',$data1);
     }
 
     public  function saveUpload (Request $request) {

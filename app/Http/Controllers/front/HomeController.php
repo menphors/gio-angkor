@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -31,10 +31,11 @@ class HomeController extends Controller
 
     public function index()
     {
-        if (Auth::user() && Auth::user()->admin == 1) {
+        $data1['data'] = DB::table('tbl_category')->get();
+        if(Auth::user() &&  Auth::user()->admin == 1){
             return $next($request);
-        } else {
-            return view('front.user_dashboard.dashboard');
+        }else{
+            return view('front.user_dashboard.dashboard',$data1);
         }
 
     }
