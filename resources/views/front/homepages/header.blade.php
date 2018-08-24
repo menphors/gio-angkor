@@ -110,7 +110,7 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="background-color: #f9fafb">
+    <div class="container-fluid" style="background-color: #e7e7e8">
         <div class="container">
             <div class="row">
 
