@@ -12,6 +12,12 @@ class HomeController extends Controller
      *
      * @return void
      */
+
+    public function index()
+    {
+        return view('front.homepages.homepage');
+    }
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -22,12 +28,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        if(Auth::user() &&  Auth::user()->admin == 1){
+        if (Auth::user() && Auth::user()->admin == 1) {
             return $next($request);
-        }else{
+        } else {
             return view('front.user_dashboard.dashboard');
         }
+
+    }
+    public function getData(){
+
+
     }
 }

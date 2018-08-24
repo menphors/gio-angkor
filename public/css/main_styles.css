@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Fonts
+2. Body and some general stuff
+3. Header
+	3.1 Top Bar
+	3.2 Header Main
+	3.3 Main Navigation
+	3.4 Page Menu
+4. Banner
+5. Characteristics
+6. Deals of the week
+	6.1 Deals
+	6.2 Featured
+7. Popular Categories
+8. Banner 2
+9. Hot New Arrivals
+10. Hot Best Sellers
+11. Adverts
+12. Trends
+13. Latest Reviews
+14. Recently Viewed
+15. Brands
+16. Newsletter
+17. Footer
+
+
+******************************/
+
+/***********
+1. Fonts
+***********/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900');
+
+/*********************************
+2. Body and some general stuff
+*********************************/
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #bf1e2e;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav a:hover { 
+  color: #464646;
+  
+}
+
+.topnav .icon {
+  display: none;
+}
+
+#rcorners1 {
+	border-radius: 10px;
+	background: #bcbdc0;
+	padding: 20px;
+	width: 290px;
+	height: 40px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    	#rcorners1 {display: none}
+    #search_group #btn-all{
+        display: none;
+    }
+    #search-tool{
+        width: 50px;
+    }
+    #search-tool{margin-bottom: 10px;margin-top: -30px }
+    #btn-all{}
+    #logo{height:100px; display: block;}
+	#color-main01 li a{
+		font-size: 12px;
+	}
+	#adv{
+		display: none;
+	}
+    .category h4{
+        font-size: 14px;
+    }
+    #myTopnav{
+        display: none;
+    }
+    #collection{
+        width: 50%;
+    }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+ 	#rcorners1 {display: none}
+
+    #search-tool{margin-bottom: 10px;margin-top: -30px }
+	#logo{height:100px; display: block;
+    margin-left: auto;
+    margin-right: auto;}
+	#color-main01 li a{
+		font-size: 12px;
+	}
+
+	#adv{
+		display: block;
+	}
+    .category h4{
+        font-size: 14px;
+    }
+    #myTopnav{
+        display: none;
+    }
+    #collection{
+        width: 50%;
+    }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+	#rcorners1 {display: none}
+	#myTopnav{display: block;}
+	.topnav a{
+		padding: 10px 5px;
+		font-size: 10px;
+	}
+	.category h4{
+		font-size: 12px;
+	}
+	#search-tool{display: block;margin-top:0px  }
+	#logo{height:100px}
+
+	#color-main01 li a{
+		font-size: 12px;
+	}
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+	#rcorners1 {    display: none}
+	#myTopnav{display: block;}
+	.topnav a{
+		padding: 10px 5px;
+		font-size: 13px;
+	}
+	.category h4{
+		font-size: 15px;
+	}
+	#color-main01 li a{
+		font-size: 14px;
+	}
+
+	#logo{height:100px}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	#rcorners1 {    display: block; width:290px}
+	.topnav a{
+		padding: 10px 14px;
+		font-size: 15px;
+	}
+	.category h4{
+		font-size: 20px;
+	}
+	#logo{height:100px}
+	#color-main01 li a{
+		font-size: 14px;
+	}
+}
+
+

@@ -19,6 +19,10 @@ class CreateCategoryTable extends Migration
             $table->string('name')->unique();
             $table->integer('parent_id')->nulllable()->default(0);
             $table->text('published')->nulllable();
+            $table->text('name')->nullable();
+            $table->integer('parent_id')->nullable()->default(0);
+	    $table->integer('ordering')->nullable();	
+            $table->text('published')->nullable();
             $table->timestamps();
             $table->rememberToken();
         });

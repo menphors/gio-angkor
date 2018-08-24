@@ -15,10 +15,12 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('front.homepages.homepage');
+
 });
 /*Route Admin page*/
 // resource put delete update get show data post request
 Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
+
     Route::get('/','StoreReportsController@index')->middleware('admin');
     Route::resource('user-account','AccountController')->middleware('admin');
     Route::resource('setting-types', 'SettingTypesController')->middleware('admin');
@@ -46,8 +48,16 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function() {
 /*Route Frontend*/
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     Route::get('order','OrderController@index');
+
     Route::get('detail','ProductController@index');
     Route::get('show-product-grid','ProductController@show');
+
+    Route::get('detail','StorepageController@index');
+    Route::get('home','HomeController@index');
+    Route::get('contact','ContactController@index');
+    Route::get('about','AboutController@index');
+    Route::get('term-condition','TermConditionController@index');
+
     Route::get('store', function () {
         return view('front.StorePage.store');
     });

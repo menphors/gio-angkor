@@ -11,6 +11,13 @@
         {!! BootForm::text('name') !!}
     </div>
 </div>
+<div class="row">
+
+
+    <div class="col-md-6">
+        {!! BootForm::text('name') !!}
+    </div>
+</div>
 <div class="row" style="height: 30px !important;">
     <div class="col-md-6">
        <!--  {!! BootForm::number('parent_id')!!} -->
