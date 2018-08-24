@@ -49,8 +49,8 @@ class ProductGridController extends Controller
     public function show()
     {
         $products = DB::table('tbl_products')->paginate(8);
-
-        return view('front.pro_detail.product-list-single',compact('products'));
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view('front.pro_detail.product-list-single',compact('products'),$data1);
     }
 
     /**
