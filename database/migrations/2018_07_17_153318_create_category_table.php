@@ -16,12 +16,9 @@ class CreateCategoryTable extends Migration
         Schema::create('tbl_category', function (Blueprint $table) {
             //
             $table->increments('id');
-            $table->string('name')->unique();
-            $table->integer('parent_id')->nulllable()->default(0);
-            $table->text('published')->nulllable();
             $table->text('name')->nullable();
             $table->integer('parent_id')->nullable()->default(0);
-	    $table->integer('ordering')->nullable();	
+	        $table->integer('ordering')->nullable();	
             $table->text('published')->nullable();
             $table->timestamps();
             $table->rememberToken();
