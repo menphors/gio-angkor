@@ -7,9 +7,6 @@
 @section('navigation-bar')
 @stop
 @section('content')
-<div class="container-fluid" style="background-color: #bf1e2e;height: 3px;margin-top: -1px">
-
-</div>
 <div class="container-fluid" style="background-color: #f3f3f4">
   <div class="container" style="background-color: #e7e7e8">
         <div class="row ">

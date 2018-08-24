@@ -142,14 +142,14 @@
                                   <input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname" style="height: 35px;">
                                   <span class="input-group-btn  mr-3">
                                   <div id="btn-all" class="input-group-btn search-panel">
-                                        <select name="searchByCategory" id="searchByCategory" class="class="btn btn-default dropdown-toggle data-toggle="dropdown">
-                                          <option value="">ALL Category</option>
+                                        <select name="searchByCategory" id="searchByCategory" class="class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown" style="height: 35px;">
+                                          <option value="" selected="selected">ALL Category</option>
                                           @foreach($data as $category)
                                               <option value="{{$category->id}}">{{$category->name}}</option>
                                           @endforeach
                                       </select>
                                   </div>
-                            <button id="btn-search" class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            <button id="btn-search" class="btn btn-danger" type="submit" style="float: right;margin-top: -34px"><span class="glyphicon glyphicon-search" ></span></button>
                           </div>
             </div>
             <div class="col-md-3">
