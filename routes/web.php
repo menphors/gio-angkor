@@ -73,9 +73,13 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function() {
     });
 
     Route::get('view-card', function () {
+        $cartItems = Cart::content();
+        if($cartItems==''){
+            return redirect('frontend/product-lists');
+        }
         $data1['data'] = DB::table('tbl_category')->get();
-        return view('front.order.view-card',$data1);
-    });
+        return view('front.checkout.checkout',$data1);
+    })->middleware('auth');
     Route::get('product-lists','ProductGridController@show');
     Route::get('products/productdetails/{$id}', 'ProductController@show_product');
 

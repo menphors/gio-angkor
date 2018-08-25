@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Product;
@@ -60,7 +60,9 @@ class ProductController extends Controller
         $data1['data'] = DB::table('tbl_category')->get();
         $product = Product::findOrFail($id);
         $data['product'] = $product;
-        return view('front.pro_detail.product-order',$data,$data1);
+        $name = $product->pro_name;
+        // $description = $product->description; 
+        return view('front.pro_detail.product-order',['data'=>$data]);
 
     }
 

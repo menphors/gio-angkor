@@ -45,20 +45,20 @@
                           </ol>
                         <div class="carousel-inner imagesize">
                               <div class="carousel-item active">
-                                <img class="d-block w-100" src="images/12.jpg" alt="First slide">
+                                <a href="{{ url('frontend/show-product-grid')}}"><img class="d-block w-100" src="images/12.jpg" alt="First slide"></a>
                               </div>
                               <div class="carousel-item">
-                                <img class="d-block w-100" src="images/34.png" alt="Second slide">
+                                <a href="{{ url('frontend/show-product-grid')}}"><img class="d-block w-100" src="images/34.png" alt="Second slide"></a>
                               </div>
                               <div class="carousel-item">
-                                <img class="d-block w-100" src="images/45.jpg" alt="Third slide">
+                                <a href="{{ url('frontend/show-product-grid')}}"><img class="d-block w-100" src="images/45.jpg" alt="Third slide"></a>
                               </div>
 
                               <div class="carousel-item">
-                                <img class="d-block w-100" src="images/123321.png" alt="Four slide">
+                                <a href="{{ url('frontend/show-product-grid')}}"><img class="d-block w-100" src="images/123321.png" alt="Four slide"></a>
                               </div>
                               <div class="carousel-item">
-                                <img class="d-block w-100" src="images/aa.png" alt="Five slide">
+                                <a href="{{ url('frontend/show-product-grid')}}"><img class="d-block w-100" src="images/aa.png" alt="Five slide"></a>
                               </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -75,7 +75,7 @@
 
                   <div id="adv" class="col-md-2 col-sm-3">
 
-                          <img src="images/170.jpg" width="140%" height="100%">
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/170.jpg" width="140%" height="100%"></a>
 
                   </div>
 
@@ -120,18 +120,18 @@
     <div class="container">
             <div class="row ">
                          <div class="w-100 no-gutters">
-                              <img id="collection" src="images/200-05.png" alt="..." class="rounded col-md-2" style="">
-                              <img id="collection" src="images/200-04.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-05.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-04.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-03.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-02.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-01.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-10.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-09.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-08.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-07.png" alt="..." class="rounded float-right col-md-2" style="">
-                              <img id="collection" src="images/200-06.png" alt="..." class="rounded float-right col-md-2" style="">
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-05.png" alt="..." class="rounded col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-04.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-05.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-04.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-03.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-02.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-01.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-10.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-09.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-08.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-07.png" alt="..." class="rounded float-right col-md-2" style=""></a>
+                              <a href="{{ url('frontend/show-product-grid')}}"><img id="collection" src="images/200-06.png" alt="..." class="rounded float-right col-md-2" style=""></a>
                          </div>
 
             </div>
@@ -155,12 +155,12 @@
                       <a class="nav-link"  href="#">Hair Accessories</a>
                       </div>
                     </nav>
-                          <img src="images/300.png" alt="..." class=" float-left col-md-4" style="height: 550px;">
-                          <img src="images/250.png " alt="..." class=" float-right col-md-2" style="height: 275px;">
-                          <img src="images/400.png" alt="..." class=" float-right col-md-4" style="height: 275px;">
-                          <img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;">
-                          <img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;">
-                          <img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;">
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/300.png" alt="..." class=" float-left col-md-4" style="height: 550px;"></a>
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png " alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/400.png" alt="..." class=" float-right col-md-4" style="height: 275px;"></a>
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
                 </div>
         </div>
     </div>
@@ -185,12 +185,12 @@
                             <a class="nav-link"  href="#">Hair Accessories</a>
                         </div>
                     </nav>
-                    <img src="images/300.png" alt="..." class=" float-left col-md-4" style="height: 550px;">
-                    <img src="images/250.png " alt="..." class=" float-right col-md-2" style="height: 275px;">
-                    <img src="images/400.png" alt="..." class=" float-right col-md-4" style="height: 275px;">
-                    <img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;">
-                    <img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;">
-                    <img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;">
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/300.png" alt="..." class=" float-left col-md-4" style="height: 550px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png " alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/400.png" alt="..." class=" float-right col-md-4" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
                 </div>
             </div>
         </div>

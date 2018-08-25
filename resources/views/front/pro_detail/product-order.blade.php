@@ -4,73 +4,113 @@
 @section('content')
     <!-- Page Content -->
     <div class="container">
+      <div style="height: 20px;"></div>
       <!-- Portfolio Item Heading -->
-      <h1 class="my-4">IPhone X</h1>
+      <h1 class="my-4">Product Description</h1>
+      <hr>
       <!-- Portfolio Item Row -->
       <div class="row">
-
-        <div class="col-md-8">
-          <img class="img-fluid" src="{{asset('images/phone_image/iphone-x.jpg')}}" alt="">
+        @foreach ($data as $value)
+        <div class="col-md-6">
+          <img class="img-fluid" src="{{URL::asset('/uploads/'.$value->gallery)}}" alt="">
         </div>
 
         <div class="col-md-4">
-          {{ $data }}
-          <h3 class="my-3">Product Description</h3>
-          <p>Technology GSM / HSPA / LTE
-2G bands  GSM 850 / 900 / 1800 / 1900
-3G bands  HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100
-4G bands  LTE band 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 13(700), 17(700), 18(800), 19(800), 20(800), 25(1900), 26(850), 28(700), 29(700), 30(2300), 34(2000), 38(2600), 39(1900), 40(2300), 41(2500), 66(1700/2100)
-Speed HSPA 42.2/5.76 Mbps, LTE-A (3CA) Cat12 600/150 Mbps, EV-DO Rev.A 3.1 Mbps
-GPRS  Yes
-EDGE  Yes</p>
+          <h3 class="my-3">{{$value->pro_name}}</h3>
+          <ul style="list-style-type: none;padding:15px;">
+             <li> <p>{{$value->product_desc}}</p></li>
+          </ul>
+          
           <h3 class="my-3">Product Specification</h3>
-          <ul>
-            <li>OS  iOS 11.1 Chipset Apple A11 Bionic</li>
-            <li>CPU Hexa-core (2x Monsoon + 4x Mistral)</li>
-            <li>GPU Apple GPU (three-core graphics)</li>
-            <li>Memory  Card slot No Internal  64/256 GB, 3 GB RAM</li>
+          <ul style="list-style-type: none;padding:15px;">
+            <li><span style="width: 7%">Model</span>: <span style="width: auto;">{{$value->model}}</span></li>
+            <li><span style="width: 7%">Price</span>: <span style="width: auto;"><strong style="color: orange;font-size: 16pt; font-weight: bold;">{{$value->prices}} $</strong></span></li>
+            <li><span style="width: 7%">Discount</span>: <span style="width: auto;">@if($value->discount== '') N/A @else {{$value->discount}} @endif</span></li>
+            <li><span style="width: 7%">Made in</span>: <span style="width: auto;">{{$value->made}}</span></li>
+            <li><span style="width: 7%">Quantity</span>: <span style="width: auto;"><input type="number" value="{{$value->quantity}}"></span></li>
+            <br><br>
             <li class="row">
-                <button class="btn btn-warning">BUY NOW</button>
+                <button class="btn btn-primary"><a href="{{ url('frontend/show-product-grid')}}" style="color:#FFF;"> << BACK TO SHOP</button>
                 &nbsp;&nbsp;
-                <button class="btn btn-primary">ADD TO CART</button>
+                <button class="btn btn-warning"><a href="{{route('cart.edit',$value->id)}}" style="color:#FFF;">ADD TO CART</a></button>
             </li><!--button-->
           </ul>
         </div>
       </div>
+      <div style="height: 40px;"></div>
+      @endforeach
       <!-- /.row -->
 
       <!-- Related Projects Row -->
-      <h3 class="my-4">Related Projects</h3>
-
-      <div class="row">
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="{{asset('images/phone_image/i-phone-8-plus.jpg')}}" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="{{asset('images/phone_image/galaxy-s9.jpg')}}" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="{{asset('images/phone_image/iphone-x.jpg')}}" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="{{asset('images/phone_image/ipad-apple.jpg')}}" alt="">
-          </a>
-        </div>
-
-      </div>
-      <!-- /.row -->
+      <h3 class="my-4">Related Products</h3>
+      <hr>
+        <div style="height: 40px;"></div>
+      <!-- /.container -->
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="well">
+                    <div id="myCarousel" class="carousel slide">
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+
+                            <div class="item active">
+                                <div class="row-fluid">
+                                    <div class="span3" ><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-blue.jpg')}}" alt="Image" style="max-width:100%;"/></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-white.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-blue.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{asset('images/phone_image/smart-watch-gray.jpg')}}" alt="Image" style="max-width:100%;" /></a></div>
+                                </div><!--/row-fluid-->
+                            </div><!--/item-->
+
+                            <div class="item">
+                                <div class="row-fluid">
+                                   <div class="span3" ><a href="#x" class="thumbnail"><img id= "writeinfo" src="uploads" alt="Image" style="max-width:100%;"/></a></div>
+                                </div><!--/row-fluid-->
+                            </div><!--/item-->
+                        </div><!--/carousel-inner-->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lt;</a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next" id="right">&gt;</a>
+                    </div><!--/myCarousel-->
+                </div><!--/well-->
+            </div>
+        </div>
+        <div id="pro">
+        <input type="hidden" class="getinfo">
+       <!--  <img id= "writeinfo" src="uploads" alt=""></img> -->
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+<script src="{{asset('js/jquery.min.js')}}" ></script>
+    <script>
+        $(document).ready(function(){
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            var pic = "http://localhost:8000/uploads";
+
+            $("#right").click(function(){
+                $.ajax({
+                    /* the route pointing to the post function */
+                    url: 'productimg',
+                    type: 'POST',
+                    /* send the csrf-token and the input to the controller */
+                    data: {_token: CSRF_TOKEN, gallery:$(".getinfo").val()},
+                    dataType: 'JSON',
+                    /* remind that 'data' is the response of the AjaxController */
+                    success: function (data) { 
+                        //var res = $(".writeinfo").append('<img src="uploads/" + data + ">');
+                       var res = $('#writeinfo').attr("src","http://localhost:8000/uploads/"+data);
+                    }
+                }); 
+            });
+       });    
+    </script>
     <!-- /.container -->
 @include('front.homepages.footer')
 @stop

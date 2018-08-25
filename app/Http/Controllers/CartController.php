@@ -50,16 +50,12 @@ class CartController extends Controller
      */
     public function view_cart()
     {
-        //view cart while checkout
-        // $product = Product::find($id);
-        // $name = $product->pro_name;
-        // $price = $product->prices;
-        // // $cart = Cart::add($id,$name,$price);
-        // $cart = Cart::add(['id'=> $id,'name'=>$name,'price'=>$price,'qty'=>1]); 
-        // return view('front.checkout.checkout', compact($cart));
-
         $cartItems = Cart::content();
-        return \View::make('front.checkout.checkout', compact('cartItems'));
+        if($cartItems==''){
+            return redirect('frontend/product-lists');
+        }
+        $data1['data'] = DB::table('tbl_category')->get();
+        return \View::make('front.checkout.checkout', compact('cartItems'),$data1);
     }
 
     /**

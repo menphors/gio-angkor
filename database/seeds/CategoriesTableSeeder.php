@@ -114,11 +114,5 @@ class CategoriesTableSeeder extends Seeder
             'published' => 1
         ]);
 
-        $c13 = Category::create([
-            'name'=> 'Home Improvement',
-            'parent_id' => 1,
-            'published' => 1
-        ]);
-
     }
 }

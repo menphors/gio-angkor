@@ -73,6 +73,9 @@
      .space-right{
          padding-right: 5px;
      }
+     img:hover, p:hover, a:hover {
+          background-color: #e7e7e8;
+      }
    
  </style>
   
@@ -82,9 +85,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-12 col-xs-12" style="margin-top: -5px">
-                    <a class="navbar-brand" href="#">
+                    <!-- <a class="navbar-brand" href="#">
                         <img src="{{asset('images/cambodia1.png')}}" >
-                    </a>
+                    </a> -->
                     <a class="navbar-brand" href="#" style="margin-left: -30px">
                         <img src="{{asset('images/uk1.png')}}" >
                     </a>
@@ -138,9 +141,9 @@
                 </div>
                 <div class="col-md-3">
                     <div id="rcorners1"  style="float: right;width: 290px;margin-top: 38px" >
-                       <p style="font-size: 16px;margin-top: -15px;"> <b style="color: #bf1e2e;"> >800 million </b></p>
-                        <p style="font-size: 16px;margin-top: -32px;margin-right: 20px;float: right"> <b style="color: #bf1e2e;"> 1.0800 million </b></p>
-                        <p style="font-size: 10px;margin-top: -15px;"> <b style="color: white;"> of product on Amazon </b></p>
+                       <p style="font-size: 16px;margin-top: -15px;"> <b style="color: #bf1e2e;"> >100 Thousands </b></p>
+                        <p style="font-size: 16px;margin-top: -32px;margin-right: 20px;float: right"> <b style="color: #bf1e2e;"> 1.0800 Times </b></p>
+                        <p style="font-size: 10px;margin-top: -15px;"> <b style="color: white;"> of product on GIO </b></p>
                         <p style="font-size: 10px;margin-top: -24px;margin-right: 14px;float: right"> <b style="color: white;"> transaction through GIO</b></p>
                         <p style="font-size: 35px;margin-top: -52px;margin-left: 120px; color: black">  | </p>
                     </div>
