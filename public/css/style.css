@@ -34,3 +34,19 @@ h5{
 p h6 a{
 	font-size: 12pt;
 }
+     #search{
+         width: 200px;
+
+     }
+     #research{
+         width: 300px;
+     }
+     .width-space{
+         width: 24%;
+     }
+     .space-right{
+         padding-right: 5px;
+     }
+     img:hover, a:hover {
+          background-color: #e7e7e8;
+      }

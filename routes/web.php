@@ -100,6 +100,10 @@ Route::get('/privacy', function () {
     $data1['data'] = DB::table('tbl_category')->get();
     return view('front.abouts.policy_privacy', $data1);
 });
+Route::get('/order-success', function () {
+    $data1['data'] = DB::table('tbl_category')->get();
+    return view('front.checkout.order-success', $data1);
+});
 
 // Cart controller
 Route::group(['middleware' => 'auth'], function () {

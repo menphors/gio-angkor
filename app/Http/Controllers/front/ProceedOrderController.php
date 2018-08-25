@@ -81,8 +81,7 @@ class ProceedOrderController extends Controller
              ]); 
         }     
              $data->save();
-        return redirect()->back()
-                        ->with('success','Article created successfully');
+        return Redirect('order-success');
     }
 
     /**
