@@ -55,15 +55,21 @@ class ProductController extends Controller
      */
     public function showProduct($id)
     {
-        //
-        $products = DB::table('tbl_products')->paginate(8);
-        $data1['data'] = DB::table('tbl_category')->get();
-        $product = Product::findOrFail($id);
-        $data['product'] = $product;
-        $name = $product->pro_name;
-        // $description = $product->description; 
-        return view('front.pro_detail.product-order',['data'=>$data]);
+//        $products = DB::table('tbl_products')->paginate(8);
+//        $data1['data'] = DB::table('tbl_category')->get();
+//        $product = Product::findOrFail($id);
+//        $data['product'] = $product;
+//        $name = $product->pro_name;
+//        // $description = $product->description;
+//        return view('front.pro_detail.product-order',['data'=>$data]);
 
+        $data = [
+            'data' => Category::get(),
+            'products' => Product::paginate(8),
+            'product' => Product::findOrFail($id),
+        ];
+
+        return view('front.pro_detail.product-order', $data);
     }
 
     /**
