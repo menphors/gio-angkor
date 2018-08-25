@@ -3,7 +3,7 @@
 <html>
 <head>
 
-  <title></title>
+  <title>Gio Angkor</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=no">
 
@@ -78,7 +78,9 @@
       }
    
  </style>
-  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -121,23 +123,36 @@
                     <a href="{{ url('/') }}"><img id="logo" src="{{asset('images/gio-angkor.png')}}" alt="logo" style="height: 80px;"></a>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12" id="search-tool">
-                    <div class="input-group" id="search_group" style="width: 530px;margin-top: 40px">
-                           <form class="input-group" action="{{route('searchResult')}}" >
-                              <input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname" style="height: 35px;">
-                              <span class="input-group-btn  mr-3">
-                                <div id="btn-all" class="input-group-btn search-panel">
-                                      <select name="searchByCategory" id="searchByCategory" class="class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown" style="height: 35px;">
-                                        <option value="" selected="selected">ALL Category</option>
-                                        @foreach($data as $category)
-                                            <option value="{{$category->id}}">{{$category->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <button id="btn-search" class="btn btn-danger" type="submit" style="float: right;margin-top: -34px"><span class="glyphicon glyphicon-search" ></span>
-                                </button>
-                                </span>
-                          </form>
-                    </div>
+                    {{--<div class="input-group" id="search_group" style="width: 530px;margin-top: 40px">--}}
+                           {{--<form class="input-group" action="{{route('searchResult')}}" >--}}
+                              {{--<input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname" style="height: 35px;">--}}
+                              {{--<span class="input-group-btn  mr-3">--}}
+                                {{--<div id="btn-all" class="input-group-btn search-panel">--}}
+                                      {{--<select name="searchByCategory" id="searchByCategory" class="form-control" style="height: 35px;">--}}
+                                        {{--<option value="" selected="selected">ALL Category</option>--}}
+                                            {{--@foreach($data as $category)--}}
+                                                {{--<option value="{{$category->id}}">{{$category->name}}</option>--}}
+                                            {{--@endforeach--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
+                                {{--<button id="btn-search" class="btn btn-danger" type="submit" style="float: right;margin-top: -34px"><span class="glyphicon glyphicon-search" ></span>--}}
+                                {{--</button>--}}
+                              {{--</span>--}}
+                          {{--</form>--}}
+                    {{--</div>--}}
+                    <form action="{{route('searchResult')}}" class="form-inline">
+                        <div class="input-group" style="margin-top: 40px;">
+                            <input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname"
+                                   style="width:340px;height:35px;padding-right:161px;">
+                            <select mame="searchByCategory" id="searchByCategory" class="form-control" style="width:150px;height:35px">
+                                <option value="" selected="selected">ALL Category</option>
+                                @foreach($data as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endforeach
+                            </select>
+                            <button class="form-control btn btn-danger fa fa-search" type="submit" style="width: 42px;"></button>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-md-3">
                     <div id="rcorners1"  style="float: right;width: 290px;margin-top: 38px" >
@@ -165,9 +180,9 @@
       xfbml      : true,
       version    : '{api-version}'
     });
-      
-    FB.AppEvents.logPageView();   
-      
+
+    FB.AppEvents.logPageView();
+
   };
 
   (function(d, s, id){
@@ -177,4 +192,13 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript">
+    $('#searchname').autocomplete({
+        source : '{!! URL::route('autoComplete') !!}',
+        minlength : 1,
+        autoFocus : true,
+        select:function(e,ui){
+        }
+    });
 </script>
