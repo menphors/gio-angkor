@@ -34,6 +34,7 @@ class CreateUsersTable extends Migration
             $table->string('published')->nullable();
             $table->string('created_by')->nullable();
             $table->string('tel',25)->nullable();
+            $table->text('avatar')->nullable();
             $table->string('admin',2)->default(0)->nullable();
             $table->timestamps();
             $table->rememberToken();

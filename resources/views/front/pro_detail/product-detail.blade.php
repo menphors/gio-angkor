@@ -1,6 +1,40 @@
 @extends('front.homepages.header')
 @section('content')
     <!-- Page Content -->
+    <style type="text/css">
+        body{padding-top:20px;}
+        .carousel {
+            margin-bottom: 0;
+            padding: 0 40px 30px 40px;
+        }
+        /* The controlsy */
+        .carousel-control {
+            left: -12px;
+            height: 40px;
+            width: 40px;
+            background: none repeat scroll 0 0 #222222;
+            border: 4px solid #FFFFFF;
+            border-radius: 23px 23px 23px 23px;
+            margin-top: 90px;
+        }
+        .carousel-control.right {
+            right: -12px;
+        }
+        /* The indicators */
+        .carousel-indicators {
+            right: 50%;
+            top: auto;
+            bottom: -10px;
+            margin-right: -19px;
+        }
+        /* The colour of the indicators */
+        .carousel-indicators li {
+            background: #cecece;
+        }
+        .carousel-indicators .active {
+        background: #428bca;
+        }
+    </style>
     <h1 class="my-4"></h1>
 
     <div class="container">
@@ -18,10 +52,10 @@
             @foreach ($users as $value)
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="#"><img src="{{URL::asset('/uploads/'.$value->gallery)}}"></a>
+                        <a href="{!! url('product/'. $value->id) !!}"><img src="{{URL::asset('/uploads/'.$value->gallery)}}"></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="{!! url('product/'. $value->id) !!}"">{{ $value->pro_name }}</a>
+                                <a href="{!! url('product/'. $value->id) !!}">{{ $value->pro_name }}</a>
                             </h4>
                             <!--get pagination-->
                             <p class="card-text">{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}</p>
@@ -47,7 +81,7 @@
         <!--related product-->
         <!------ Include the above in your HEAD tag ---------->
 
-        @include('partials.products.related-products', ['slideId' => 'relatedProducts', 'products' => $users])
+        @include('partials.products.related-products', ['slideId' => 'relatedProductsdetail', 'products' => $users])
 
     </div>
     <!--buyer protection-->

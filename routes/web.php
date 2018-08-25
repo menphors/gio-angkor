@@ -47,18 +47,14 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function () {
 
 /*Route Frontend*/
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function () {
-
     Route::get('order', 'OrderController@index');
-
     Route::get('detail', 'ProductController@index');
     Route::get('show-product-grid', 'ProductController@show');
-
     Route::get('detail', 'StorepageController@index');
     Route::get('home', 'HomeController@index');
     Route::get('contact', 'ContactController@index');
     Route::get('about', 'AboutController@index');
     Route::get('term-condition', 'TermConditionController@index');
-
     Route::get('store', function () {
         $data1['data'] = DB::table('tbl_category')->get();
         return view('front.StorePage.store', $data1);
@@ -71,7 +67,6 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function () {
         $data1['data'] = DB::table('tbl_category')->get();
         return view('front.user_dashboard.dashboard', $data1);
     });
-
     Route::get('view-card', function () {
         $cartItems = Cart::content();
         if ($cartItems == '') {
@@ -82,14 +77,14 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function () {
     })->middleware('auth');
     Route::get('product-lists', 'ProductGridController@show');
     Route::get('products/productdetails/{$id}', 'ProductController@show_product');
-
     Route::post('productimg', 'ProductController@getProduct');
 });
 //Route::resource('product/{$id}', 'ProductController');
 Route::get('/product/{id}', 'ProductController@showproduct');
 Route::get('/home', function () {
-    $data1['data'] = DB::table('tbl_category')->get();
-    return view('front.user_dashboard.dashboard', $data1);
+    $data['data'] = DB::table('tbl_category')->get();
+    $data['user'] = Auth::user();
+    return view('front.profiles.user', $data);
 })->middleware('auth');
 
 Route::get('/policy', function () {
@@ -112,18 +107,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('delete', 'CartController@delete');
     Route::get('checkout', 'CheckoutController@checkout');
     Route::get('remove-cart/{rowid}', 'CheckoutController@RemoveCart');
-
     Route::get('/profile', function () {
         $data['data'] = DB::table('tbl_category')->get();
         $data['user'] = Auth::user();
         return view('front.profiles.user', $data);
     });
-
-    Route::patch('user/{id}', function () {
-        dd('No Code');
-    })->name('user.update');
-
-
+    Route::resource('user', 'UserController');
+    Route::get('user', 'UserController@userShowOrder');
 });
 //Checkout or billing address
 Route::resource('billing-address', 'CheckoutController@store');

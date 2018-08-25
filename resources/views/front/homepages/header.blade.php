@@ -104,9 +104,9 @@
                     <a class="navbar-brand fa fa-lock text-dark Active " href="{{ url('/login') }}" style="float: right;font-size: 14px">
                         <i class=" fa-lg" aria-hidden="true"></i>
                         Sign In </a>
-                    <a class="navbar-brand fa fa-heartbeat text-dark Active " href="#" style="float: right;font-size: 14px">
+                    <!-- <a class="navbar-brand fa fa-heartbeat text-dark Active " href="#" style="float: right;font-size: 14px">
                         <i class=" fa-lg" aria-hidden="true"></i>
-                        Wish List </a>
+                        Wish List </a> -->
                     <a class="navbar-brand fa fa-shopping-cart text-dark Active " href="{{ route('cart.index')}}" style="float: right;font-size: 14px">
                         <i class=" fa-lg" aria-hidden="true"></i>
                         Card <span class="badge badge-pill badge-danger" style="border: 2px solid;">{{ Cart::count() }}</span></a>
@@ -144,7 +144,7 @@
                         <div class="input-group" style="margin-top: 40px;">
                             <input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname"
                                    style="width:340px;height:35px;padding-right:161px;">
-                            <select mame="searchByCategory" id="searchByCategory" class="form-control" style="width:150px;height:35px">
+                            <select name="searchByCategory" id="searchByCategory" class="form-control" style="width:150px;height:35px">
                                 <option value="" selected="selected">ALL Category</option>
                                 @foreach($data as $category)
                                     <option value="{{$category->id}}">{{$category->name}}</option>
