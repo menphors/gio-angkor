@@ -87,28 +87,28 @@
               <div class="col-md-3 col-xs-6">
                   <div class="card-header" id="fontss" style="border-top-right-radius:8px;border-top-left-radius:8px"><i class="fa fa-usd" aria-hidden="true"></i> GREATE VALUE</div>
                   <div class="card-body" id="fontsss" style="border-bottom-right-radius:8px;border-bottom-left-radius:8px">
-                      <p class="card-text">Some quick example text to build on the card title.</p>
+                      <p class="card-text">We offer competitive prices on our customer plus product range.</p>
                   </div>
               </div>
               <div class="col-md-3 col-xs-6">
                       <div class="card-header" id="fontss" style="border-top-right-radius:8px;border-top-left-radius:8px"><i class="fa fa-shield" aria-hidden="true"></i> SHOP AND CONFIDENCE</div>
                       <div class="card-body" id="fontsss" style="border-bottom-right-radius:8px;border-bottom-left-radius:8px">
 
-                        <p class="card-text">Some quick example text to build on the card title.</p>
+                        <p class="card-text">Our Buyer Protection covers your purchase from click submit add to cart.</p>
                       </div>
               </div>
               <div class="col-md-3 col-xs-6">
                       <div class="card-header" id="fontss" style="border-top-right-radius:8px;border-top-left-radius:8px"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> SAFE PAYMENT</div>
                       <div class="card-body" id="fontsss" style="border-bottom-right-radius:8px;border-bottom-left-radius:8px">
 
-                        <p class="card-text">Some quick example text to build on the card title.</p>
+                        <p class="card-text">Pay with the Cambodia’s most popular and secure payment methods. Cash on delivery.</p>
                       </div>
               </div>
               <div class="col-md-3 col-xs-6">
                       <div class="card-header" id="fontss" style="border-top-right-radius:8px;border-top-left-radius:8px"><i class="fa fa-truck" aria-hidden="true"></i> LOCAL DELIVERY</div>
                       <div class="card-body" id="fontsss" style="border-bottom-right-radius:8px;border-bottom-left-radius:8px">
 
-                        <p class="card-text">Some quick example text to build on the card title.</p>
+                        <p class="card-text">With sites in Cambodia, we ship to location in local Cambodia Country.</p>
                       </div>
               </div>
 
