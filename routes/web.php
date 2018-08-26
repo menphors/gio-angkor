@@ -111,11 +111,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('delete', 'CartController@delete');
     Route::get('checkout', 'CheckoutController@checkout');
     Route::get('remove-cart/{rowid}', 'CheckoutController@RemoveCart');
+
     Route::get('/profile', function () {
         $data['data'] = DB::table('tbl_category')->get();
-        $data['user'] = Auth::user();
+        $data['user'] = Auth::user()->with('orders')->first();
         return view('front.profiles.user', $data);
     });
+
     Route::resource('user', 'UserController');
     Route::get('user', 'UserController@userShowOrder');
 });

@@ -56,13 +56,18 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+
+    }
+
     public function level() {
         return $this->hasManyThrough('App\Level','id');
     }
 
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-        
+    // User has many orders ( One many relationship )
+    public function orders() {
+        return $this->hasMany(Order::class);
     }
 }

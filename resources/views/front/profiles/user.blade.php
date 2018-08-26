@@ -1,11 +1,11 @@
 @extends('front.homepages.header')
 @section('content')
-<style type="text/css">
-     input[type="password"]{
-        height: 35px;
-        width: 100%;
-    }
-</style>
+    <style type="text/css">
+        input[type="password"] {
+            height: 35px;
+            width: 100%;
+        }
+    </style>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,19 +25,19 @@
         <div class="row">
             <div class="col-sm-10"></div>
             <div class="col-sm-2">
-                    @if(Auth::user() &&  Auth::user()->admin == 1)
+                @if(Auth::user() &&  Auth::user()->admin == 1)
                     <div class="row">
                         <a href="{{url('adminz')}}" style="color:#FFF;" class="btn btn-success">Go to Admin Panel</a>&nbsp;&nbsp;
                         <a href="{{url('auth/logout') }}" class="btn btn-danger"><i class="fa fa-sign-out"></i></a>
                     </div>
-                    @else
+                @else
                     <a href="{{ url('auth/logout') }}" class="btn btn-danger"><i class="fa fa-sign-out"></i></a>
-                    @endif  
+                @endif
             </div>
         </div>
-            @if(Session::has('successMsg'))
-                <div class="alert alert-success"> {{ Session::get('successMsg') }}</div>
-            @endif
+        @if(Session::has('successMsg'))
+            <div class="alert alert-success"> {{ Session::get('successMsg') }}</div>
+        @endif
         <div class="row">
             <div class="col-sm-3"><!--left col-->
 
@@ -51,7 +51,7 @@
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
                     <li><a data-toggle="tab" href="#messages">Order Items</a></li>
-                    <li><a  href="{{ url('auth/logout') }}">Logout</a></li>
+                    <li><a href="{{ url('auth/logout') }}">Logout</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -81,7 +81,7 @@
 
                         <div class="form-group">
                             <div class="col-xs-6">
-                               {!! Form::label('Gender', null, ['class' => 'control-label']) !!}
+                                {!! Form::label('Gender', null, ['class' => 'control-label']) !!}
                                 {!! Form::text('gender', null, ['id' => 'gender', 'class' => 'form-control', 'style' => 'height: 35px']) !!}
                             </div>
                         </div>
@@ -129,21 +129,31 @@
                         <hr>
                     </div><!--/tab-pane-->
                     <div class="tab-pane" id="messages">
-                    <h3>Your Order</h3>
-                            <table class="table table-bordered">
-                              <thead>
+                        <h3>Your Order</h3>
+                        <table class="table table-bordered">
+                            <thead>
                                 <tr>
-                                  <th scope="col">No</th>
-                                  <th scope="col">ProID</th>
-                                  <th scope="col">Quantity</th>
-                                  <th scope="col">Unit Price</th>
-                                  <th scope="col">Sub total</th>
-                                  <th scope="col">Total</th>
+                                    <th scope="col">No</th>
+                                    <th scope="col">ProID</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Unit Price</th>
+                                    <th scope="col">Sub total</th>
+                                    <th scope="col">Total</th>
                                 </tr>
-                              </thead>
-                                <tbody>
-                              </tbody>
-                            </table>
+                            </thead>
+                            <tbody>
+                            @foreach($user->orders as $order)
+                                <tr>
+                                    <td>{{ $order->id }}</td>
+                                    <td>{{ $order->product->pro_name }}</td>
+                                    <td>{{ $order->quantity }}</td>
+                                    <td>{{ $order->order_unit_price }}</td>
+                                    <td>{{ $order->sub_total }}</td>
+                                    <td>{{ $user->orders->sum('sub_total') }}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div><!--/tab-pane-->
                 </div><!--/tab-pane-->
             </div><!--/tab-content-->
