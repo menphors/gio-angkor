@@ -98,10 +98,10 @@
                             <div class="col-xs-6 col-md-offset-3">
                                 <div class="col-md-12">
                                     <h3>Cash on Delivery</h3>
-                                    <p>1. Paid by Wing Account: 00000001</p>
-                                    <p>2. Paid by Truemoney Account: 00005555</p>
-                                    <p>3. Paid by ABA Account: 00003575</p>
-                                    <p>4. Paid by Phone: 016984476</p>
+                                    <p>1. Paid by Wing Account</p>
+                                    <p>2. Paid by Truemoney Account</p>
+                                    <p>3. Paid by ABA Account (000345402)</p>
+                                    <p>4. Paid by Phone: (+855) 16 841 777</p>
                                     <h3> Payment Method</h3>
                                         <div class="form-group">
                                         <label class="control-label">Payment Type</label>
