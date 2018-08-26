@@ -139,11 +139,11 @@ return [
             'icon'        => 'file-image-o',
             'url' => 'adminz/gallery/create',
         ],
-        [
-            'text'   => 'Log Activity',
-            'icon'        => 'eye-slash',
-            'url' => 'adminz/log-activity',
-        ],
+        // [
+        //     'text'   => 'Log Activity',
+        //     'icon'        => 'eye-slash',
+        //     'url' => 'adminz/log-activity',
+        // ],
         // [
         //     'text'    => 'Orders',
         //     'icon'        => 'shopping-cart',
