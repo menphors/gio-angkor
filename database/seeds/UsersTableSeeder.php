@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
             "gender" => "f",
             "dob" => "1995/05/15",
             "username" => "phorsmen",
-            "email" => "menphorsqty@gmail.com",
+            "email" => "gioangkor.info@gmail.com",
             "password" => "123456",
             "level_id" => 1,
             "address" => "Phnom Penh",

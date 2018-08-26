@@ -37,7 +37,7 @@ class CategoriesTableSeeder extends Seeder
         // ]);
 
         $c1 = Category::create([
-            'name'=> 'Men Clothes',
+            'name'=> "Children's Clothing",
             'parent_id' => 1,
             'published' => 1
         ]);

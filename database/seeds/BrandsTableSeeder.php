@@ -23,12 +23,32 @@ class BrandsTableSeeder extends Seeder
             'images_url' => "apple.png",
             'official' => 1
         ]);
-        
+        $b4 = Brand::create([
+            'brand_name'=> 'OPPO',
+            'images_url' => "",
+            'official' => 1
+        ]);
         $b3 = Brand::create([
             'brand_name'=> 'Romanson',
             'images_url' => "Romanson-Logo.jpg",
             'official' => 1
         ]);
+        $b5 = Brand::create([
+            'brand_name'=> 'Adidas',
+            'images_url' => "",
+            'official' => 1
+        ]);
+        $b6 = Brand::create([
+            'brand_name'=> 'Nike',
+            'images_url' => "",
+            'official' => 1
+        ]);
+        $b7 = Brand::create([
+            'brand_name'=> 'Canon',
+            'images_url' => "",
+            'official' => 1
+        ]);
+
 
     }
 }
