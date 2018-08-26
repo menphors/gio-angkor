@@ -141,7 +141,4 @@ Route::post('/billing-address', 'front\ProceedOrderController@store');
 
 Route::get('/autoComplete', array('as' => 'autoComplete', 'uses' => 'ProductController@autoComplete'));
 Route::get('/searchResult', array('as' => 'searchResult', 'uses' => 'ProductController@searchResult'));
-
-
-
-
+Route::get('/searchCategory',array('as'=>'searchCategory','uses'=>'ProductController@searchCategory'));

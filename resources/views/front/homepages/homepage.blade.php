@@ -11,15 +11,17 @@
             <div class="col-md-3" id="menu">
                 <ul class="" id="color-main01" style="background-color: #e7e7e8">
                   @foreach($data as $category)
+                    @if($category->id<=12)
                         <li>
-                            <a href="{{route('searchResult')}}?searchByCategory={{$category->id}}"  >
-                                @if($category->id==1)<i class="fa fa-home fa-fw"></i>
-                                @elseif($category->id==2)<i class="fa fa-list-alt fa-fw"></i>
-                                @elseif($category->id==3)<i class="fa fa-file-o fa-fw"></i>
-                                @elseif($category->id==4)<i class="fa fa-bar-chart-o fa-fw"></i>
-                                @elseif($category->id==5)<i class="fa fa-list-alt fa-fw"></i>
-                                @elseif($category->id==6)<i class="fa fa-list-alt fa-fw"></i>
+                            <a href="{{route('searchCategory')}}?categoryGrid={{$category->id}}&categoryName={{$category->name}}">
+                                @if($category->id==1)<i class="fa fa-child fa-fw"></i>
+                                @elseif($category->id==2)<i class="fa fa-female fa-fw"></i>
+                                @elseif($category->id==3)<i class="fa fa-user fa-fw"></i>
+                                @elseif($category->id==4)<i class="fa fa-mobile fa-fw"></i>
+                                @elseif($category->id==5)<i class="fa fa-laptop fa-fw"></i>
+                                @elseif($category->id==6)<i class="fa fa-camera-retro fa-fw"></i>
                                 @elseif($category->id==7)<i class="fa fa-list-alt fa-fw"></i>
+                                @elseif($category->id==8)<i class="fa fa-list-alt fa-fw"></i>
                                 @elseif($category->id==9)<i class="fa fa-list-alt fa-fw"></i>
                                 @elseif($category->id==10)<i class="fa fa-list-alt fa-fw"></i>
                                 @elseif($category->id==11)<i class="fa fa-list-alt fa-fw"></i>
@@ -28,8 +30,14 @@
                                 @elseif($category->id==14)<i class="fa fa-list-alt fa-fw"></i>
                                 @else<i class="fa fa-file-o fa-fw"></i>
                                 @endif
-                                {{$category->name}}</a>
+                                {{$category->name}}</a>  
                         </li>
+                        @elseif($category->id<=13)
+                          <li>
+                            <a href="{{route('searchCategory')}}?categoryGrid=&categoryName="><i class="fa fa-list-alt fa-fw"></i>View All</a>
+                          </li>
+                                
+                        @endif
                         @endforeach
                 </ul>
             </div>

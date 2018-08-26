@@ -11,8 +11,8 @@
             View:&nbsp;<a href="{!! url('frontend/show-product-grid') !!}"><i class="btn fa fa-table"></i></a>&nbsp;&nbsp;&nbsp;<a href="{!! url('frontend/product-lists') !!}"><i class="btn fa fa-list-ul"></i></a>
         </div>
     </div>
-    <h1>Search Results</h1>
-    <p>{{$products->count()}} result(s) for '{{request()->input('searchname')}}'</p>
+    <!-- <h1>Search Results</h1>
+    <p>{{$products->count()}} result(s) for '{{request()->input('searchname')}}'</p> -->
 
     {{--@foreach($products as $product)--}}
         {{--<div>{{ $product->pro_name }}</div>--}}
@@ -40,24 +40,26 @@
             {{--@endforeach--}}
         {{--</tbody>--}}
     {{--</table>--}}
-    @foreach( $products as $value )
-
+    <h1 class="my-4">{{request()->input('categoryName')}}</h1>
     <div class="row">
-        <div class="col-md-3">
-            <a href="{!! url('frontend/product-add-to-card') !!}">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="{{URL::asset('/uploads/'.$value->gallery)}}" style="width: 200px;">
-            </a>
-        </div>
-        <div class="col-md-5">
-            <h3><a href="{!! url('product/'. $value->id) !!}">{{ $value->pro_name }}</a></h3>
-            <p>{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}.</p>
-            <h4><b><a href="#" style="color: red !important;font-weight: bold;">{{ $value->prices }}$</a></b></h4>
-            <a class="btn btn-primary" href="{!! url('product/'. $value->id) !!}">View Detail</a>
-        </div>
+      @foreach ($products as $value)
+          <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+              <div class="card h-100">
+                  <a href="{!! url('product/'. $value->id) !!}"><img src="{{URL::asset('/uploads/'.$value->gallery)}}"></a>
+                  <div class="card-body">
+                      <h4 class="card-title">
+                          <a href="{!! url('product/'. $value->id) !!}"">{{ $value->pro_name }}</a>
+                      </h4>
+                      <!--get pagination-->
+                      <p class="card-text">{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}</p>
+                      <p><a href="#" style="color: red !important;font-weight: bold;">{{ $value->prices }}$</a></p>
+                      <button class="btn btn-success"><a href="{{route('cart.edit',$value->id)}}" style="color: #FFF;">Add to cart</a></button>
+                  </div>
+              </div>
+          </div>
+          <br><br><br><br>
+          @endforeach
     </div>
-    <hr>
-    @endforeach
-
     {{ $products->appends(request()->input())->links() }}
 </div>
 

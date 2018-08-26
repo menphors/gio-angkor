@@ -124,9 +124,23 @@ class ProductController extends Controller
         $searchByCategory=$request->input('searchByCategory');
         $products = Product::where('pro_name','like',"%$searchname%")
             ->where('category_id','like',"%$searchByCategory%")
-            ->get();
+            ->paginate(8);
         $data1['data'] = DB::table('tbl_category')->get();
         return view('front.products.index',$data1)->with('products',$products);
     }
+    public function searchCategory(Request $request){
 
+        $categoryGrid=$request->input('categoryGrid');
+        $categoryName=$request->input('categoryName');
+
+        $products = Product::join('tbl_category','tbl_category.id','=','tbl_products.category_id')
+            ->where('tbl_products.category_id','like',"%$categoryGrid%")
+            ->where('tbl_category.name','LIKE',"%$categoryName%")
+            ->paginate(8);
+
+        $data1['data'] = DB::table('tbl_category')
+        ->get();
+        return view('front.products.product-grid',$data1)->with('products',$products);
+
+    }
 }
