@@ -164,11 +164,11 @@
                       </div>
                     </nav>
                           <a href="{{ url('frontend/show-product-grid')}}"><img src="images/300.png" alt="..." class=" float-left col-md-4" style="height: 550px;"></a>
-                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png " alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250women.jpg " alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
                           <a href="{{ url('frontend/show-product-grid')}}"><img src="images/400.png" alt="..." class=" float-right col-md-4" style="height: 275px;"></a>
                           <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
-                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
-                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250s.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250ss.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
                 </div>
         </div>
     </div>
@@ -179,11 +179,9 @@
             <div class="row ">
                 <div class="no-gutters">
                     <nav class="nav flex-column col-md-2 float-left " >
-                        <a class="nav-link" id="fontssa" href="#">WOMEN'S
+                        <a class="nav-link" id="fontssa" href="#">MEN'S
                             <br/>CLOTHING</a>
                         <div style="background-color: #e7e7e8; text-align: center; height: 470px;">
-                            <a class="nav-link"  href="#">Casual Dresses</a>
-                            <a class="nav-link"  href="#">Autumn Dresses</a>
                             <a class="nav-link"  href="#">Coats & Jackets</a>
                             <a class="nav-link"  href="#">Sweaters</a>
                             <a class="nav-link"  href="#">Blouses & Shirts</a>
@@ -193,12 +191,39 @@
                             <a class="nav-link"  href="#">Hair Accessories</a>
                         </div>
                     </nav>
-                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/300.png" alt="..." class=" float-left col-md-4" style="height: 550px;"></a>
-                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png " alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
-                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/400.png" alt="..." class=" float-right col-md-4" style="height: 275px;"></a>
-                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
-                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
-                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250.png" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/300man.jpg" alt="..." class=" float-left col-md-4" style="height: 550px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250man.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/400man.jpg" alt="..." class=" float-right col-md-4" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/200man2.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/250man2.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                    <a href="{{ url('frontend/show-product-grid')}}"><img src="images/2002man.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+        <div class="container" style="padding-top: 20px;">
+            <div class="row ">
+                <div class="no-gutters">
+                    <nav class="nav flex-column col-md-2 float-left " >
+                        <a class="nav-link" id="fontssa" href="#">Phone
+                            <br/>Accessories</a>
+                        <div style="background-color: #e7e7e8; text-align: center; height: 470px;">
+                            <!-- <a class="nav-link"  href="#">Coats & Jackets</a>
+                            <a class="nav-link"  href="#">Sweaters</a>
+                            <a class="nav-link"  href="#">Blouses & Shirts</a>
+                            <a class="nav-link"  href="#">T-Shirts</a>
+                            <a class="nav-link"  href="#">Sunglasses</a>
+                            <a class="nav-link"  href="#">Intimates&Sleepwear</a>
+                            <a class="nav-link"  href="#">Hair Accessories</a> -->
+                        </div>
+                    </nav>
+                      <a href="{{ url('frontend/show-product-grid')}}"><img src="uploads/iphonex.jpg" alt="..." class=" float-left col-md-4" style="height: 550px;"></a>
+                      <a href="{{ url('frontend/show-product-grid')}}"><img src="uploads/SamsungGalaxyJ8.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                      <a href="{{ url('frontend/show-product-grid')}}"><img src="uploads/LG-V30.jpg" alt="..." class=" float-right col-md-4" style="height: 275px;"></a>
+                      <a href="{{ url('frontend/show-product-grid')}}"><img src="uploads/adpter.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                      <a href="{{ url('frontend/show-product-grid')}}"><img src="uploads/Camera-Flash-Speedlite.PNG" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
+                      <a href="{{ url('frontend/show-product-grid')}}"><img src="uploads/Samsung-Galaxy-A8-Star.jpg" alt="..." class=" float-right col-md-2" style="height: 275px;"></a>
                 </div>
             </div>
         </div>
