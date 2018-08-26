@@ -30,12 +30,15 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Product Name</th>
+                                        <th>Count Products</th>
                                     </tr>
                                     <?php $i = 1; ?>
                                     @foreach($getstorechart as $value)
                                         <tr>
                                             <td>{{ $i++ }}</td>
                                             <td>{{ $value->pro_name }}</td>
+                                             <td>{{ $value->count }}</td>
+
                                         </tr>
                                     @endforeach
                                 </table>
