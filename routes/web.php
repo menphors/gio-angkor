@@ -54,6 +54,10 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function () {
     Route::get('home', 'HomeController@index');
     Route::get('contact', 'ContactController@index');
     Route::get('about', 'AboutController@index');
+    Route::get('user-guide',function(){
+        $data1['data'] = DB::table('tbl_category')->get();
+        return view("front.user-guide",$data1);
+    });
     Route::get('term-condition', 'TermConditionController@index');
     Route::get('store', function () {
         $data1['data'] = DB::table('tbl_category')->get();
