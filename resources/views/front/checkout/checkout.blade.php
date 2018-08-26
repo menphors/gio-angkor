@@ -98,19 +98,15 @@
                             <div class="col-xs-6 col-md-offset-3">
                                 <div class="col-md-12">
                                     <h3>Cash on Delivery</h3>
-                                    <p>1. Paid by Wing Account</p>
-                                    <p>2. Paid by Truemoney Account</p>
-                                    <p>3. Paid by ABA Account (000345402)</p>
-                                    <p>4. Paid by Phone: (+855) 16 841 777</p>
+                                    <p>1. Paid by ABA Account (000345402)</p>
+                                    <p>2. Paid by Phone: 016984476</p>
                                     <h3> Payment Method</h3>
                                         <div class="form-group">
                                         <label class="control-label">Payment Type</label>
                                         <select maxlength="200" type="select" required="required" class="form-control" name="payment_type" style="height: 30px !important;">
                                             <option value="">[--Please select--]</option>
                                             <option value="aba">1. Pay By ABA Bank</option>
-                                            <option value="wing">2. Pay By Wing</option>
-                                            <option value="truemoney">3. Pay By Truemoney</option>
-                                            <option value="truemoney">Others</option>
+                                            <option value="phone">2. Pay By Phone (016984476)</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
