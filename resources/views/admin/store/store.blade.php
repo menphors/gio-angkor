@@ -13,7 +13,7 @@
                 <section>
                         <div class="col-md-6">
                             <div class="panel panel-success">
-                                <div class="panel-heading">Product Report By Month</div>
+                                <div class="panel-heading">Product Report By Day</div>
                                 <div class="panel-body">
                                     <div class="chart">
                                         <canvas id="chart-bar" height="310" width="600"></canvas>
@@ -24,20 +24,18 @@
                         </div>
                     <div class="col-md-6">
                         <div class="panel panel-primary">
-                            <div class="panel-heading">Count product results group by Product category </div>
+                            <div class="panel-heading"> Product Dashboard </div>
                             <div class="panel-body">
                                 <table class="table" height="100" width="600">
                                     <tr>
                                         <th>No.</th>
-                                        <th>Count product</th>
                                         <th>Product Name</th>
                                     </tr>
                                     <?php $i = 1; ?>
                                     @foreach($getstorechart as $value)
                                         <tr>
-                                            <td>{{$i++}}</td>
-                                            <td>{{$value->count}}</td>
-                                            <td>{{$value->store_name}}</td>
+                                            <td>{{ $i++ }}</td>
+                                            <td>{{ $value->pro_name }}</td>
                                         </tr>
                                     @endforeach
                                 </table>

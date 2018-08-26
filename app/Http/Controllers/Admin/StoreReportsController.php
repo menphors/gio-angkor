@@ -8,13 +8,13 @@ use DB;
 class StoreReportsController extends Controller
 {
     public function index() {
-        $getstorechart = DB::table('tbl_store')
+        $getstorechart = DB::table('tbl_products')
 //            ->count()
 //            ->groupBy('store_name')
 //            ->orderBy('store_name', 'asc')
 //            ->get();
-        ->select(DB::raw('COUNT(*) as "count",store_name'))
-            ->groupBy('store_name')
+        ->select(DB::raw('COUNT(*) as "count",pro_name'))
+            ->groupBy('pro_name')
             ->get();
         return view('admin.store.store',compact('Store report','getstorechart'));
     }
