@@ -16,7 +16,7 @@
             <h5>How to Buy</h5>
             <ul class="list-unstyled">
                 <li><a href="#" style="color:#000;">Delivery Options</a></li>
-                <li><a href="#" style="color:#000;">New User Guide</a></li>
+                <li><a href="{{url('frontend/user-guide')}}" style="color:#000;">New User Guide</a></li>
             </ul>
         </div>
 
