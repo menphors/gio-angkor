@@ -79,11 +79,9 @@
         <div id="row1" class="row">
                 <div class="col-md-6">
                     <h1 id="our_product"><b>Our Products</b></h1>
-                   <p id="text1">Since the foundation, FIPLUS Khmer Co. Ltd., is the trusted service financial solution, IT consultancy by contributing to the development of solution activities through our services and value proposition.
+                   <p id="text1">At GIO Angkor, we all come to work every day because we want to solve the biggest problem in Ecommerce. Everyone is guessing. Uers don’t know what apps to build, how to monetize them, or even what to price them at. Advertisers & brands don’t know where their target users are, how to reach them, or even how much they need to spend in order to do so. Investors aren’t sure which apps and genres are growing the quickest, and where users are really spending their time (and money).<br>
 
-                       We have placed value on the social in dependency and offer high-quality and specialized services. In our solution, all the team members are communicate closely with clients, have discussions from multiple perspectives and offer tailored advice and professional services.
-
-                       We develop innovative and creative products and services that provide total communication and information solutions. Through such unrestricted discussions, we offer efficient, cost-effective and relationship-focused services.</p>
+                    Throughout the history of business, people use data to make more informed decisions. Our mission at Apptopia is to make the app economy more transparent. Today we provide the most actionable mobile app data & insights in the industry. We want to make this data available to as many people as possible (not just the top 5%).</p>
                 </div>
                 <div class="col-md-6">
                     <img id="about1" src="{{asset('images/our_product.jpg')}}">
@@ -96,23 +94,20 @@
             </div>
             <div class="col-md-6">
                 <h1 id="our_team"><b>Our Team</b></h1>
-                <p id="text2">Since the foundation, FIPLUS Khmer Co. Ltd., is the trusted service financial solution, IT consultancy by contributing to the development of solution activities through our services and value proposition.
-
-                    We have placed value on the social in dependency and offer high-quality and specialized services. In our solution, all the team members are communicate closely with clients, have discussions from multiple perspectives and offer tailored advice and professional services.
-
-                    We develop innovative and creative products and services that provide total communication and information solutions. Through such unrestricted discussions, we offer efficient, cost-effective and relationship-focused services.</p>
+                <p id="text2">Today, people embrace companies with the customer experiences that best meet their needs. Huge transforms companies by designing these best-in-class experiences, driven by strong creative and rooted in the technology, data, and organizational strategy required for operational excellence. We combine these capabilities into a single solution, creating unified brand experiences that change industries and foster meaningful relationships with users. This user-centric approach has made us the fastest-growing agency of the past decade.</p>
             </div>
 
         </div>
 
         <div id="row1" class="row">
             <div class="col-md-6">
-                <h1 id="our_product"><b>Our Partners</b></h1>
-                <p id="text1">Since the foundation, FIPLUS Khmer Co. Ltd., is the trusted service financial solution, IT consultancy by contributing to the development of solution activities through our services and value proposition.
+                <h1 id="our_product"><b>Our Design Website</b></h1>
+                <p id="text1">Expert Designers and Developers trained in the creative and digital industry who offer a bespoke, professional and trustworthy service.
+                We are a Web Design Studio based in Manchester with an outstanding reputation for quality, bespoke designs across all digital campaigns - including eCommerce web design and responsive website design.
 
-                    We have placed value on the social in dependency and offer high-quality and specialized services. In our solution, all the team members are communicate closely with clients, have discussions from multiple perspectives and offer tailored advice and professional services.
+                With over a decade of experience, Shape is a energetic, fresh and vibrant team of eight offering creative talent, industry knowledge and extremely high standards. All of our team members have degrees in both Graphic Design and Web Design.
 
-                    We develop innovative and creative products and services that provide total communication and information solutions. Through such unrestricted discussions, we offer efficient, cost-effective and relationship-focused services.</p>
+                We work with Sole Traders and ambitious Start Up Businesses through to large global organisations such as Blackberry, Selfridges and Harvey Nichols, so we can tailor our services to suit your needs.</p>
             </div>
             <div class="col-md-6">
                 <img id="about1" src="{{asset('images/our_partner.jpg')}}">
