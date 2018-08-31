@@ -78,7 +78,7 @@
 
 
                 </div>
-                <div class="col-md-9 col-sm-12 col-xs-12" style="margin-bottom: 15px">
+                <div class="col-md-9 col-sm-12 col-xs-12" style="margin-bottom: 0px">
                     <a class="navbar-brand fa fa-users text-dark Active " href="{{ url('/register') }}" style="float: right;font-size: 14px">
                         <i class=" fa-lg" aria-hidden="true"></i>
                         Free Join </a>
@@ -109,23 +109,6 @@
                     <a href="{{ url('/') }}"><img id="logo" src="{{asset('images/gio-angkor.png')}}" alt="logo" style="height: 80px;"></a>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12" id="search-tool">
-                    {{--<div class="input-group" id="search_group" style="width: 530px;margin-top: 40px">--}}
-                           {{--<form class="input-group" action="{{route('searchResult')}}" >--}}
-                              {{--<input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname" style="height: 35px;">--}}
-                              {{--<span class="input-group-btn  mr-3">--}}
-                                {{--<div id="btn-all" class="input-group-btn search-panel">--}}
-                                      {{--<select name="searchByCategory" id="searchByCategory" class="form-control" style="height: 35px;">--}}
-                                        {{--<option value="" selected="selected">ALL Category</option>--}}
-                                            {{--@foreach($data as $category)--}}
-                                                {{--<option value="{{$category->id}}">{{$category->name}}</option>--}}
-                                            {{--@endforeach--}}
-                                    {{--</select>--}}
-                                {{--</div>--}}
-                                {{--<button id="btn-search" class="btn btn-danger" type="submit" style="float: right;margin-top: -34px"><span class="glyphicon glyphicon-search" ></span>--}}
-                                {{--</button>--}}
-                              {{--</span>--}}
-                          {{--</form>--}}
-                    {{--</div>--}}
                     <form action="{{route('searchResult')}}" class="form-inline">
                         <div class="input-group" style="margin-top: 40px;">
                             <input type="text" class="form-control" placeholder="Seach..." name="searchname" id="searchname"
@@ -143,10 +126,10 @@
                 <div class="col-md-3">
                     <div id="rcorners1"  style="float: right;width: 290px;margin-top: 38px" >
                        <p style="font-size: 16px;margin-top: -15px;"> <b style="color: #bf1e2e;"> >100 Thousands </b></p>
-                        <p style="font-size: 16px;margin-top: -32px;margin-right: 20px;float: right"> <b style="color: #bf1e2e;"> 1.0800 Times </b></p>
+                        <p style="font-size: 16px;margin-top: -30px;margin-right: 20px;float: right"> <b style="color: #bf1e2e;"> 1.0800 Times </b></p>
                         <p style="font-size: 10px;margin-top: -15px;"> <b style="color: white;"> of product on GIO </b></p>
-                        <p style="font-size: 10px;margin-top: -24px;margin-right: 14px;float: right"> <b style="color: white;"> transaction through GIO</b></p>
-                        <p style="font-size: 35px;margin-top: -52px;margin-left: 120px; color: black">  | </p>
+                        <p style="font-size: 10px;margin-top: -31px;margin-right: 14px;float: right"> <b style="color: white;"> transaction through GIO</b></p>
+                        <p style="font-size: 35px;margin-top: -39px;margin-left: 120px; color: black">  | </p>
                     </div>
                 </div>
         </div>
