@@ -72,7 +72,6 @@
       if(newQty <= 0) {
       alert('Please input valid quantity');
       } else {
-        alert('You updated quantity ' + newQty);
         window.location.reload(); 
       $.ajax({
         url:'{{ url("/cart/update/$cartItem->id") }}',

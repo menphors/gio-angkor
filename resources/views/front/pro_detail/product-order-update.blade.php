@@ -129,7 +129,6 @@
       }else if(newQty > proQty) {
             alert('Your input product is out of stock. Please check again');
       }else {
-        alert('You updated quantity ' + newQty);
         window.location.reload(); 
       $.ajax({
         url:'{{ url("/cart/update/addcart/$cartItem->id") }}',

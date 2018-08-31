@@ -64,6 +64,15 @@
    </style>
 </head>
 <body>
+  <!--facebook SDK-->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=1557007854605344&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container-fluid">
         <div class="container">
             <div class="row">
@@ -75,8 +84,6 @@
                         <img src="{{asset('images/uk1.png')}}" >
                     </a>
                     <a class="navbar-brand mr-auto" style=" font-size:12px;color: black;margin-left: -15px" href="#">Tel: 016 841 777</a>
-
-
                 </div>
                 <div class="col-md-9 col-sm-12 col-xs-12" style="margin-bottom: 0px">
                     <a class="navbar-brand fa fa-users text-dark Active " href="{{ url('/register') }}" style="float: right;font-size: 14px">

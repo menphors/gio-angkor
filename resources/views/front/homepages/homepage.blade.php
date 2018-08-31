@@ -80,14 +80,16 @@
                       </div>
 
                   </div>
-
+                  <!--facebook like page-->
                   <div id="adv" class="col-md-2 col-sm-3">
-
-                          <a href="https://www.facebook.com/giioangkor"><img src="images/photo-banner-fb.png" width="140%" height="100%"></a>
-
+                      <div class="fb-page"
+                      data-href="https://www.facebook.com/giioangkor" 
+                      data-width="340"
+                      data-hide-cover="false"
+                      data-show-facepile="true"></div>
+                      </div>
                   </div>
-
-        </div>
+          </div>
       </div>
 
     <div class="container" style="margin-top: 10px">
