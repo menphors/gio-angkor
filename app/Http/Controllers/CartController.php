@@ -69,8 +69,9 @@ class CartController extends Controller
         $product = Product::find($id);
         $name = $product->pro_name;
         $price = $product->prices;
+        $img =  $product->gallery;
         // $cart = Cart::add($id,$name,$price);
-        Cart::add(['id'=> $id,'name'=>$name,'price'=>$price,'qty'=>1]); 
+        Cart::add(['id'=> $id,'name'=>$name,'price'=>$price,'qty'=>1,'img' =>$img]); 
         return redirect('cart');
     }
 
@@ -81,9 +82,34 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
+        $data['data'] = DB::table('tbl_category')->get(); 
+
+        $qty = $request->newQty;
+        $rowId = $request->rowID;
+        //$price = $request->price;
+        Cart::update($rowId,$qty);
+        //dd($qty);
+        $cartItems =  Cart::content();
         //
+        return  view('front.order.upCart',compact('cartItems'));
+
+    }
+
+    public function update_add_cart(Request $request,$id)
+    {
+        $data['data'] = DB::table('tbl_category')->get(); 
+        
+        $qty = $request->newQty;
+        $rowId = $request->rowID;
+        //$price = $request->price;
+        Cart::update($rowId,$qty);
+        //dd($qty);
+        $cartItems =  Cart::content();
+        //
+        return  view('front.pro_detail.product-order-update',compact('cartItems'));
+
     }
 
     /**
@@ -95,5 +121,7 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
+        Cart::remove($id);
+        return back(); // will keep same page
     }
 }

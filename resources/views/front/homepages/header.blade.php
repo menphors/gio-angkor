@@ -1,27 +1,16 @@
-<!--soklim code-->
 <!DOCTYPE html>
 <html>
 <head>
-
   <title>Gio Angkor</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="csrf-token" content="{{ csrf_token() }}" />
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-
   <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
   <link href="{{asset('css/main.css')}}" rel="stylesheet">
   <link href="{{asset('css/main01.css')}}" rel="stylesheet">
   <link href="{{asset('css/bootstrap-theme.min.css')}}" rel="stylesheet">
-
-  <script src="{{asset('js/jquery.min.js')}}" ></script>
   <script src="{{asset('js/popper.min.js')}}" ></script>
-  <script src="{{asset('js/bootstrap.min.js')}}" ></script>
   <!-- Header style -->
   <!-- order style -->
   <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
@@ -31,35 +20,31 @@
   <script type="text/javascript" src="{{ URL::asset('js/bootstrap.js') }}"></script>
     <!-- end order style -->
     <!-- product-detail header -->
-  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{asset('css/main_styles.css')}}" rel="stylesheet">
   {{--<link href="{{asset('css/responsive.css')}}" rel="stylesheet">--}}
   <link href="{{asset('css/product-detail-css.css')}}" rel="stylesheet">
   <link href="{{asset('css/bootstrap-combined.min.css')}}" rel="stylesheet" id="bootstrap-css">
     <!-- Custom styles for this template -->
   <link href="{{asset('css/4-col-portfolio.css')}}'" rel="stylesheet">
-  <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
   <script src="{{asset('js/jquery.min.js')}}"></script>
+  <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
   <script src="{{asset('vendor/bootstrap/dist/js/bootstrap.js')}}"></script>
   <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
-    <!-- end product detail header -->
-    <!-- user dashboard-->
-
-  <link type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <!-- end product detail header -->
+  <!-- user dashboard-->
   <link type="text/css" href="{{asset('bootstrap/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
   <link type="text/css" href="{{asset('css/theme.css')}}" rel="stylesheet">
   <link type="text/css" href="{{asset('images_icon/icons/css/font-awesome.css')}}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- end user dashboar --> 
     <!-- apply hold font to all page -->
   <link type="text/css" href="{{asset('css/style.css')}}" rel="stylesheet">
- <style type="text/css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <style type="text/css">
      #search{
          width: 200px;
 
@@ -73,14 +58,10 @@
      .space-right{
          padding-right: 5px;
      }
-     img:hover, p:hover, a:hover {
+     img:hover, a:hover {
           background-color: #e7e7e8;
       }
-   
- </style>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+   </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -101,9 +82,14 @@
                     <a class="navbar-brand fa fa-users text-dark Active " href="{{ url('/register') }}" style="float: right;font-size: 14px">
                         <i class=" fa-lg" aria-hidden="true"></i>
                         Free Join </a>
+                        @if(Auth::user())
+                        <a class="navbar-brand fa fa-user text-dark Active " href="{{ url('/login') }}" style="float: right;font-size: 14px">
+                        <i class=" fa-lg" aria-hidden="true"></i><?php echo Auth::user()->username;?></a>
+                        @else 
                     <a class="navbar-brand fa fa-lock text-dark Active " href="{{ url('/login') }}" style="float: right;font-size: 14px">
                         <i class=" fa-lg" aria-hidden="true"></i>
                         Sign In </a>
+                        @endif
                     <!-- <a class="navbar-brand fa fa-heartbeat text-dark Active " href="#" style="float: right;font-size: 14px">
                         <i class=" fa-lg" aria-hidden="true"></i>
                         Wish List </a> -->

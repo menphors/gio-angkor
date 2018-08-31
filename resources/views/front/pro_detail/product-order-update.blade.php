@@ -38,6 +38,7 @@
     </style>
     <!-- Page Content -->
     <div class="container">
+        <div id="updateDiv"></div>
         <div style="height: 20px;"></div>
         <!-- Portfolio Item Heading -->
         <h1 class="my-4">Product Description</h1>
@@ -82,8 +83,10 @@
                          @foreach($cartItems as $cartItem)
                          <input type="hidden" value="{{ $cartItem->rowId }}" id="rowID{{ $cartItem->id }}">
                         <span style="width: 7%">Quantity</span>: <span style="width: auto;">
-                            <input type="number" value="{{ $cartItem->qty }}" id="upCart{{ $cartItem->id }}">
+                            <input type="number" value="{{$cartItem->qty}}" id="upCart{{$cartItem->id}}">
                         </span>
+                        <input type="hidden" value="{{ $cartItem->price }}">
+                        <input type="hidden" value="{{ subtotal() }}">
                         @endforeach
                     </li>
                     <br><br>
@@ -129,7 +132,7 @@
         alert('You updated quantity ' + newQty);
         window.location.reload(); 
       $.ajax({
-        url:'{{ url("/cart/update/$cartItem->id") }}',
+        url:'{{ url("/cart/update/addcart/$cartItem->id") }}',
         data:'rowID=' + rowID + '&newQty=' + newQty,
         type:'get',
         dataType:'html',

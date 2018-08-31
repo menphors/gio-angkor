@@ -69,8 +69,6 @@
                                           <th scope="col">Products</th>
                                           <th scope="col">Quantity</th>
                                           <th scope="col">Unit Price</th>
-                                          <th scope="col">Sub total</th>
-                                          <th scope="col">Total</th>
                                         </tr>
                                       </thead>
                                         <tbody>
@@ -78,15 +76,21 @@
                                         @foreach($cartItems as $cartItem)
                                         <tr>
                                           <th scope="row"><?php echo $i++;?></th>
-                                          <td>{{ $cartItem->name}}</td>
-                                          <td align="center">{{$cartItem->qty}}</td>
-                                          <td align="left">${{ $cartItem->price}}</td>
-                                          <td align="left">${{ Cart::subtotal()}}</td>
-                                          <td>{{ Cart::subtotal()}} $</td>
+                                          <td>{{ $cartItem->name }}</td>
+                                          <td align="center">{{$cartItem->qty }}</td>
+                                          <td align="left">${{ $cartItem->price }}</td>
                                           <!-- {{ Cart::total() }} -->
                                     <!--       <td><a href="{{url('remove-cart/'.$cartItem->rowId)}}"><i class="fa fa-trash btn btn-danger"></i></td> -->
                                         </tr>
                                         @endforeach
+                                        <tr>
+                                            <td colspan="3"><strong>Subtotal</strong></td>
+                                            <td align="right">{{ Cart::subtotal() }} $</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"><strong>Totals </strong></td>
+                                            <td align="right" style="color: red;">{{ Cart::subtotal() }} $</td>
+                                        </tr>
                                       </tbody>
                                     </table>
                                     <br>
@@ -97,9 +101,6 @@
                         <div class="row setup-content" id="step-3">
                             <div class="col-xs-6 col-md-offset-3">
                                 <div class="col-md-12">
-                                    <h3>Cash on Delivery</h3>
-                                    <p>1. Paid by ABA Account (000345402)</p>
-                                    <p>2. Paid by Phone: 016984476</p>
                                     <h3> Payment Method</h3>
                                         <div class="form-group">
                                         <label class="control-label">Payment Type</label>
@@ -111,7 +112,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Payment Code</label>
-                                        <input maxlength="200" type="text" required="required" name="payment_code" class="form-control" placeholder="e.g Wing 12345678"  style="height: 30px !important;"/>
+                                        <input maxlength="200" type="text" required="required" name="payment_code" class="form-control" placeholder="e.g Wing 12345678"  style="height: 30px !important;" min="8"/>
                                     </div>
                                     <div class="form-group">
                                        

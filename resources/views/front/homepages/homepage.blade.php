@@ -83,7 +83,7 @@
 
                   <div id="adv" class="col-md-2 col-sm-3">
 
-                          <a href="{{ url('frontend/show-product-grid')}}"><img src="images/170.jpg" width="140%" height="100%"></a>
+                          <a href="https://www.facebook.com/giioangkor"><img src="images/photo-banner-fb.png" width="140%" height="100%"></a>
 
                   </div>
 

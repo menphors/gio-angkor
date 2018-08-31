@@ -3,19 +3,17 @@
     @yield('footer')
 </nav>
 </div>
-
 <style>
     li a {
         display:block;
     }
 </style>
-
 <div class="container-fluid" style="background-color: #e7e7e8; text-align: center; padding: 15px" >
     <div class="row">
         <div class="col-lg-3"  >
             <h5>How to Buy</h5>
             <ul class="list-unstyled">
-                <li><a href="#" style="color:#000;">Delivery Options</a></li>
+                <li><a href="{{url('frontend/user-guide')}}" style="color:#000;">Delivery Options</a></li>
                 <li><a href="{{url('frontend/user-guide')}}" style="color:#000;">New User Guide</a></li>
             </ul>
         </div>
@@ -32,7 +30,7 @@
             <h5>Ad post rule</h5>
             <ul class="list-unstyled">
                 <li> <a href="{{ url('/frontend/term-condition') }}" style="color:#000;">Terms and Conditions</a></li>
-                <li> <a href="{{ url('/frontend/contact') }}" style="color:#000;">Policy and Privacy</a></li>
+                <li> <a href="{{ url('/policy') }}" style="color:#000;">Policy and Privacy</a></li>
             </ul>
         </div>
 

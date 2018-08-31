@@ -44,7 +44,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'adminz'], function () {
     Route::get('export-user', 'UsersReportsController@user_export')->middleware('admin');
     Route::resource('order', 'OrdersController')->middleware('admin');
 });
-
 /*Route Frontend*/
 Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function () {
     Route::get('order', 'OrderController@index');
@@ -59,17 +58,9 @@ Route::group(['namespace' => 'front', 'prefix' => 'frontend'], function () {
         return view("front.user-guide",$data1);
     });
     Route::get('term-condition', 'TermConditionController@index');
-    Route::get('store', function () {
-        $data1['data'] = DB::table('tbl_category')->get();
-        return view('front.StorePage.store', $data1);
-    });
     Route::get('product-add-to-card', function () {
         $data1['data'] = DB::table('tbl_category')->get();
         return view('front.pro_detail.product-order', $data1);
-    });
-    Route::get('dashboard-user', function () {
-        $data1['data'] = DB::table('tbl_category')->get();
-        return view('front.user_dashboard.dashboard', $data1);
     });
     Route::get('view-card', function () {
         $cartItems = Cart::content();
@@ -107,20 +98,20 @@ Route::get('/order-success', function () {
 // Cart controller
 Route::group(['middleware' => 'auth'], function () {
     Route::get('view-card', 'CartController@view_cart');
-    Route::resource('/cart', 'CartController');
     Route::delete('delete', 'CartController@delete');
     Route::get('checkout', 'CheckoutController@checkout');
     Route::get('remove-cart/{rowid}', 'CheckoutController@RemoveCart');
-
     Route::get('/profile', function () {
         $data['data'] = DB::table('tbl_category')->get();
         $data['user'] = Auth::user()->with('orders')->first();
         return view('front.profiles.user', $data);
     });
-
     Route::resource('user', 'UserController');
     Route::get('user', 'UserController@userShowOrder');
 });
+Route::resource('/cart', 'CartController');
+Route::get('/cart/update/{id}', 'CartController@update');
+Route::get('/cart/update/addcart/{id}', 'CartController@update_add_cart');
 //Checkout or billing address
 Route::resource('billing-address', 'CheckoutController@store');
 Route::get('/auth/logout', 'CheckoutController@logout');
@@ -138,7 +129,7 @@ Route::get('google/callback', 'AuthController@handleGoogleCallback');
 /*Proceed Order*/
 Route::get('/billing-address', 'front\ProceedOrderController@store');
 Route::post('/billing-address', 'front\ProceedOrderController@store');
-
+/*Search Auto complete*/
 Route::get('/autoComplete', array('as' => 'autoComplete', 'uses' => 'ProductController@autoComplete'));
 Route::get('/searchResult', array('as' => 'searchResult', 'uses' => 'ProductController@searchResult'));
 Route::get('/searchCategory',array('as'=>'searchCategory','uses'=>'ProductController@searchCategory'));

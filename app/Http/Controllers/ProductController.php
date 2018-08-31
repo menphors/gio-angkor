@@ -67,6 +67,7 @@ class ProductController extends Controller
             'data' => Category::get(),
             'products' => Product::paginate(8),
             'product' => Product::findOrFail($id),
+            'cartItems' => Cart::content(),
         ];
 
         return view('front.pro_detail.product-order', $data);

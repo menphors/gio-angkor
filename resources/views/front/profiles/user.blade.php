@@ -147,9 +147,9 @@
                                     <td>{{ $order->id }}</td>
                                     <td>{{ $order->product->pro_name }}</td>
                                     <td>{{ $order->quantity }}</td>
-                                    <td>{{ $order->order_unit_price }}</td>
-                                    <td>{{ $order->sub_total }}</td>
-                                    <td>{{ $user->orders->sum('sub_total') }}</td>
+                                    <td>{{ $order->order_unit_price }} $</td>
+                                    <td>{{ $order->sub_total }} $</td>
+                                    <td>{{ $user->orders->sum('sub_total') }} $</td>
                                 </tr>
                             @endforeach
                             </tbody>

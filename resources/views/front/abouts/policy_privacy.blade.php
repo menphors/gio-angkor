@@ -1,6 +1,7 @@
 @extends('front.homepages.header')
 @section('content')
-
+<div class="container-fluid" style="padding: 25px">
+<div>
 <h1>Privacy Policy</h1>
 
 
@@ -116,5 +117,7 @@
       
             <li>By mail: gioangkor.info@gmail.com</li>
     </ul> 
+</div>
+</div>
 @include('front.homepages.footer')
 @stop                              
