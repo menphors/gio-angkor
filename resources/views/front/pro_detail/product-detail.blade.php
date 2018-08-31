@@ -49,19 +49,19 @@
         <hr>
         <h1 class="my-4"></h1>
         <div class="row">
-            @foreach ($users as $value)
+            @foreach ($products as $product)
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="{!! url('product/'. $value->id) !!}"><img src="{{URL::asset('/uploads/'.$value->gallery)}}"></a>
+                        <a href="{!! url('product/'. $product->id) !!}"><img src="{{URL::asset('/uploads/'.$product->gallery)}}"></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="{!! url('product/'. $value->id) !!}">{{ $value->pro_name }}</a>
+                                <a href="{!! url('product/'. $product->id) !!}">{{ $product->pro_name }}</a>
                             </h4>
                             <!--get pagination-->
-                            <p class="card-text">{{ $value->product_desc }} {{ $value->model }} {{ $value->pro_code }}</p>
-                            <p><a href="#" style="color: red !important;font-weight: bold;">{{ $value->prices }}$</a>
+                            <p class="card-text">{{ $product->product_desc }} {{ $product->model }} {{ $product->pro_code }}</p>
+                            <p><a href="#" style="color: red !important;font-weight: bold;">{{ $product->prices }}$</a>
                             </p>
-                            <button class="btn btn-success"><a href="{{route('cart.edit',$value->id)}}"
+                            <button class="btn btn-success"><a href="{{route('cart.edit',$product->id)}}"
                                                                style="color: #FFF;">Add to cart</a></button>
                         </div>
                     </div>
@@ -74,14 +74,14 @@
         <!-- Pagination -->
         <ul class="pagination justify-content-center">
             <li class="page-item">
-                {{ $users->links() }}
+                {{ $products->appends(request()->input())->links() }}
             </li>
         </ul>
 
         <!--related product-->
         <!------ Include the above in your HEAD tag ---------->
 
-        @include('partials.products.related-products', ['slideId' => 'relatedProductsdetail', 'products' => $users])
+        @include('partials.products.related-products', ['slideId' => 'relatedProductsdetail', 'products' => $products])
 
     </div>
     <!--buyer protection-->

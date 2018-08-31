@@ -21,8 +21,9 @@ class ProductController extends Controller
         $data1['data'] = DB::table('tbl_category')->get();
         $data = [];
         $data["title"]="hello";
-        $data["products"]=Product::paginate(2);
-        return view("products.index",$data,$data1);
+        $data["products"]=Product::paginate(8);
+        $data["cartItems"] = Cart::content();
+        return view("front.pro_detail.product-detail",$data,$data1);
     }
 
     /**
@@ -62,10 +63,9 @@ class ProductController extends Controller
 //        $name = $product->pro_name;
 //        // $description = $product->description;
 //        return view('front.pro_detail.product-order',['data'=>$data]);
-
         $data = [
             'data' => Category::get(),
-            'products' => Product::paginate(8),
+            'products' => \App\Product::paginate(8),
             'product' => Product::findOrFail($id),
             'cartItems' => Cart::content(),
         ];
@@ -109,8 +109,8 @@ class ProductController extends Controller
     public function autoComplete(Request $request)
     {
         $term=$request->term;
-        $data = Product::where('pro_name','LIKE','%'.$term.'%')
-            ->take(10)
+        $data = \App\Product::where('pro_name','LIKE','%'.$term.'%')
+            ->take(8)
             ->get();
         $results=array();
         foreach($data as $key => $v){
@@ -123,25 +123,25 @@ class ProductController extends Controller
 
         $searchname=$request->input('searchname');
         $searchByCategory=$request->input('searchByCategory');
-        $products = Product::where('pro_name','like',"%$searchname%")
+        $products = \App\Product::where('pro_name','like',"%$searchname%")
             ->where('category_id','like',"%$searchByCategory%")
             ->paginate(8);
         $data1['data'] = DB::table('tbl_category')->get();
-        return view('front.products.index',$data1)->with('products',$products);
+        return view('front.pro_detail.product-detail',$data1)->with('products',$products);
     }
     public function searchCategory(Request $request){
 
         $categoryGrid=$request->input('categoryGrid');
         $categoryName=$request->input('categoryName');
 
-        $products = Product::join('tbl_category','tbl_category.id','=','tbl_products.category_id')
-            ->where('tbl_products.category_id','like',"%$categoryGrid%")
-            ->where('tbl_category.name','LIKE',"%$categoryName%")
+        $products = \App\Product::where('tbl_products.category_id','like',"%$categoryGrid%")
+            //->where('tbl_category.id','LIKE',"%$categoryName%")
             ->paginate(8);
 
-        $data1['data'] = DB::table('tbl_category')
+        $data['data'] = DB::table('tbl_category')
         ->get();
-        return view('front.products.product-grid',$data1)->with('products',$products);
+        $data["cartItems"] = Cart::content();
+        return view('front.pro_detail.product-list-single',$data)->with('products',$products);
 
     }
 }
