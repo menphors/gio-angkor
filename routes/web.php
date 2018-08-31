@@ -100,7 +100,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('view-card', 'CartController@view_cart');
     Route::delete('delete', 'CartController@delete');
     Route::get('checkout', 'CheckoutController@checkout');
-    Route::get('remove-cart/{rowid}', 'CheckoutController@RemoveCart');
     Route::get('/profile', function () {
         $data['data'] = DB::table('tbl_category')->get();
         $data['user'] = Auth::user()->with('orders')->first();
@@ -112,6 +111,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::resource('/cart', 'CartController');
 Route::get('/cart/update/{id}', 'CartController@update');
 Route::get('/cart/update/addcart/{id}', 'CartController@update_add_cart');
+Route::get('remove-cart/{rowid}', 'CheckoutController@RemoveCart');
 //Checkout or billing address
 Route::resource('billing-address', 'CheckoutController@store');
 Route::get('/auth/logout', 'CheckoutController@logout');
