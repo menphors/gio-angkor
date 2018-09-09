@@ -63,17 +63,11 @@
       }
    </style>
 </head>
-<body>
+<body style="padding: 0px;">
   <!--facebook SDK-->
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=1557007854605344&autoLogAppEvents=1';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="container-fluid">
+
+    <div class="container-fluid" style="margin-bottom: -9px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-12 col-xs-12" style="margin-top: -5px">
@@ -147,6 +141,23 @@
     </section>
 <!-- Nav header -->
 
+  <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=1557007854605344&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script type="text/javascript">
+      $('#searchname').autocomplete({
+          source : '{!! URL::route('autoComplete') !!}',
+          minlength : 1,
+          autoFocus : true,
+          select:function(e,ui){
+          }
+      });
+  </script>
 </body>
 <script>
   window.fbAsyncInit = function() {
@@ -169,12 +180,4 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<script type="text/javascript">
-    $('#searchname').autocomplete({
-        source : '{!! URL::route('autoComplete') !!}',
-        minlength : 1,
-        autoFocus : true,
-        select:function(e,ui){
-        }
-    });
-</script>
+
