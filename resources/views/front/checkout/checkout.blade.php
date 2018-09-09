@@ -50,10 +50,12 @@
                                         <label class="control-label">Phone</label>
                                         <input type="text" name="tel" required="required" class="form-control" placeholder="Enter your phone" style="height: 30px !important;"/>
                                     </div>
+                                    @if(!Auth::user())
                                     <div class="form-group">
                                         <label class="control-label">Email</label>
                                         <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter your email" name="email" style="height: 30px !important;"/>
                                     </div>
+                                    @endif
                                     <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
                                 </div>
                             </div>

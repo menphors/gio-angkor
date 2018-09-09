@@ -39,28 +39,6 @@ class ProceedOrderController extends Controller
      */
     public function store(Request $request)
     {
-        // $order = new Order;
-        // $order->first_name = $request->input('first_name');
-        // $order->last_name = $request->input('last_name');
-        // $order->phone = $request->input('tel');
-        // $order->email = $request->input('email');
-        // $order->payment_type = $request->input('payment_type');
-        // $order->payment_code = $request->input('payment_code');
-        // $order->order_unit_price = $request->input('order_unit_price');
-        // $order->quantity = $request->input('quantity');
-        // $order->status_product = $request->input('status_product');
-        // $order->order_date = $request->input('order_date');
-
-        // request()->validate([
-        //     'first_name' => 'required',
-        //     'last_name' => 'required',
-            
-        // ]);
-        //  Order::create([
-        //      'product_id' => $product->id,
-        //      'user_id' => auth()->id(),
-        //  ]);
-        // Order::create($request->all());
         $products = Cart::content();
         $user = Auth::user();
      // iterate through the products and store them into the database
@@ -81,6 +59,7 @@ class ProceedOrderController extends Controller
              ]); 
         }     
              $data->save();
+             Cart::destroy();
         return Redirect('order-success');
     }
 

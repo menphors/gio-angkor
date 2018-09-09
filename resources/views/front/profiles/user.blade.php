@@ -100,8 +100,9 @@
                         </div>
                         <div class="form-group">
                             <div class="col-xs-6">
-                                {!! Form::label('Password', null, ['class' => 'control-label']) !!}<br>
-                                {!! Form::password('password', null, ['id' => 'password', 'class' => 'form-control', 'style' => 'height: 35px']) !!}
+                          <!--       {!! Form::label('Password', null, ['class' => 'control-label']) !!}<br>
+                                {!! Form::text('password', $user->password, ['id' => 'password', 'class' => 'form-control', 'style' => 'height: 35px']) !!} -->
+                                <input type="password" name="password" value="$user->password">
                             </div>
                         </div>
                         <div class="form-group">
